@@ -1,11 +1,19 @@
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 from django.http import HttpResponse, HttpResponseRedirect
-from models import Employee, Record, DBRecord, Person, PersonWrapper
+from models import Employee, Record, CSPerson, DBRecord, Person, PersonWrapper
 from django.template import loader, RequestContext
 from django.core.urlresolvers import reverse
 from SignAndSearch import Authenticate
+from django import forms
+from pymongo import MongoClient
 from .forms import UploadFileForm
 import csv
+import json
+import logging
+from bson import Binary, Code
+from bson.json_util import dumps
+
+logging.basicConfig(filename='log_file.txt',level=logging.INFO)
 
 def batchSearch(request):
     form = UploadFileForm(request.POST, request.FILES)
@@ -113,24 +121,20 @@ def filter(request):
         return render(request,'testApp/message.html', context)
     
 def formSearch(request):
+    print "Inside form search ... "
     firstName = request.POST.get('fname', 'Empty')
     lastName = request.POST.get('lname', 'Empty')
     email = request.POST.get('email', 'Empty')
     school = request.POST.get('school', 'Empty')
-    title = request.POST.get('title', 'Empty')
-    company = request.POST.get('company', 'Empty')
-    postalCode = request.POST.get('postalCode', 'Empty')
     distance = request.POST.get('distance', 'Empty')
     countryCode = request.POST.get('country',  'Empty')
     keywords = request.POST.get('keywords', 'Empty')
     params = {'email':email, 'firstName':firstName,'lastName':lastName, 'school':school, 'countryCode':countryCode, 'keywords':keywords}
-    if postalCode != '':
-        params['postalCode'] = postalCode
-        params['distance'] = distance
-    if company != '':
-        params['company'] = company
-    print params
+    
+    print "Searching : "+params.__str__() 
+    # Authenticating a linkedin profile to start with.
     linkObj = Authenticate('bigdatafall2015@gmail.com','chandraisgr8')
+    print "Linkedin Object :: "+linkObj.__str__()
     resp = Authenticate.performSearch(linkObj, params, 'localhost', 27017, 'test')
     if resp.startswith('Success'):
         print request
@@ -146,6 +150,75 @@ def formSearch(request):
                    'msg':msg}
         return render(request, 'testApp/message.html', context)
     
+    
+def searchUnderGrad(request): ## Added By, Bikramjit edu.bmandal@gmail.com
+    print "Inside grad search ... "
+    myclient = MongoClient()
+    db = myclient.test
+    firstName = request.POST.get('fname', 'Empty')
+    lastName = request.POST.get('lname', 'Empty')
+    personemail = request.POST.get('email','Empty')
+    #print "Values received from request : "+firstName.__str__()+", "+lastName.__str__()+", "+email.__str__()
+    #resp = Authenticate.performSearch(linkObj, params, 'localhost', 27017, 'test')
+    #resp = Authenticate.filterResult(linkObj, filterParams, 'localhost', 27017, 'test')
+    # results = Lesson.objects(__raw__={'subject.subject_name': 'Math'})
+    #entries = db.d_b_record.find({'record.email':{'$eq':personemail}})#(__raw__={'person.fmt_location':'Taiwan'})
+    '''
+    Below we match the email in the records and fetch the 
+    person IDs that are related to the given email.
+
+    We need to filter the output further to 
+    see if it has the college name present.
+
+    Also other keywords to search for.
+
+    '''
+    entries = db.d_b_record.aggregate(
+        [
+            {
+                "$match": {   "record.email": personemail }# Text Search for College Name and Country Name}
+            },
+            {
+                "$group": {   "_id": "$record.results.person.personId"  }
+            }
+        ])
+    entries_list = list(entries)
+
+
+    """
+    Helps to convert the Cursor function output to
+    JSON readable output using BSON.JSON_UTIL library.
+    """
+    parsed_bson = dumps(entries_list[0]) 
+
+    '''
+    Helps to read the json from the output of the 
+    above statement.
+
+    Will now use this method to read the details from the outputs 
+    that can be presented in the output.
+    '''
+    parsed_json = json.loads(parsed_bson.__str__())
+    print "\n\n IDs : "+parsed_json['_id'][0].__str__()+", "+parsed_json['_id'][1].__str__()
+    persons_filter = DBRecord.objects(record__results__person__personId=parsed_json['_id'][0].__str__())
+    print "Persons are ... \n"
+    preffered_list = []
+    for p in persons_filter:
+        print " "+p.record.results.__str__()
+        print " The IDs are :\n"
+        for p1 in p.record.results:
+            print p1.person.personId.__str__()
+            +", "+p1.person.firstName.__str__()
+            +", "+p1.person.lastName.__str__()
+            +", "+p1.person.fmt_industry.__str__()
+    
+    # each JSON can be 
+
+    ctx = { 'entries':entries_list }
+    context=ctx
+    return render(request,'testApp/searchGrad.html',context)
+    
+
 def remove(request):
     email_id = request.POST.get('email', 'EMPTY')
     if email_id == 'EMPTY':
@@ -175,7 +248,7 @@ def employ(request):
 def detail(request, question_id):
     return render(request, 'testApp/readForm.html')
 
-def results(request):
+def results(request): #Accessing mongoengine to get data.
     #res = DBRecord.objects.all()
     res = DBRecord.objects.order_by('record.results.person.firstName', '-record.results.person.connectionCount')
     if res is None:
@@ -226,6 +299,9 @@ def vote(request, question_id):
 
 def search(request):
     return render(request, 'testApp/search.html')
+
+def searchgrad(request):
+    return render(request, 'testApp/grad-search.html')
 
 def upload(request):
     return render(request, 'testApp/upload.html')

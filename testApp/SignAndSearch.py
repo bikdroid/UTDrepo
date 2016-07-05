@@ -7,15 +7,18 @@ import sys
 import json
 import pymongo
 import datetime
+from models import Employee, Record, DBRecord, Person, PersonWrapper
 from bs4 import BeautifulSoup
 from bs4 import Comment
+import logging
 
+logging.basicConfig(filename='log_file.txt',level=logging.INFO)
 username = "bigdatafall2015@gmail.com"
 password = "chandraisgr8"
-dbHost = 'localhost'
+dbHost = 'localhost' #found from the hostname() command in mongo.
 dbPort = 27017
-dbName = 'linkedIn'
-dbCollection = 'users'
+dbName = 'test'
+dbCollection = 'd_b_record'
 url1 = 'https://www.linkedin.com/'
 linkHome = 'http://www.linkedin.com/nhome'
 lSrchTitle = 'Search | LinkedIn'
@@ -150,6 +153,7 @@ class Authenticate(object):
         
     def performSearch(self, searchParams, dbHost, dbPort, dbName):
         """ Performs search and Saves the information gathered into DB. This method almost performs everything this class is created for """
+        print "inside Perform Search ... "
         try:
             #self.login = login
             #self.password = password
@@ -177,15 +181,43 @@ class Authenticate(object):
             recordJSON = self.formTrimmedJSON(linkedJSON)
             dbRecord = self.formDBRecord(recordJSON, mailId)
             client = self.connect2DB(dbHost, dbPort)
+            print "Client details : "+client.__str__()
             self.store2DB(dbRecord, mailId, client)
             return 'Success'
         except Exception as e:
             x,y = e.args
             return x
-            
+     
+    def filterResult(self, filterParams, dbHost, dbPort, dbName):
+        """Performs a filter based on the filter parameters """
+        print "Inside Filter Result view ..."
+        try:
+            self.cj = cookielib.MozillaCookieJar(cookie_filename)
+            if os.access(cookie_filename, os.F_OK):
+                self.cj.load()
+            self.opener = urllib2.build_opener(
+                urllib2.HTTPRedirectHandler(),
+                urllib2.HTTPHandler(debuglevel=0),
+                urllib2.HTTPSHandler(debuglevel=0),
+                urllib2.HTTPCookieProcessor(self.cj)
+            )
+            self.opener.addheaders = [
+                ('User-agent', ('Mozilla/4.0 (compatible; MSIE 6.0; '
+                               'Windows NT 5.2; .NET CLR 1.1.4322)'))
+            ]
+            self.checkLogin(url1)
+
+            ## start here ##
+            print " Data So Far : \n"+Person.objects.all()
+            return 'Success'
+
+        except Exception as e:
+            x,y = e.args
+            return x       
         
     def connect2DB(self, dbHost, dbPort):
         """ This definition connects to db using the details provided and returns the client"""
+        print "inside connect2DB .. "
         try:
             client = pymongo.MongoClient(dbHost, dbPort)
             return client
@@ -215,7 +247,10 @@ class Authenticate(object):
     def store2DB(self, json2Store, email, dbClient):
         """ Persists the document to the DB using the dbClient, if the record is already present, it simply replaces the document """
         #db = dbClient.linkedinTest
+        print "Inside store2DB ... "
         db = dbClient.test
+        print "DB client is : "+db.__str__()
+
         if self.findEntryInDB(db, email):
             db.d_b_record.replace_one({'record.email':email},json2Store)
         else:
@@ -232,6 +267,7 @@ class Authenticate(object):
     
     def insertRecord(self, record, db):
         """ Simple Insert into DB """
+        print "saving record : "+record.__str__()
         db.d_b_record.save(record)
         
         
@@ -246,32 +282,33 @@ class Authenticate(object):
         pJSON = json.dumps(params)
         return json.loads(pJSON) 
     
-    def formSearchURL(self, params):
+    def formSearchURL(self, params): #Here the parameters are converted to the URL.
         """ Creates the search url using the params """
         if params is None:
             return url1
         paramString = ''
-        pKeys = params.keys()
-        for key in pKeys:
+        pKeys = params.keys() #getting the parameters.
+        for key in pKeys:       # for each parameter, check
             if key == 'email':
                 continue
             val = params[key]
             if val is None or val == '':
                 continue
-            val = val.replace(' ',spaceV)
-            val = val.replace(amper, amperV)
-            paramString = paramString + key + equalTo + val + amper
+            val = val.replace(' ',spaceV) #replace spaces with %20, for making URLs ahead
+            val = val.replace(amper, amperV) # replace ampersands with %26, for making URLs ahead
+            paramString = paramString + key + equalTo + val + amper #making the complete URL for the profile
         tX = ''
         cX = ''
         if 'title' in pKeys:
-            tX = titleScopeParam
+            tX = titleScopeParam #this is as per the variables in a linkedIn URL
         if 'company' in pKeys:
-            cX = companyScopeParam
+            cX = companyScopeParam # as per variables in the linkedIn URL
         if 'postalCode' in pKeys:
-            lX = locationSelectParam
+            lX = locationSelectParam # as per variable in the linkedIn URL
         else:
             lX = locationNoSelectParam
-        srchURL = paramBaseURL.format(paramString, tX, cX, lX)
+        srchURL = paramBaseURL.format(paramString, tX, cX, lX) 
+        # paramBaseURL is defined at the top, the {0}, {1} etc. positions are filled with the respictive indexed parameters
         return srchURL
     
     def checkLogin(self, homeUrl):
@@ -357,6 +394,7 @@ class Authenticate(object):
         """
         Loads the search page using the url provided and returns raw search results
         """
+        print " inside loadSearch .."
         sPage = self.loadPage(url)
         spContent = BeautifulSoup(sPage)
         #title = spContent.find('title')
@@ -377,6 +415,8 @@ class Authenticate(object):
         """
         This is full JSON method, i.e. it forms the JSON with extensive information including all possible (or public) information. This increases the size of the document considerably
         """
+        logging.info('::::::::::: JSON from the linkedIn URl ::::::::::::')
+        
         if srchResult is None:
             sys.exit('There is some problem with loading search page and search results')
         rawResults = re.sub('\\\\u002d1', '\"\"', srchResult)
@@ -403,14 +443,16 @@ class Authenticate(object):
             #self.printAdvSearchFields(searchFields)
             results = searchRes[resultsKey]
             recObj = {recordKey : {gReqParamsKey:globalReqParams,advSearchFormKey:advSearchParams,baseDataKey:baseData,resultsKey:results}}
+             # trying to send the value of recObj to the logging file.
             convertedRec = json.dumps(recObj)
-            recObjJSON = json.loads(convertedRec)
+            recObjJSON = json.loads(convertedRec) # loading the dump
             print json.dumps(recObjJSON, indent=4)
         except:
             sys.exit('There seems to be a problem with JSON, Might have occured if there is a change at LinkedIn Result structure or naming')
             
-    def formTrimmedJSON(self, srchResult):
+    def formTrimmedJSON(self, srchResult): ## The function being used primarily.
         """ Latest: forms the JSON with only general and mostly required information avoiding the redundant and actions information. """
+        #logging.info(srchResult)
         if srchResult is None:
             raise Exception('Info: Either the query has not returned any results or there is some problem with linkedIn search', 'Info')
         rawResults = re.sub('\\\\u002d1', '\"\"', srchResult)

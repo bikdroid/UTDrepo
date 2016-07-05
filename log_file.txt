@@ -1,0 +1,325 @@
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 167, in searchUnderGrad
+    parsed_json = json.loads(e.__str__()) #loading each record as a JSON
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 380, in raw_decode
+    obj, end = self.scan_once(s, idx)
+ValueError: Expecting property name: line 1 column 2 (char 1)
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 167, in searchUnderGrad
+    parsed_json = json.loads(e.__str__()) #loading each record as a JSON
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 380, in raw_decode
+    obj, end = self.scan_once(s, idx)
+ValueError: Expecting property name: line 1 column 2 (char 1)
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 168, in searchUnderGrad
+    parsed_json = json.loads(e.__str__()) #loading each record as a JSON
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 380, in raw_decode
+    obj, end = self.scan_once(s, idx)
+ValueError: Expecting property name: line 1 column 2 (char 1)
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 164, in searchUnderGrad
+    print " All Persons " + Person.objects.all().__str__()
+AttributeError: type object 'Person' has no attribute 'objects'
+INFO:root: :::: Parsed JSON ::::
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 172, in searchUnderGrad
+    logging.info(parsed_json) # trying to log the parse JSON
+NameError: global name 'parsed_json' is not defined
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 173, in searchUnderGrad
+    parsed_json = json_loads(parsed_bson.__str__())
+NameError: global name 'json_loads' is not defined
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 174, in searchUnderGrad
+    print "First Name : "+parsed_json['record.searchParams.firstName'].__str__()
+KeyError: 'record.searchParams.firstName'
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 174, in searchUnderGrad
+    print "First Name : "+parsed_json['firstName']
+KeyError: 'firstName'
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 174, in searchUnderGrad
+    print "First Name : "+parsed_json['record']
+TypeError: cannot concatenate 'str' and 'dict' objects
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 181, in searchUnderGrad
+    parsed_bson = dumps(entries_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 169, in searchUnderGrad
+    "$match": {   email: personemail  }
+NameError: global name 'email' is not defined
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 172, in searchUnderGrad
+    "$group": {   "_id": "$record.results.person.personId"}
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1671, in aggregate
+    read_concern=self.read_concern)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 205, in _command
+    read_concern=read_concern)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/pool.py", line 213, in command
+    read_concern)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/network.py", line 99, in command
+    helpers._check_command_response(response_doc, None, allowable_errors)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/helpers.py", line 196, in _check_command_response
+    raise OperationFailure(msg % errmsg, code, response)
+OperationFailure: bad query: BadValue: unknown top level operator: $record.email
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 195, in searchUnderGrad
+    print "\n\nFirst Name : "+parsed_json['record']['searchParams']['firstName'].__str__()
+KeyError: 'record'
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 188, in searchUnderGrad
+    parsed_bson = dumps(entries_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 175, in searchUnderGrad
+    "$project": {   "location": "$record.results.person.fmt_location"}
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1671, in aggregate
+    read_concern=self.read_concern)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 205, in _command
+    read_concern=read_concern)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/pool.py", line 213, in command
+    read_concern)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/network.py", line 99, in command
+    helpers._check_command_response(response_doc, None, allowable_errors)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/helpers.py", line 196, in _check_command_response
+    raise OperationFailure(msg % errmsg, code, response)
+OperationFailure: the group aggregate field 'location' must be defined as an expression inside an object
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 172, in searchUnderGrad
+    "$group": {   "_id": "$record.results.person.personId", "location":"$record.results.person.fmt_location"}
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1671, in aggregate
+    read_concern=self.read_concern)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 205, in _command
+    read_concern=read_concern)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/pool.py", line 213, in command
+    read_concern)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/network.py", line 99, in command
+    helpers._check_command_response(response_doc, None, allowable_errors)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/helpers.py", line 196, in _check_command_response
+    raise OperationFailure(msg % errmsg, code, response)
+OperationFailure: the group aggregate field 'location' must be defined as an expression inside an object
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 195, in searchUnderGrad
+    print "Persons are ... \n"+persons_filter.__str__()
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 58, in __repr__
+    self._populate_cache()
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 92, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1407, in next
+    raw_doc = self._cursor.next()
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1481, in _cursor
+    self._cursor_obj = self._collection.find(self._query,
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1515, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 90, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 155, in accept
+    return visitor.visit_query(self)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 78, in visit_query
+    return transform.query(self.document, **query.query)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/transform.py", line 61, in query
+    raise InvalidQueryError(e)
+InvalidQueryError: Cannot resolve field "person"
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 195, in searchUnderGrad
+    print "Persons are ... \n"+persons_filter.__str__()
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 58, in __repr__
+    self._populate_cache()
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 92, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1407, in next
+    raw_doc = self._cursor.next()
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1481, in _cursor
+    self._cursor_obj = self._collection.find(self._query,
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1515, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 90, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 155, in accept
+    return visitor.visit_query(self)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 78, in visit_query
+    return transform.query(self.document, **query.query)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/transform.py", line 61, in query
+    raise InvalidQueryError(e)
+InvalidQueryError: Cannot resolve field "person"
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 195, in searchUnderGrad
+    print "Persons are ... \n"+persons_filter.__str__()
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 58, in __repr__
+    self._populate_cache()
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 92, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1407, in next
+    raw_doc = self._cursor.next()
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1481, in _cursor
+    self._cursor_obj = self._collection.find(self._query,
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1515, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 90, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 155, in accept
+    return visitor.visit_query(self)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 78, in visit_query
+    return transform.query(self.document, **query.query)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/transform.py", line 61, in query
+    raise InvalidQueryError(e)
+InvalidQueryError: Cannot resolve field "results"
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 197, in searchUnderGrad
+    print " :: "+p['fmt_location'].__str__()+"\t"
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 227, in __getitem__
+    raise KeyError(name)
+KeyError: 'fmt_location'
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 197, in searchUnderGrad
+    print " "+p.fmt_location.__str__()
+AttributeError: 'DBRecord' object has no attribute 'fmt_location'
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 201, in searchUnderGrad
+    print p1.personId
+AttributeError: 'PersonWrapper' object has no attribute 'personId'
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 201, in searchUnderGrad
+    print p1.person.personId+", "+p1.person.firstName+", "+p1.person.lastName
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 201, in searchUnderGrad
+    print p1.person.personId+", "+p1.person.firstName.__str__()+", "+p1.person.lastName.__str__()
+TypeError: unsupported operand type(s) for +: 'int' and 'str'

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+	<title>Search Results </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Search Form | LinkedIn Profile Scrapper</title>
+	<link rel="stylesheet" href="/static/testApp/css/layouts/search.css">
+	<link rel="stylesheet" href="/static/testApp/css/layouts/pure-min.css">
+	<link rel="stylesheet" href="/static/testApp/css/layouts/grids-responsive-min.css">
+</head>
+<body>
+	<h2> Results for the filters </h2>
+	{% csrf_token %}
+	<h3>Entries </h3>
+	{% for e in entries %}
+	<div>{{e}}</div>
+	{% endfor %}
+
+</body>
+</html>
