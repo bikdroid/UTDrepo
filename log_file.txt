@@ -323,3 +323,1723 @@ Traceback (most recent call last):
   File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 201, in searchUnderGrad
     print p1.person.personId+", "+p1.person.firstName.__str__()+", "+p1.person.lastName.__str__()
 TypeError: unsupported operand type(s) for +: 'int' and 'str'
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 192, in searchUnderGrad
+    parsed_bson = dumps(entries_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 212, in searchUnderGrad
+    +", "+p1.person.firstName.__str__()
+TypeError: bad operand type for unary +: 'str'
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 219, in searchUnderGrad
+    return render(request,'testApp/searchGrad.html',context)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/backends/django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '+" "+e.lastName' from 'e.firstName+" "+e.lastName'
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 219, in searchUnderGrad
+    return render(request,'testApp/searchGrad.html',context)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/backends/django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Variables and attributes may not begin with underscores: 'e.firstName.__str'
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/None
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 203, in searchUnderGrad
+    print "\n\n IDs : "+parsed_json['_id'][0].__str__()+", "+parsed_json['_id'][1].__str__()
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/None
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 203, in searchUnderGrad
+    print "\n\n IDs : "+parsed_json['_id'][0].__str__()+", "+parsed_json['_id'][1].__str__()
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 193, in searchUnderGrad
+    parsed_bson = dumps(ent_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 193, in searchUnderGrad
+    parsed_bson = dumps(ent_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/None
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 203, in searchUnderGrad
+    print "\n\n IDs : "+parsed_json['_id'][0].__str__()+", "+parsed_json['_id'][1].__str__()
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/None
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 203, in searchUnderGrad
+    print "\n\n IDs : "+parsed_json['_id'][0].__str__()+", "+parsed_json['_id'][1].__str__()
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/None
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 203, in searchUnderGrad
+    print "\n\n IDs : "+parsed_json['_id'][0].__str__()+", "+parsed_json['_id'][1].__str__()
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/None
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 204, in searchUnderGrad
+    print "\n\n IDs : "+parsed_json['_id'][0].__str__()+", "+parsed_json['_id'][1].__str__()
+IndexError: list index out of range
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 229, in searchUnderGrad
+    return render(request,'testApp/searchGrad.html',context)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/backends/django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 510, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 572, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+TemplateSyntaxError: Invalid block tag on line 60: 'static'. Did you forget to register or load this tag?
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 229, in searchUnderGrad
+    return render(request,'testApp/searchGrad.html',context)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/backends/django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 510, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 572, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+TemplateSyntaxError: Invalid block tag on line 60: 'static'. Did you forget to register or load this tag?
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 229, in searchUnderGrad
+    return render(request,'testApp/searchGrad.html',context)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/backends/django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 510, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 572, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+TemplateSyntaxError: Invalid block tag on line 60: 'static'. Did you forget to register or load this tag?
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 229, in searchUnderGrad
+    return render(request,'testApp/searchGrad.html',context)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/backends/django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 510, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 572, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+TemplateSyntaxError: Invalid block tag on line 60: 'static'. Did you forget to register or load this tag?
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 225, in searchUnderGrad
+    print "Entries _ list ::"+entries_list
+TypeError: cannot concatenate 'str' and 'list' objects
+WARNING:django.request:Not Found: /testApp/js/jquery-3.0.0.js
+WARNING:django.request:Not Found: /testApp/js/rango-ajax.js
+WARNING:django.request:Not Found: /testApp/js/rango-ajax.js
+WARNING:django.request:Not Found: /testApp/js/jquery-3.0.0.js
+WARNING:django.request:Not Found: /testApp/js/rango-ajax.js
+WARNING:django.request:Not Found: /testApp/js/rango-ajax.js
+WARNING:django.request:Not Found: /testApp/js/jquery-3.0.0.js
+WARNING:django.request:Not Found: /testApp/js/rango-ajax.js
+WARNING:django.request:Not Found: /testApp/js/rango-ajax.js
+WARNING:django.request:Not Found: /testApp/js/jquery-3.0.0.js
+WARNING:django.request:Not Found: /testApp/js/rango-ajax.js
+WARNING:django.request:Not Found: /testApp/js/rango-ajax.js
+WARNING:django.request:Not Found: /js/jquery-3.0.0.js
+WARNING:django.request:Not Found: /js/rango-ajax.js
+WARNING:django.request:Not Found: /js/rango-ajax.js
+WARNING:django.request:Not Found: /js/jquery-3.0.0.js
+WARNING:django.request:Not Found: /js/rango-ajax.js
+WARNING:django.request:Not Found: /js/rango-ajax.js
+WARNING:django.request:Not Found: /js/jquery-3.0.0.js
+WARNING:django.request:Not Found: /js/rango-ajax.js
+WARNING:django.request:Not Found: /js/rango-ajax.js
+WARNING:django.request:Not Found: /js/jquery-3.0.0.js
+WARNING:django.request:Not Found: /js/rango-ajax.js
+WARNING:django.request:Not Found: /js/rango-ajax.js
+WARNING:django.request:Not Found: /js/jquery-3.0.0.js
+WARNING:django.request:Not Found: /js/rango-ajax.js
+WARNING:django.request:Not Found: /js/rango-ajax.js
+WARNING:django.request:Not Found: /js/jquery-3.0.0.js
+WARNING:django.request:Not Found: /js/rango-ajax.js
+WARNING:django.request:Not Found: /js/rango-ajax.js
+WARNING:django.request:Not Found: /js/rango-ajax.js
+WARNING:django.request:Not Found: /js/jquery-3.0.0.js
+WARNING:django.request:Not Found: /js/rango-ajax.js
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /js/rango-ajax.js
+WARNING:django.request:Not Found: /js/jquery-3.0.0.js
+WARNING:django.request:Not Found: /js/rango-ajax.js
+WARNING:django.request:Not Found: /js/jquery-3.0.0.min.js
+WARNING:django.request:Not Found: /js/rango-ajax.js
+WARNING:django.request:Not Found: /js/jquery-3.0.0.min.js
+WARNING:django.request:Not Found: /js/rango-ajax.js
+WARNING:django.request:Not Found: /js/rango-ajax.js
+WARNING:django.request:Not Found: /testApp/js/jquery-3.0.0.min.js
+WARNING:django.request:Not Found: /testApp/js/rango-ajax.js
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 227, in searchUnderGrad
+    ctx = { 'fname':fname, 'lname':lname, 'personemail':personemail, 'entries':entries_list, 'recordInstances':persons_filter }
+NameError: global name 'fname' is not defined
+WARNING:django.request:Not Found: /merge_update/
+WARNING:django.request:Not Found: /merge_update/
+WARNING:django.request:Not Found: /merge_update/
+WARNING:django.request:Not Found: /merge_update/
+WARNING:django.request:Not Found: /merge_update/
+WARNING:django.request:Not Found: /merge_update/
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 238, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+WARNING:django.request:Not Found: /merge_update/
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 238, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+WARNING:django.request:Not Found: /merge_update/
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 238, in mergedUpdate
+    entries_list = request.GET["selectedIDs"]
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+WARNING:django.request:Not Found: /merge_update/
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 238, in mergedUpdate
+    entries_list = request.GET["selectedIDs"]
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+WARNING:django.request:Not Found: /merge_update/
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 238, in mergedUpdate
+    entries_list = request.GET["selectedIDs"]
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 238, in mergedUpdate
+    entries_list = request.GET["selectedIDs"]
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 238, in mergedUpdate
+    entries_list = request.GET["selectedIDs"]
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 238, in mergedUpdate
+    entries_list = request.GET[selectedIDs]
+NameError: global name 'selectedIDs' is not defined
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 238, in mergedUpdate
+    entries_list = request.GET[selectedIDs]
+NameError: global name 'selectedIDs' is not defined
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 238, in mergedUpdate
+    entries_list = request.GET[selectedIDs]
+NameError: global name 'selectedIDs' is not defined
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 238, in mergedUpdate
+    entries_list = request.GET[selectedIDs]
+NameError: global name 'selectedIDs' is not defined
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 238, in mergedUpdate
+    entries_list = request.GET[selectedIDs]
+NameError: global name 'selectedIDs' is not defined
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 238, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 238, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 238, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 238, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 238, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 238, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 238, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 238, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 238, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 238, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 238, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 239, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 239, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 239, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 239, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 239, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 239, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 239, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 239, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 239, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 239, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 239, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 239, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 239, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 239, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 239, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 239, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 239, in mergedUpdate
+    entries_list = request.GET['selectedIDs']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'selectedIDs'"
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view testApp.views.mergedUpdate didn't return an HttpResponse object. It returned None instead.
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view testApp.views.mergedUpdate didn't return an HttpResponse object. It returned None instead.
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view testApp.views.mergedUpdate didn't return an HttpResponse object. It returned None instead.
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view testApp.views.mergedUpdate didn't return an HttpResponse object. It returned None instead.
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 249, in mergedUpdate
+    return HttpResponse(return_list)
+NameError: global name 'return_list' is not defined
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 249, in mergedUpdate
+    return HttpResponse(return_list)
+NameError: global name 'return_list' is not defined
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 249, in mergedUpdate
+    return HttpResponse(return_list)
+NameError: global name 'return_list' is not defined
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 249, in mergedUpdate
+    return HttpResponse(return_list)
+NameError: global name 'return_list' is not defined
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 249, in mergedUpdate
+    return HttpResponse(return_list)
+NameError: global name 'return_list' is not defined
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 249, in mergedUpdate
+    return HttpResponse(return_list)
+NameError: global name 'return_list' is not defined
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 249, in mergedUpdate
+    return HttpResponse(return_list)
+NameError: global name 'return_list' is not defined
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 249, in mergedUpdate
+    return HttpResponse(return_list)
+NameError: global name 'return_list' is not defined
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 249, in mergedUpdate
+    return HttpResponse(return_list)
+NameError: global name 'return_list' is not defined
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 249, in mergedUpdate
+    return HttpResponse(return_list)
+NameError: global name 'return_list' is not defined
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 249, in mergedUpdate
+    return HttpResponse(return_list)
+NameError: global name 'return_list' is not defined
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 260, in mergedUpdate
+    print "first person id : "+p.record.results[0].person.personId
+TypeError: cannot concatenate 'str' and 'int' objects
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 260, in mergedUpdate
+    print "first person id : "+p.record.results[0].person.personId
+TypeError: cannot concatenate 'str' and 'int' objects
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 260, in mergedUpdate
+    print "first person id : "+p.record.results[0].person.personId
+TypeError: cannot concatenate 'str' and 'int' objects
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 260, in mergedUpdate
+    print "first person id : "+p.record.results[0].person.personId
+TypeError: cannot concatenate 'str' and 'int' objects
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 260, in mergedUpdate
+    print "first person id : "+p.record.results[0].person.personId
+TypeError: cannot concatenate 'str' and 'int' objects
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 258, in mergedUpdate
+    final_list = db.d_b_record.aggregate(
+NameError: global name 'db' is not defined
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 258, in mergedUpdate
+    final_list = db.d_b_record.aggregate(
+NameError: global name 'db' is not defined
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 258, in mergedUpdate
+    final_list = db.d_b_record.aggregate(
+NameError: global name 'db' is not defined
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 258, in mergedUpdate
+    final_list = db.d_b_record.aggregate(
+NameError: global name 'db' is not defined
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 258, in mergedUpdate
+    final_list = db.d_b_record.aggregate(
+NameError: global name 'db' is not defined
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 269, in mergedUpdate
+    "$industry": {"$concat":"$record.results.person.fmt_industry"}
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1671, in aggregate
+    read_concern=self.read_concern)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 205, in _command
+    read_concern=read_concern)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/pool.py", line 213, in command
+    read_concern)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/network.py", line 99, in command
+    helpers._check_command_response(response_doc, None, allowable_errors)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/helpers.py", line 196, in _check_command_response
+    raise OperationFailure(msg % errmsg, code, response)
+OperationFailure: the group aggregate field name '$workinfo' cannot be an operator name
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 269, in mergedUpdate
+    "industry": {"$concat":"$record.results.person.fmt_industry"}
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1671, in aggregate
+    read_concern=self.read_concern)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 205, in _command
+    read_concern=read_concern)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/pool.py", line 213, in command
+    read_concern)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/network.py", line 99, in command
+    helpers._check_command_response(response_doc, None, allowable_errors)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/helpers.py", line 196, in _check_command_response
+    raise OperationFailure(msg % errmsg, code, response)
+OperationFailure: unknown group operator '$concat'
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 276, in mergedUpdate
+    }'''
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1671, in aggregate
+    read_concern=self.read_concern)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 205, in _command
+    read_concern=read_concern)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/pool.py", line 213, in command
+    read_concern)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/network.py", line 99, in command
+    helpers._check_command_response(response_doc, None, allowable_errors)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/helpers.py", line 196, in _check_command_response
+    raise OperationFailure(msg % errmsg, code, response)
+OperationFailure: pipeline element 2 is not an object
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 277, in mergedUpdate
+    print "Merge Update JSON : \n"+parsed_json
+TypeError: cannot concatenate 'str' and 'list' objects
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 275, in mergedUpdate
+    parsed_bson = dumps(filter_list[1])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 275, in mergedUpdate
+    parsed_bson = dumps(filter_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 275, in mergedUpdate
+    parsed_bson = dumps(filter_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 275, in mergedUpdate
+    parsed_bson = dumps(filter_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 275, in mergedUpdate
+    parsed_bson = dumps(filter_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 276, in mergedUpdate
+    parsed_bson = dumps(filter_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 278, in mergedUpdate
+    print "filter_list : "+filter_list.__str__()
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 279, in mergedUpdate
+    parsed_bson = dumps(filter_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 278, in mergedUpdate
+    print "filter_list : "+filter_list
+TypeError: cannot concatenate 'str' and 'list' objects
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 284, in mergedUpdate
+    for p in person_filter:
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 80, in _iter_results
+    self._populate_cache()
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 92, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1407, in next
+    raw_doc = self._cursor.next()
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1481, in _cursor
+    self._cursor_obj = self._collection.find(self._query,
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1515, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 90, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 155, in accept
+    return visitor.visit_query(self)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 78, in visit_query
+    return transform.query(self.document, **query.query)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/transform.py", line 95, in query
+    value = field.prepare_query_value(op, value)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/fields.py", line 210, in prepare_query_value
+    return super(IntField, self).prepare_query_value(op, int(value))
+ValueError: invalid literal for int() with base 10: '['
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 284, in mergedUpdate
+    for p in person_filter:
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 80, in _iter_results
+    self._populate_cache()
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 92, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1407, in next
+    raw_doc = self._cursor.next()
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1481, in _cursor
+    self._cursor_obj = self._collection.find(self._query,
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1515, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 90, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 155, in accept
+    return visitor.visit_query(self)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 78, in visit_query
+    return transform.query(self.document, **query.query)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/transform.py", line 95, in query
+    value = field.prepare_query_value(op, value)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/fields.py", line 210, in prepare_query_value
+    return super(IntField, self).prepare_query_value(op, int(value))
+ValueError: invalid literal for int() with base 10: '['
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 284, in mergedUpdate
+    for p in person_filter:
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 80, in _iter_results
+    self._populate_cache()
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 92, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1407, in next
+    raw_doc = self._cursor.next()
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1481, in _cursor
+    self._cursor_obj = self._collection.find(self._query,
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1515, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 90, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 155, in accept
+    return visitor.visit_query(self)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 78, in visit_query
+    return transform.query(self.document, **query.query)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/transform.py", line 95, in query
+    value = field.prepare_query_value(op, value)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/fields.py", line 210, in prepare_query_value
+    return super(IntField, self).prepare_query_value(op, int(value))
+ValueError: invalid literal for int() with base 10: '['
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 276, in mergedUpdate
+    parsed_bson = dumps(filter_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 278, in mergedUpdate
+    parsed_bson = dumps(filter_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 259, in mergedUpdate
+    print "new parsed_list :"+list(new_parsed_list)
+TypeError: cannot concatenate 'str' and 'list' objects
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 259, in mergedUpdate
+    print "new parsed_list :"+list(new_parsed_list)
+TypeError: cannot concatenate 'str' and 'list' objects
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 278, in mergedUpdate
+    parsed_bson = dumps(filter_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 278, in mergedUpdate
+    parsed_bson = dumps(filter_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 278, in mergedUpdate
+    parsed_bson = dumps(filter_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 279, in mergedUpdate
+    parsed_bson = dumps(filter_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 269, in mergedUpdate
+    {"$group": {    _id: "$record.results.person.personId"}},
+NameError: global name '_id' is not defined
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 279, in mergedUpdate
+    parsed_bson = dumps(filter_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 279, in mergedUpdate
+    parsed_bson = dumps(filter_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 279, in mergedUpdate
+    parsed_bson = dumps(filter_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 271, in mergedUpdate
+    parsed_bson = dumps(filter_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 271, in mergedUpdate
+    parsed_bson = dumps(filter_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 271, in mergedUpdate
+    parsed_bson = dumps(filter_list[0])
+IndexError: list index out of range
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 266, in mergedUpdate
+    'personPhoto':person_filter[0].results[0].person.profilePhoto.profilePhoto.media_picture_link_100,
+AttributeError: 'DBRecord' object has no attribute 'results'
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 288, in mergedUpdate
+    print "final_list > industry :"+final_list['industry']
+TypeError: 'CommandCursor' object has no attribute '__getitem__'
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 288, in mergedUpdate
+    print "final_list > industry :"+parsed_json['industry']
+TypeError: cannot concatenate 'str' and 'list' objects
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 289, in mergedUpdate
+    nperson['fmt_industry'].append(parsed_json['industry'].__str__())
+AttributeError: 'str' object has no attribute 'append'
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 275, in mergedUpdate
+    nperson_json = json.loads(nperson)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 275, in mergedUpdate
+    nperson_json = json.loads(nperson.__str__())
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 380, in raw_decode
+    obj, end = self.scan_once(s, idx)
+ValueError: Expecting property name: line 1 column 2 (char 1)
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 275, in mergedUpdate
+    nperson_json = json.loads(list(nperson).__str__())
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 382, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 291, in mergedUpdate
+    nperson_json['fmt_industry'].append(parsed_json['industry'].__str__())
+AttributeError: 'unicode' object has no attribute 'append'
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 291, in mergedUpdate
+    nperson_json['fmt_industry'].append(parsed_json['industry'].__str__())
+TypeError: string indices must be integers, not str
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 277, in mergedUpdate
+    print "nperson_json : "+nperson_json['firstName']
+TypeError: string indices must be integers, not str
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 292, in mergedUpdate
+    nperson_json['fmt_industry'].append(parsed_json['industry'].__str__())
+TypeError: string indices must be integers, not str
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 278, in mergedUpdate
+    print "nperson_json : "+nperson_json2
+TypeError: cannot concatenate 'str' and 'dict' objects
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 293, in mergedUpdate
+    nperson_json['fmt_industry'].append(parsed_json['industry'].__str__())
+TypeError: string indices must be integers, not str
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 292, in mergedUpdate
+    nperson_json['fmt_industry'].append(parsed_json['industry'].__str__())
+TypeError: string indices must be integers, not str
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 292, in mergedUpdate
+    nperson_json['fmt_industry'].append(parsed_json['industry'].__str__())
+TypeError: string indices must be integers, not str
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 280, in mergedUpdate
+    print "nperson_json : "+nperson_json
+TypeError: cannot concatenate 'str' and 'dict' objects
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 280, in mergedUpdate
+    print "nperson_json : "+nperson_json
+TypeError: cannot concatenate 'str' and 'dict' objects
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 295, in mergedUpdate
+    nperson_json['fmt_industry'].append(parsed_json['industry'].__str__())
+AttributeError: 'unicode' object has no attribute 'append'
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 280, in mergedUpdate
+    nperson_json2 = json.loads(nperson_json)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 296, in mergedUpdate
+    nperson_json['fmt_industry'].append(parsed_json['industry'].__str__())
+AttributeError: 'unicode' object has no attribute 'append'
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 296, in mergedUpdate
+    nperson_json2['fmt_industry'].append(parsed_json['industry'].__str__())
+TypeError: string indices must be integers, not str
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 277, in mergedUpdate
+    nperson_json = json.loads(nperson)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 294, in mergedUpdate
+    nperson_json['fmt_industry'].append(parsed_json['industry'].__str__())
+AttributeError: 'unicode' object has no attribute 'append'
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 280, in mergedUpdate
+    print "nperson_json : "+nperson_json
+TypeError: cannot concatenate 'str' and 'dict' objects
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 295, in mergedUpdate
+    nperson_json['fmt_industry'].append(parsed_json['industry'].__str__())
+AttributeError: 'unicode' object has no attribute 'append'
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 297, in mergedUpdate
+    nperson_json['fmt_industry'].append(parsed_json['industry'].__str__())
+AttributeError: 'unicode' object has no attribute 'append'
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 295, in mergedUpdate
+    nperson['fmt_industry'].append(parsed_json['industry'].__str__())
+AttributeError: 'str' object has no attribute 'append'
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 295, in mergedUpdate
+    nperson_json['fmt_industry'].append(parsed_json['industry'].__str__())
+AttributeError: 'unicode' object has no attribute 'append'
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 297, in mergedUpdate
+    nperson['fmt_headline'].append(parsed_json['headline'].__str__())
+KeyError: 'fmt_headline'
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 295, in mergedUpdate
+    print "final_list > industry :"+parsed_bson['industry'].__str__()
+TypeError: string indices must be integers, not str
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 295, in mergedUpdate
+    print "final_list > industry :"+parsed_json['industry']
+TypeError: cannot concatenate 'str' and 'list' objects
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 288, in mergedUpdate
+    print "final_list : "+type(final_list)
+TypeError: cannot concatenate 'str' and 'type' objects
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 290, in mergedUpdate
+    print "filter_list : "+type(filter_list).__str__()
+TypeError: descriptor '__str__' of 'object' object needs an argument
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 295, in mergedUpdate
+    print "final_list > industry :"+parsed_json['industry']
+TypeError: cannot concatenate 'str' and 'list' objects
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 264, in mergedUpdate
+    person_filter = DBRecord.objects(record__results__person__personId=final_parsed_list[0].__str__())
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 264, in mergedUpdate
+    person_filter = DBRecord.objects(record__results__person__personId=final_parsed_list[0].__str__())
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 264, in mergedUpdate
+    person_filter = DBRecord.objects(record__results__person__personId=final_parsed_list[0].__str__())
+IndexError: list index out of range
+WARNING:py.warnings:/home/bikram/.local/lib/python2.7/site-packages/django/core/management/base.py:399: RemovedInDjango110Warning: The 'migrate --list' command is deprecated. Use 'showmigrations' instead.
+  output = self.handle(*args, **options)
+

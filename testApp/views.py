@@ -150,7 +150,7 @@ def formSearch(request):
                    'msg':msg}
         return render(request, 'testApp/message.html', context)
     
-    
+
 def searchUnderGrad(request): ## Added By, Bikramjit edu.bmandal@gmail.com
     print "Inside grad search ... "
     myclient = MongoClient()
@@ -182,14 +182,15 @@ def searchUnderGrad(request): ## Added By, Bikramjit edu.bmandal@gmail.com
                 "$group": {   "_id": "$record.results.person.personId"  }
             }
         ])
-    entries_list = list(entries)
+    entries_list = [] # list, will store all details.
+    ent_list = list(entries)
 
 
     """
     Helps to convert the Cursor function output to
     JSON readable output using BSON.JSON_UTIL library.
     """
-    parsed_bson = dumps(entries_list[0]) 
+    parsed_bson = dumps(ent_list[0]) 
 
     '''
     Helps to read the json from the output of the 
@@ -199,25 +200,123 @@ def searchUnderGrad(request): ## Added By, Bikramjit edu.bmandal@gmail.com
     that can be presented in the output.
     '''
     parsed_json = json.loads(parsed_bson.__str__())
-    print "\n\n IDs : "+parsed_json['_id'][0].__str__()+", "+parsed_json['_id'][1].__str__()
-    persons_filter = DBRecord.objects(record__results__person__personId=parsed_json['_id'][0].__str__())
-    print "Persons are ... \n"
-    preffered_list = []
-    for p in persons_filter:
-        print " "+p.record.results.__str__()
-        print " The IDs are :\n"
-        for p1 in p.record.results:
-            print p1.person.personId.__str__()
-            +", "+p1.person.firstName.__str__()
-            +", "+p1.person.lastName.__str__()
-            +", "+p1.person.fmt_industry.__str__()
+    print "\n Length of parsed_bson : "+len(parsed_json).__str__()
+    #print "\n\n IDs : "+parsed_json['_id'][0].__str__()+", "+parsed_json['_id'][1].__str__()
+
+    print "\n PARSED_JSON : "+parsed_json.__str__()+" \n"
+    for e in parsed_json['_id']: # for each of the entries in parsed_json we send add the values to list.
+
+        #print "value : "+e.__str__()
+    
+        persons_filter = DBRecord.objects(record__results__person__personId=e.__str__())
+        #print "Persons are ... \n"
+        '''
+        Also complete objects can be sent.
+        '''
+        for p in persons_filter:
+            #print " "+p.record.results.__str__()
+            #print " The IDs are :\n"
+            for p1 in p.record.results:
+                print p1.person.personId.__str__()+", "+p1.person.firstName.__str__()+", "+p1.person.lastName.__str__()+", "+p1.person.fmt_industry.__str__()
+                nperson = { 'personId':p1.person.personId, 'personPhoto':p1.person.profilePhoto.profilePhoto.media_picture_link_100,'firstName':p1.person.firstName, 'lastName':p1.person.lastName, 'fmt_industry':p1.person.fmt_industry, 'fmt_location':p1.person.fmt_location, 'workinfo':p1.person.fmt_headline }
+            entries_list.append(nperson) # appending the details of one person to the list.    
     
     # each JSON can be 
+    print "Entries _ list ::"+entries_list.__str__()
 
-    ctx = { 'entries':entries_list }
+    ctx = { 'fname':firstName, 'lname':lastName, 'personemail':personemail, 'entries':entries_list, 'recordInstances':persons_filter }
     context=ctx
+    print "\n Entries appended to list and rendered to searchGrad.html "
     return render(request,'testApp/searchGrad.html',context)
     
+def mergedUpdate(request):
+    context = RequestContext(request)
+    print "<<<<< INSIDE mergeUpdate >>>>> \n"
+    myclient = MongoClient()
+    db = myclient.test
+    print "\n\n\n Inside mergedUpdate \n\n"
+    entries_list = []
+    return_list = []
+    #return_list = []
+    if request.method=='GET':
+        
+        entries_list = request.GET['selectedIDs[]']
+        
+    if entries_list:
+        # fill the return list with merged results.
+        # also, merge the data in the database.
+        print "\n\n\n\nmergedUpdate returns \n"
+        print "list we got : "
+
+        '''
+        We use json.loads(string) method to convert the GET request list 
+        to a parseable JSON. Now, we can iterate over them using for loop.
+        (bikramjit, edu.bmandal@gmail.com)
+        '''
+        parsed_list = json.loads(entries_list.__str__())
+        #print "parsed_list : "+parsed_list.__str__()
+        new_parsed_list = json.dumps(parsed_list)
+        #print "new parsed_list :"+json.loads(new_parsed_list).__str__()
+        final_parsed_list = json.loads(new_parsed_list)
+        #print "final_parsed_list : "+final_parsed_list.__str__()
+        merge_list = []
+
+        person_filter = DBRecord.objects(record__results__person__personId=final_parsed_list[0].__str__())
+        nperson = { 'personId':final_parsed_list[0], 
+                    'personPhoto':person_filter[0].record.results[0].person.profilePhoto.profilePhoto.media_picture_link_100,
+                    'firstName':person_filter[0].record.results[0].person.firstName, 
+                    'lastName':person_filter[0].record.results[0].person.lastName, 
+                    'fmt_industry':[], 
+                    'fmt_location':[], 
+                    'workinfo':[] 
+                    }
+
+        print "Intial nperson JSOn : "+nperson.__str__()
+        
+        
+        nperson_bson = json.dumps(nperson)
+        print "nperson_bson : "+nperson_bson
+        nperson_json = json.loads(nperson_bson)
+        print "nperson_json : "+nperson_json.__str__()
+
+
+        for e in final_parsed_list: # printing to check if values received are right.
+            print e.__str__()
+            
+            final_list = db.d_b_record.aggregate([{"$unwind": "$record.results"},{"$group": { '_id': "$record.results.person.personId", 'headline':{"$addToSet":"$record.results.person.fmt_headline"}, 'location':{"$addToSet":"$record.results.person.fmt_location"}, 'industry':{"$addToSet":"$record.results.person.fmt_industry"}}},{'$match': {'_id': {'$eq':int(e)}}}])
+            
+            print "final_list : "+str(final_list)
+            filter_list = list(final_list)
+            print "filter_list : "+str(filter_list)
+            parsed_bson = dumps(filter_list[0])
+            print "parsed_bson : "+str(parsed_bson)
+            parsed_json = json.loads(parsed_bson, encoding='ascii')
+            #print "Merge Update JSON : \n"+parsed_json.__str__()
+            print "final_list > industry :"+parsed_json['industry'][0]
+            for i in parsed_json['industry']:
+                print ";;"+i
+            nperson['fmt_industry'].append(parsed_json['industry'])
+            nperson['fmt_location'].append(parsed_json['location'])
+            nperson['workinfo'].append(parsed_json['headline'])
+
+        print "Final nperson JSON : "+nperson.__str__()
+
+            
+            
+        return_list.append(nperson) #this list will be returned to website.    
+        print "RETURN LIST : "+str(return_list)
+        ctx = { 'entries':return_list }
+        context=ctx
+        print "\n Entries appended to list and rendered to searchGrad.html "
+        
+    else:
+        print "\n\n\n\nmergedupdate not working \n"
+
+        #render page with new results.
+    #return HttpResponse(context)
+    return render(request,'testApp/searchGrad.html',context)
+
+
 
 def remove(request):
     email_id = request.POST.get('email', 'EMPTY')
