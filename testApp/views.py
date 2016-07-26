@@ -237,10 +237,16 @@ def mergedUpdate(request):
     print "\n\n\n Inside mergedUpdate \n\n"
     entries_list = []
     return_list = []
+    res = []
     #return_list = []
     if request.method=='GET':
         
         entries_list = request.GET['selectedIDs[]']
+        print "first entry"
+        res = entries_list.strip('"[]').split('","')
+        res = [int(i) for i in res]
+        print res
+
         
     if entries_list:
         # fill the return list with merged results.
@@ -253,13 +259,18 @@ def mergedUpdate(request):
         to a parseable JSON. Now, we can iterate over them using for loop.
         (bikramjit, edu.bmandal@gmail.com)
         '''
+        print "Entries List below : "
+        entry_int_list = entries_list
+        #entry_int_list = [int(i) for i in entry_int_list]
+        print entry_int_list
         parsed_list = json.loads(entries_list.__str__())
         #print "parsed_list : "+parsed_list.__str__()
         new_parsed_list = json.dumps(parsed_list)
         #print "new parsed_list :"+json.loads(new_parsed_list).__str__()
         final_parsed_list = json.loads(new_parsed_list)
-        #print "final_parsed_list : "+final_parsed_list.__str__()
+        print "final_parsed_list : "+final_parsed_list.__str__()
         merge_list = []
+
 
         person_filter = DBRecord.objects(record__results__person__personId=final_parsed_list[0].__str__())
         nperson = { 'personId':final_parsed_list[0], 
@@ -272,37 +283,68 @@ def mergedUpdate(request):
                     }
 
         print "Intial nperson JSOn : "+nperson.__str__()
-        
-        
-        nperson_bson = json.dumps(nperson)
-        print "nperson_bson : "+nperson_bson
-        nperson_json = json.loads(nperson_bson)
-        print "nperson_json : "+nperson_json.__str__()
+    
+        # Using mongoengine to get the objects.
+        findlist = DBRecord.objects(__raw__={'record.results.person.personId':{'$in':res}})
+        print "PyMongo Print : "
+        # Printing from the mongoengine objects.
+        industry = ""
+        headlines = ""
+        locations = ""
+        for i in findlist:
+            for j in i.record.results:
+                ind = j.person.fmt_industry
+                headl = j.person.fmt_headline
+                loc = j.person.fmt_location
+                if any(str(ind) in s for s in industry.split(',')):
+                    print ind+" there"
+                else:
+                    industry+=str(j.person.fmt_industry)+","
 
+                print(j.person.personId)
 
+                if any(str(headl) in s for s in headlines.split('|')):
+                    print headl+"(present)"
+                else:
+                    headlines+=str(j.person.fmt_headline)+"|"
+
+                if any(str(loc) in s for s in locations.split(',')):
+                    print loc+"(present)"
+                else:
+                    locations+= str(j.person.fmt_location)+","
+                print(loc)
+        print "FMT_INDUSTRY : "+industry
+        print "FMT_HEADLINE : "+headlines
+        print "FMT_LOCATION : "+locations
+
+        """
+        Update in the database, combining the embedded documents.
+        """
+        
+        '''
         for e in final_parsed_list: # printing to check if values received are right.
             print e.__str__()
-            
             final_list = db.d_b_record.aggregate([{"$unwind": "$record.results"},{"$group": { '_id': "$record.results.person.personId", 'headline':{"$addToSet":"$record.results.person.fmt_headline"}, 'location':{"$addToSet":"$record.results.person.fmt_location"}, 'industry':{"$addToSet":"$record.results.person.fmt_industry"}}},{'$match': {'_id': {'$eq':int(e)}}}])
             
-            print "final_list : "+str(final_list)
+            #print "final_list : "+str(final_list)
             filter_list = list(final_list)
-            print "filter_list : "+str(filter_list)
+            #print "filter_list : "+str(filter_list)
             parsed_bson = dumps(filter_list[0])
             print "parsed_bson : "+str(parsed_bson)
             parsed_json = json.loads(parsed_bson, encoding='ascii')
             #print "Merge Update JSON : \n"+parsed_json.__str__()
-            print "final_list > industry :"+parsed_json['industry'][0]
+            #print "final_list > industry :"+parsed_json['industry'][0]
             for i in parsed_json['industry']:
                 print ";;"+i
             nperson['fmt_industry'].append(parsed_json['industry'])
             nperson['fmt_location'].append(parsed_json['location'])
             nperson['workinfo'].append(parsed_json['headline'])
-
+        '''
+        nperson['fmt_industry']=industry
+        nperson['workinfo']=headlines
+        nperson['fmt_location']=locations
         print "Final nperson JSON : "+nperson.__str__()
 
-            
-            
         return_list.append(nperson) #this list will be returned to website.    
         print "RETURN LIST : "+str(return_list)
         ctx = { 'entries':return_list }
@@ -315,8 +357,6 @@ def mergedUpdate(request):
         #render page with new results.
     #return HttpResponse(context)
     return render(request,'testApp/searchGrad.html',context)
-
-
 
 def remove(request):
     email_id = request.POST.get('email', 'EMPTY')

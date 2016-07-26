@@ -188,6 +188,43 @@ class Authenticate(object):
             x,y = e.args
             return x
      
+    def performFullSearch(self, searchParams, dbHost, dbPort, dbName):
+        """ Performs search and Saves the information gathered into DB. This method almost performs everything this class is created for """
+        print "inside Perform Search ... "
+        try:
+            #self.login = login
+            #self.password = password
+            # Simulate browser with cookies enabled
+            self.cj = cookielib.MozillaCookieJar(cookie_filename)
+            if os.access(cookie_filename, os.F_OK):
+                self.cj.load()
+            self.opener = urllib2.build_opener(
+                urllib2.HTTPRedirectHandler(),
+                urllib2.HTTPHandler(debuglevel=0),
+                urllib2.HTTPSHandler(debuglevel=0),
+                urllib2.HTTPCookieProcessor(self.cj)
+            )
+            self.opener.addheaders = [
+                ('User-agent', ('Mozilla/4.0 (compatible; MSIE 6.0; '
+                               'Windows NT 5.2; .NET CLR 1.1.4322)'))
+            ]
+            self.checkLogin(url1)
+            fName = searchParams['firstName']
+            mailId = searchParams['email']
+            if fName == 'EMPTY' or mailId == 'EMPTY':
+                raise Exception('Info: Search has to be performed from Search page only, Please try again', 'Info')
+            fSrchURL = self.formSearchURL(searchParams)
+            linkedJSON = self.loadSearch(fSrchURL, fName)
+            recordJSON = self.formTrimmedJSON(linkedJSON)
+            dbRecord = self.formDBRecord(recordJSON, mailId)
+            client = self.connect2DB(dbHost, dbPort)
+            print "Client details : "+client.__str__()
+            self.store2DB(dbRecord, mailId, client)
+            return 'Success'
+        except Exception as e:
+            x,y = e.args
+            return x
+
     def filterResult(self, filterParams, dbHost, dbPort, dbName):
         """Performs a filter based on the filter parameters """
         print "Inside Filter Result view ..."

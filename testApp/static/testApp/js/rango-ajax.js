@@ -18,21 +18,13 @@ $(document).ready(function(){
 		// Call view of django with the list.
 		//$.get('/testApp/merge_update/', { selectedIDs: selected}, function(data){
 
+		
 		$.get('/testApp/merge_update/',
 			{'selectedIDs[]': select_params}, function(data){
+				//var entries = JSON.parse(data)
 				$('#selections_list').html(data);	
 			});
-		/*
-		$.ajax({
-			type: "GET",
-			url: '/testApp/merge_update/',
-			data: {'selectedIDs[]': select_params},
-			contentType: "application/json; charset=utf-8",
-			dataType: "json",
-			success
-		});
-		*/
-	});
+			});
 
 });
 

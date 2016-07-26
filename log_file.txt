@@ -2043,3 +2043,104 @@ IndexError: list index out of range
 WARNING:py.warnings:/home/bikram/.local/lib/python2.7/site-packages/django/core/management/base.py:399: RemovedInDjango110Warning: The 'migrate --list' command is deprecated. Use 'showmigrations' instead.
   output = self.handle(*args, **options)
 
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 264, in mergedUpdate
+    person_filter = DBRecord.objects(record__results__person__personId=final_parsed_list[0].__str__())
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 264, in mergedUpdate
+    person_filter = DBRecord.objects(record__results__person__personId=final_parsed_list[0].__str__())
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 193, in searchUnderGrad
+    parsed_bson = dumps(ent_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 193, in searchUnderGrad
+    parsed_bson = dumps(ent_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 264, in mergedUpdate
+    person_filter = DBRecord.objects(record__results__person__personId=final_parsed_list[0].__str__())
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 257, in mergedUpdate
+    entry_int_list = [int(i) for i in entries_list]
+ValueError: invalid literal for int() with base 10: '['
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 258, in mergedUpdate
+    entry_int_list = map(int,entry_int_list)
+ValueError: invalid literal for int() with base 10: '['
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 258, in mergedUpdate
+    entry_int_list = [int(i) for i in entry_int_list]
+ValueError: invalid literal for int() with base 10: '['
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 260, in mergedUpdate
+    entry_int_list = [int(i) for i in entry_int_list]
+ValueError: invalid literal for int() with base 10: '['
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 262, in mergedUpdate
+    entry_int_list = [int(i) for i in entry_int_list]
+ValueError: invalid literal for int() with base 10: '['
+ERROR:django.request:Internal Server Error: /testApp/merge_update/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 262, in mergedUpdate
+    entry_int_list = [int(i) for i in entry_int_list]
+ValueError: invalid literal for int() with base 10: '['
