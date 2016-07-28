@@ -1,0 +1,55 @@
+<!-- all search results -->
+<!DOCTYPE html>
+<body>
+	{%	load staticfiles %}
+	{% csrf_token %}
+
+	<div class="l-content"> 
+    <div id="selections_list" class="pricing-tables pure-g">
+
+	<table class="one tablesorter" id="table_one">
+	<h3>Entries </h3>
+	<thead>
+        <tr>
+        	<th>ID</th>
+		    <th>Image</th>
+            <th>Name</th>
+			<!--<th>Title</th>
+            <th>LinkedIn</th>
+			<th>Connections</th>-->
+            <th>Industry</th>
+            <th>Location</th>
+            <th>Work Info</th>
+            <th>Select</th>
+        </tr>
+    </thead>
+	<tbody>
+	
+	{% for e in entries %}
+	
+	<tr>
+		<td>{{e.personId}}</td>
+		<td><img src={{e.personPhoto}}></td>
+		<td>{{e.firstName}} {{e.lastName}}</td>
+		<td>
+		{{e.fmt_industry}}
+		</td>
+		<td>{{e.fmt_location}}</td>
+		<td>{{e.workinfo}}</td>
+		<td><input type="checkbox" class="check_class" name="{{e.personId}}" /></td>
+
+	<!-- ID should be unique -->
+	</tr>
+	
+	{% endfor %}
+	
+	<br>
+	
+	</tbody>
+	</table>
+</body>
+	<script src="{% static "/static/testApp/js/jquery-3.0.0.min.js" %}"></script>
+
+	<script src="{% static "/static/testApp/js/rango-ajax.js" %}"></script>
+	<script src="{% static "/static/testApp/js/json2.js" %}"></script>
+</html>

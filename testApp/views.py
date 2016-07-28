@@ -184,13 +184,16 @@ def searchUnderGrad(request): ## Added By, Bikramjit edu.bmandal@gmail.com
         ])
     entries_list = [] # list, will store all details.
     ent_list = list(entries)
-
+    print "ENTRIES "
+    print ent_list
 
     """
     Helps to convert the Cursor function output to
     JSON readable output using BSON.JSON_UTIL library.
     """
     parsed_bson = dumps(ent_list[0]) 
+
+    print parsed_bson
 
     '''
     Helps to read the json from the output of the 
@@ -200,33 +203,60 @@ def searchUnderGrad(request): ## Added By, Bikramjit edu.bmandal@gmail.com
     that can be presented in the output.
     '''
     parsed_json = json.loads(parsed_bson.__str__())
-    print "\n Length of parsed_bson : "+len(parsed_json).__str__()
+#    print "\n Length of parsed_bson : "+len(parsed_json).__str__()
     #print "\n\n IDs : "+parsed_json['_id'][0].__str__()+", "+parsed_json['_id'][1].__str__()
 
-    print "\n PARSED_JSON : "+parsed_json.__str__()+" \n"
-    for e in parsed_json['_id']: # for each of the entries in parsed_json we send add the values to list.
+#    print "\n PARSED_JSON : "+parsed_json.__str__()+" \n"
+    print "IDs that match : "
+    idlist = []
+    for e in parsed_json['_id']:
+        print e
+        idlist.append(e)
+    print "ID List :"
+    idlist1 = [int(s) for s in idlist]
+    print idlist1
+    '''
+        for e in parsed_json['_id']: # for each of the entries in parsed_json we send add the values to list.
 
-        #print "value : "+e.__str__()
-    
-        persons_filter = DBRecord.objects(record__results__person__personId=e.__str__())
-        #print "Persons are ... \n"
-        '''
-        Also complete objects can be sent.
-        '''
-        for p in persons_filter:
-            #print " "+p.record.results.__str__()
-            #print " The IDs are :\n"
-            for p1 in p.record.results:
-                print p1.person.personId.__str__()+", "+p1.person.firstName.__str__()+", "+p1.person.lastName.__str__()+", "+p1.person.fmt_industry.__str__()
-                nperson = { 'personId':p1.person.personId, 'personPhoto':p1.person.profilePhoto.profilePhoto.media_picture_link_100,'firstName':p1.person.firstName, 'lastName':p1.person.lastName, 'fmt_industry':p1.person.fmt_industry, 'fmt_location':p1.person.fmt_location, 'workinfo':p1.person.fmt_headline }
-            entries_list.append(nperson) # appending the details of one person to the list.    
-    
+            #print "value : "+e.__str__()
+
+            persons_filter = DBRecord.objects(record__results__person__personId=e.__str__())
+            #print "Persons are ... "
+            
+            for p in persons_filter:
+                #print " "+p.record.results.__str__()
+                #print " The IDs are :"
+                for p1 in p.record.results:
+                    print p1.person.personId.__str__()+", "+p1.person.firstName.__str__()+", "+p1.person.lastName.__str__()+", "+p1.person.fmt_industry.__str__()
+                    nperson = { 'personId':p1.person.personId, 'personPhoto':p1.person.profilePhoto.profilePhoto.media_picture_link_100,'firstName':p1.person.firstName, 'lastName':p1.person.lastName, 'fmt_industry':p1.person.fmt_industry, 'fmt_location':p1.person.fmt_location, 'workinfo':p1.person.fmt_headline }
+                entries_list.append(nperson) # appending the details of one person to the list.    
+     '''   
+    findlist = DBRecord.objects(__raw__={'record.results.person.personId':{'$in':idlist1}})
+    search_list = []
+    for p in findlist:
+        for j in p.record.results:
+            print j.person.firstName
+            nperson = {
+                'personId':j.person.personId,
+                'personPhoto':j.person.profilePhoto.profilePhoto.media_picture_link_200,
+                'firstName':j.person.firstName,
+                'lastName':j.person.lastName,
+                'fmt_industry':j.person.fmt_industry,
+                'fmt_location':j.person.fmt_location,
+                'workinfo':j.person.fmt_headline
+            }
+            search_list.append(nperson)
+
+
+
     # each JSON can be 
-    print "Entries _ list ::"+entries_list.__str__()
+    print "Entries _ list ::"
+    print search_list
 
-    ctx = { 'fname':firstName, 'lname':lastName, 'personemail':personemail, 'entries':entries_list, 'recordInstances':persons_filter }
+    ctx = { 'entries':search_list }
     context=ctx
     print "\n Entries appended to list and rendered to searchGrad.html "
+    #return render(request, 'testApp/allresults.html', context)
     return render(request,'testApp/searchGrad.html',context)
     
 def mergedUpdate(request):
@@ -320,7 +350,7 @@ def mergedUpdate(request):
         """
         Update in the database, combining the embedded documents.
         """
-        
+
         '''
         for e in final_parsed_list: # printing to check if values received are right.
             print e.__str__()
@@ -356,7 +386,8 @@ def mergedUpdate(request):
 
         #render page with new results.
     #return HttpResponse(context)
-    return render(request,'testApp/searchGrad.html',context)
+    return render(request,'testApp/allresults.html',context)
+    #return render(request,'testApp/searchGrad.html',context)
 
 def remove(request):
     email_id = request.POST.get('email', 'EMPTY')
@@ -440,7 +471,32 @@ def search(request):
     return render(request, 'testApp/search.html')
 
 def searchgrad(request):
-    return render(request, 'testApp/grad-search.html')
+    findlist=DBRecord.objects.all()
+    search_list = []
+    for p in findlist:
+        for j in p.record.results:
+            print j.person.firstName
+            nperson = {
+                'personId':j.person.personId,
+                'personPhoto':j.person.profilePhoto.profilePhoto.media_picture_link_200,
+                'firstName':j.person.firstName,
+                'lastName':j.person.lastName,
+                'fmt_industry':j.person.fmt_industry,
+                'fmt_location':j.person.fmt_location,
+                'workinfo':j.person.fmt_headline
+            }
+            search_list.append(nperson)
+
+
+
+    # each JSON can be 
+    print "Entries _ list ::"
+    print search_list
+
+    ctx = { 'entries':search_list }
+    context=ctx
+    return render(request, 'testApp/searchGrad.html', context)
+    #return render(request, 'testApp/grad-search.html', context)
 
 def upload(request):
     return render(request, 'testApp/upload.html')

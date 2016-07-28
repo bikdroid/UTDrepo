@@ -19,59 +19,19 @@
 	<div class="pure-menu pure-menu-horizontal">
 	    <a href="#" class="pure-menu-heading">UTD</a>
 	    <ul class="pure-menu-list">
-	        <li class="pure-menu-item"><a href="/testApp/search/" class="pure-menu-link">Search</a></li>
+	        <li class="pure-menu-item"><a href="/testApp/searchgrad/" class="pure-menu-link">Search</a></li>
 	        <li class="pure-menu-item pure-menu-selected"><a href="/testApp/results/" class="pure-menu-link">Results</a></li>
 	        <li class="pure-menu-item"><a href="/testApp/delete/" class="pure-menu-link">Delete</a></li>
 			<li class="pure-menu-item"><a href="/testApp/upload/" class="pure-menu-link">Batch File</a></li>
 	    </ul>
 	</div>
 	
-	<h2> Results for the filters </h2>
-	{% csrf_token %}
+	{% include "testApp/searchbox.html" %}
+	
 
-	<div class="l-content"> 
-    <div id="selections_list" class="pricing-tables pure-g">
-
-	<table class="one tablesorter" id="table_one">
-	<h3>Entries </h3>
-	<thead>
-        <tr>
-        	<th>ID</th>
-		    <th>Image</th>
-            <th>Name</th>
-			<!--<th>Title</th>
-            <th>LinkedIn</th>
-			<th>Connections</th>-->
-            <th>Industry</th>
-            <th>Location</th>
-            <th>Work Info</th>
-            <th>Select</th>
-        </tr>
-    </thead>
-	<tbody>
+	<!-- Table to print the search results -->
+	{% include "testApp/allresults.html" %}
 	
-	{% for e in entries %}
-	
-	<tr>
-		<td>{{e.personId}}</td>
-		<td><img src={{e.personPhoto}}></td>
-		<td>{{e.firstName}} {{e.lastName}}</td>
-		<td>
-		{{e.fmt_industry}}
-		</td>
-		<td>{{e.fmt_location}}</td>
-		<td>{{e.workinfo}}</td>
-		<td><input type="checkbox" class="check_class" name="{{e.personId}}" /></td>
-
-	<!-- ID should be unique -->
-	</tr>
-	
-	{% endfor %}
-	
-	<br>
-	
-	</tbody>
-	</table>
 	</div>
 		<button type="button" id="submit_selections">Merge</button>
 	</div>

@@ -1,0 +1,22 @@
+<!-- template : searchbox -->
+<!DOCTYPE html>
+<body>
+<form class="pure-form pure-form-aligned" style="width:100%;" action="{% url 'testApp:searchgradaction' %}" method="post">
+		{% csrf_token %}
+		<fieldset>
+			<div class="pure-control-group">
+				<label for="fname">First Name</label>
+				<input name="fname" type="text" style="text-align:left;" placeholder="First Name" >
+				<label for="lname">Last Name</label>
+		        <input name="lname" type="text" style="text-align:right;" placeholder="Last Name">
+		        <label for="email">Email</label>
+            <input name="email" type="text" style="text-align:left;" placeholder="Email" required>
+            
+    		</div>
+	        <div class="pure-controls">
+	            <button type="submit" class="pure-button pure-button-primary">Submit</button>
+	        </div> 
+		</fieldset>
+	</form>
+</body>
+</html>
