@@ -6,7 +6,7 @@ font: 15px/22.5px "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
-    line-height: 22.5px;
+    line-height: 20px;
     font-size-adjust: none;
     font-stretch: normal;
     -x-system-font: none;
@@ -74,13 +74,15 @@ p {
     width: 100%;
     margin-bottom: 3em;
     display: table;
+    
 }
 
     .banner-head {
         display: table-cell;
+
         vertical-align: middle;
         margin-bottom: 0;
-        font-size: 2em;
+        font-size: 6em;
         color: white;
         font-weight: 500;
         text-shadow: 0 1px 1px black;
@@ -206,9 +208,12 @@ p {
 }
 
 .footer {
-    background: #111;
+    background: #333;
     color: #888;
     text-align: center;
+    bottom:0;
+    position:fixed;
+    width:100%;
 }
     .footer a {
         color: #ddd;
