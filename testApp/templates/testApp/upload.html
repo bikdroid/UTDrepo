@@ -12,8 +12,9 @@
 <div class="pure-menu pure-menu-horizontal">
     <a href="#" class="pure-menu-heading">UTD</a>
     <ul class="pure-menu-list">
-        <li class="pure-menu-item pure-menu-selected"><a href=/testApp/search/"" class="pure-menu-link">Search</a></li>
-        <li class="pure-menu-item"><a href="/testApp/results/" class="pure-menu-link">Results</a></li>
+        <li class="pure-menu-item pure-menu-selected"><a href="/testApp/search" class="pure-menu-link">SearchData</a></li>
+        <li class="pure-menu-item"><a href="/testApp/searchgrad/" class="pure-menu-link">Query</a></li>
+        <li class="pure-menu-item"><a href="/testApp/allresults/" class="pure-menu-link">Browse</a></li>
         <li class="pure-menu-item"><a href="/testApp/delete/" class="pure-menu-link">Delete</a></li>
 		<li class="pure-menu-item"><a href="/testApp/upload/" class="pure-menu-link">Batch File</a></li>
     </ul>
@@ -31,7 +32,7 @@
 <form class="pure-form pure-form-aligned" method="post" enctype="multipart/form-data" action="{% url 'testApp:batchSearch' %}" style="margin-left:25%; margin-right:25%; width:100%;">
 {% csrf_token %}
     <fieldset>
-        <div class="pure-control-group">
+        <div class="">
             <input name="linkedFile" type="file" required>
         </div>
         <div class="pure-controls" style="margin:1.5em 0 0 -5em;">
@@ -43,10 +44,10 @@
                         <p style = "letter-spacing:0em; text-align:center">
                             Please note to use below format for the file. 
 							<br/>Any deviations, program will ignore that line 
-							<br/>No Headers required
-							<br/>File Format : .csv
+							<br/>Headers required (sequence, cas sensitive) - Full Name, Email, school, Company 
+							<br/>File Format : .xls
 							
-							<br/>FirstName,LastName,Email,School,Company,Keywords,Title,Country Code(2 Char),Postal Code,WithIn
+							
                         </p>
                     </div>
  </div>

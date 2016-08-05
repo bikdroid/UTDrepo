@@ -2254,3 +2254,2855 @@ Traceback (most recent call last):
   File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 572, in invalid_block_tag
     "or load this tag?" % (token.lineno, command)
 TemplateSyntaxError: Invalid block tag on line 50: 'static'. Did you forget to register or load this tag?
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 246, in searchUnderGrad
+    soup = BeautifulSoup(html)
+NameError: global name 'BeautifulSoup' is not defined
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 249, in searchUnderGrad
+    edu_part = soup.find_all("div",re.compile("^education"))
+NameError: global name 're' is not defined
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 253, in searchUnderGrad
+    further_part = edu_part[0].find_all("a")
+IndexError: list index out of range
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 254, in searchUnderGrad
+    further_part = edu_part[0].find_all("a")
+IndexError: list index out of range
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 255, in searchUnderGrad
+    further_part = edu_part[0].find_all("a")
+IndexError: list index out of range
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 256, in searchUnderGrad
+    further_part = edu_part[0].find_all("a")
+IndexError: list index out of range
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/None
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 258, in searchUnderGrad
+    further_part = edu_part[0].find_all("a")
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/None
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 258, in searchUnderGrad
+    further_part = edu_part[0].find_all("a")
+IndexError: list index out of range
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/None
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 260, in searchUnderGrad
+    further_part = edu_part[0].find_all("a")
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/searchgrad/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 530, in searchgrad
+    further_part = edu_part[0].find_all("a")
+IndexError: list index out of range
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgrad/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 530, in searchgrad
+    further_part = edu_part[0].find_all("a")
+IndexError: list index out of range
+WARNING:django.request:Not Found: /searchgrad
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgrad/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 532, in searchgrad
+    further_part = edu_part[0].find_all("a")
+IndexError: list index out of range
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgrad/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 532, in searchgrad
+    further_part = edu_part[0].find_all("a")
+IndexError: list index out of range
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgrad/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 532, in searchgrad
+    further_part = edu_part[0].find_all("a")
+IndexError: list index out of range
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgrad/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 533, in searchgrad
+    further_part = edu_part[0].find_all("a")
+IndexError: list index out of range
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgrad/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 533, in searchgrad
+    further_part = edu_part[0].find_all("a")
+IndexError: list index out of range
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgrad/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 527, in searchgrad
+    soup = BeautifulSoup(html, html._formatter_parser())
+  File "/usr/local/lib/python2.7/dist-packages/bs4/__init__.py", line 149, in __init__
+    if features is None or len(features) == 0:
+TypeError: object of type 'formatteriterator' has no len()
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgrad/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 534, in searchgrad
+    further_part = edu_part[0].find_all("a")
+IndexError: list index out of range
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 260, in searchUnderGrad
+    further_part = edu_part[0].find_all("a")
+IndexError: list index out of range
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 270, in searchUnderGrad
+    print f.contents[0][0]
+  File "/usr/local/lib/python2.7/dist-packages/bs4/element.py", line 958, in __getitem__
+    return self.attrs[key]
+KeyError: 0
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 270, in searchUnderGrad
+    print f.contents[0][0]
+  File "/usr/local/lib/python2.7/dist-packages/bs4/element.py", line 958, in __getitem__
+    return self.attrs[key]
+KeyError: 0
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 270, in searchUnderGrad
+    print f.contents[0][1]
+  File "/usr/local/lib/python2.7/dist-packages/bs4/element.py", line 958, in __getitem__
+    return self.attrs[key]
+KeyError: 1
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 271, in searchUnderGrad
+    flist = f.contents[0].split()
+TypeError: 'NoneType' object is not callable
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 271, in searchUnderGrad
+    flist = f.contents[0].split('')
+TypeError: 'NoneType' object is not callable
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 273, in searchUnderGrad
+    print str(flist[0]).split('')
+ValueError: empty separator
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 271, in searchUnderGrad
+    print "content : "+f.contents[0]
+TypeError: cannot concatenate 'str' and 'Tag' objects
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 274, in searchUnderGrad
+    if any(str(searchtext) in str(f.contents[0])):
+TypeError: 'bool' object is not iterable
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 199, in searchUnderGrad
+    parsed_bson = dumps(ent_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 199, in searchUnderGrad
+    parsed_bson = dumps(ent_list[0])
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 199, in searchUnderGrad
+    parsed_bson = dumps(ent_list[0])
+IndexError: list index out of range
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgrad/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 552, in searchgrad
+    further_part = edu_part[0].find_all("a")
+IndexError: list index out of range
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchNow/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 141, in formSearch
+    linkObj.checkLogin(url1) #checks that the login is successful.
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/SignAndSearch.py", line 364, in checkLogin
+    self.confirmLogin(homeUrl)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/SignAndSearch.py", line 371, in confirmLogin
+    raise Exception('Error: There is some problem signing into LinkedIn, Please check Credentials', 'Error')
+Exception: ('Error: There is some problem signing into LinkedIn, Please check Credentials', 'Error')
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchNow/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 144, in formSearch
+    resp = Authenticate.performSearch(linkObj, params, 'localhost', 27017, 'test1')
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/SignAndSearch.py", line 199, in performSearch
+    x,y = e.args
+ValueError: need more than 1 value to unpack
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchNow/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 147, in formSearch
+    return results(request)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 490, in results
+    for r in res:
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 80, in _iter_results
+    self._populate_cache()
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 92, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1411, in next
+    _auto_dereference=self._auto_dereference, only_fields=self.only_fields)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 706, in _from_son
+    else field.to_python(value))
+  File "/usr/lib/python2.7/dist-packages/mongoengine/fields.py", line 546, in to_python
+    return self.document_type._from_son(value, _auto_dereference=self._auto_dereference)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 706, in _from_son
+    else field.to_python(value))
+  File "/usr/lib/python2.7/dist-packages/mongoengine/fields.py", line 546, in to_python
+    return self.document_type._from_son(value, _auto_dereference=self._auto_dereference)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 730, in _from_son
+    obj = cls(__auto_convert=False, _created=created, __only_fields=only_fields, **data)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/document.py", line 72, in __init__
+    super(EmbeddedDocument, self).__init__(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 80, in __init__
+    raise FieldDoesNotExist(msg)
+FieldDoesNotExist: The field 'university' does not exist on the document 'SearchParams'
+ERROR:django.request:Internal Server Error: /testApp/results/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 490, in results
+    for r in res:
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 80, in _iter_results
+    self._populate_cache()
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 92, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1411, in next
+    _auto_dereference=self._auto_dereference, only_fields=self.only_fields)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 706, in _from_son
+    else field.to_python(value))
+  File "/usr/lib/python2.7/dist-packages/mongoengine/fields.py", line 546, in to_python
+    return self.document_type._from_son(value, _auto_dereference=self._auto_dereference)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 706, in _from_son
+    else field.to_python(value))
+  File "/usr/lib/python2.7/dist-packages/mongoengine/fields.py", line 546, in to_python
+    return self.document_type._from_son(value, _auto_dereference=self._auto_dereference)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 730, in _from_son
+    obj = cls(__auto_convert=False, _created=created, __only_fields=only_fields, **data)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/document.py", line 72, in __init__
+    super(EmbeddedDocument, self).__init__(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 80, in __init__
+    raise FieldDoesNotExist(msg)
+FieldDoesNotExist: The field 'university' does not exist on the document 'SearchParams'
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgrad/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 541, in searchgrad
+    for p in findlist:
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 80, in _iter_results
+    self._populate_cache()
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 92, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1411, in next
+    _auto_dereference=self._auto_dereference, only_fields=self.only_fields)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 706, in _from_son
+    else field.to_python(value))
+  File "/usr/lib/python2.7/dist-packages/mongoengine/fields.py", line 546, in to_python
+    return self.document_type._from_son(value, _auto_dereference=self._auto_dereference)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 706, in _from_son
+    else field.to_python(value))
+  File "/usr/lib/python2.7/dist-packages/mongoengine/fields.py", line 546, in to_python
+    return self.document_type._from_son(value, _auto_dereference=self._auto_dereference)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 730, in _from_son
+    obj = cls(__auto_convert=False, _created=created, __only_fields=only_fields, **data)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/document.py", line 72, in __init__
+    super(EmbeddedDocument, self).__init__(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 80, in __init__
+    raise FieldDoesNotExist(msg)
+FieldDoesNotExist: The field 'university' does not exist on the document 'SearchParams'
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchNow/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 147, in formSearch
+    return results(request)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 490, in results
+    for r in res:
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 80, in _iter_results
+    self._populate_cache()
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 92, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1411, in next
+    _auto_dereference=self._auto_dereference, only_fields=self.only_fields)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 706, in _from_son
+    else field.to_python(value))
+  File "/usr/lib/python2.7/dist-packages/mongoengine/fields.py", line 546, in to_python
+    return self.document_type._from_son(value, _auto_dereference=self._auto_dereference)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 706, in _from_son
+    else field.to_python(value))
+  File "/usr/lib/python2.7/dist-packages/mongoengine/fields.py", line 546, in to_python
+    return self.document_type._from_son(value, _auto_dereference=self._auto_dereference)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 730, in _from_son
+    obj = cls(__auto_convert=False, _created=created, __only_fields=only_fields, **data)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/document.py", line 72, in __init__
+    super(EmbeddedDocument, self).__init__(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 80, in __init__
+    raise FieldDoesNotExist(msg)
+FieldDoesNotExist: The field 'university' does not exist on the document 'SearchParams'
+ERROR:django.request:Internal Server Error: /testApp/searchgrad/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 541, in searchgrad
+    for p in findlist:
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 80, in _iter_results
+    self._populate_cache()
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 92, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1411, in next
+    _auto_dereference=self._auto_dereference, only_fields=self.only_fields)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 706, in _from_son
+    else field.to_python(value))
+  File "/usr/lib/python2.7/dist-packages/mongoengine/fields.py", line 546, in to_python
+    return self.document_type._from_son(value, _auto_dereference=self._auto_dereference)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 706, in _from_son
+    else field.to_python(value))
+  File "/usr/lib/python2.7/dist-packages/mongoengine/fields.py", line 546, in to_python
+    return self.document_type._from_son(value, _auto_dereference=self._auto_dereference)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 730, in _from_son
+    obj = cls(__auto_convert=False, _created=created, __only_fields=only_fields, **data)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/document.py", line 72, in __init__
+    super(EmbeddedDocument, self).__init__(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 80, in __init__
+    raise FieldDoesNotExist(msg)
+FieldDoesNotExist: The field 'university' does not exist on the document 'SearchParams'
+ERROR:django.request:Internal Server Error: /testApp/searchNow/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 147, in formSearch
+    return results(request)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 490, in results
+    for r in res:
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 80, in _iter_results
+    self._populate_cache()
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 92, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1411, in next
+    _auto_dereference=self._auto_dereference, only_fields=self.only_fields)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 706, in _from_son
+    else field.to_python(value))
+  File "/usr/lib/python2.7/dist-packages/mongoengine/fields.py", line 546, in to_python
+    return self.document_type._from_son(value, _auto_dereference=self._auto_dereference)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 706, in _from_son
+    else field.to_python(value))
+  File "/usr/lib/python2.7/dist-packages/mongoengine/fields.py", line 546, in to_python
+    return self.document_type._from_son(value, _auto_dereference=self._auto_dereference)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 730, in _from_son
+    obj = cls(__auto_convert=False, _created=created, __only_fields=only_fields, **data)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/document.py", line 72, in __init__
+    super(EmbeddedDocument, self).__init__(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 80, in __init__
+    raise FieldDoesNotExist(msg)
+FieldDoesNotExist: The field 'university' does not exist on the document 'SearchParams'
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchNow/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 147, in formSearch
+    return results(request)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 490, in results
+    for r in res:
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 80, in _iter_results
+    self._populate_cache()
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 92, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1411, in next
+    _auto_dereference=self._auto_dereference, only_fields=self.only_fields)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 706, in _from_son
+    else field.to_python(value))
+  File "/usr/lib/python2.7/dist-packages/mongoengine/fields.py", line 546, in to_python
+    return self.document_type._from_son(value, _auto_dereference=self._auto_dereference)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 706, in _from_son
+    else field.to_python(value))
+  File "/usr/lib/python2.7/dist-packages/mongoengine/fields.py", line 546, in to_python
+    return self.document_type._from_son(value, _auto_dereference=self._auto_dereference)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 730, in _from_son
+    obj = cls(__auto_convert=False, _created=created, __only_fields=only_fields, **data)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/document.py", line 72, in __init__
+    super(EmbeddedDocument, self).__init__(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 80, in __init__
+    raise FieldDoesNotExist(msg)
+FieldDoesNotExist: The field 'university' does not exist on the document 'SearchParams'
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchNow/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 147, in formSearch
+    return results(request)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 490, in results
+    for r in res:
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 80, in _iter_results
+    self._populate_cache()
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 92, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1411, in next
+    _auto_dereference=self._auto_dereference, only_fields=self.only_fields)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 706, in _from_son
+    else field.to_python(value))
+  File "/usr/lib/python2.7/dist-packages/mongoengine/fields.py", line 546, in to_python
+    return self.document_type._from_son(value, _auto_dereference=self._auto_dereference)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 706, in _from_son
+    else field.to_python(value))
+  File "/usr/lib/python2.7/dist-packages/mongoengine/fields.py", line 546, in to_python
+    return self.document_type._from_son(value, _auto_dereference=self._auto_dereference)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 730, in _from_son
+    obj = cls(__auto_convert=False, _created=created, __only_fields=only_fields, **data)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/document.py", line 72, in __init__
+    super(EmbeddedDocument, self).__init__(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 80, in __init__
+    raise FieldDoesNotExist(msg)
+FieldDoesNotExist: The field 'university' does not exist on the document 'SearchParams'
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchNow/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 147, in formSearch
+    return results(request)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 490, in results
+    for r in res:
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 80, in _iter_results
+    self._populate_cache()
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 92, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/usr/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1411, in next
+    _auto_dereference=self._auto_dereference, only_fields=self.only_fields)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 706, in _from_son
+    else field.to_python(value))
+  File "/usr/lib/python2.7/dist-packages/mongoengine/fields.py", line 546, in to_python
+    return self.document_type._from_son(value, _auto_dereference=self._auto_dereference)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 706, in _from_son
+    else field.to_python(value))
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/fields.py", line 307, in to_python
+    for key, item in value.items()])
+  File "/usr/lib/python2.7/dist-packages/mongoengine/fields.py", line 546, in to_python
+    return self.document_type._from_son(value, _auto_dereference=self._auto_dereference)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 706, in _from_son
+    else field.to_python(value))
+  File "/usr/lib/python2.7/dist-packages/mongoengine/fields.py", line 546, in to_python
+    return self.document_type._from_son(value, _auto_dereference=self._auto_dereference)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 730, in _from_son
+    obj = cls(__auto_convert=False, _created=created, __only_fields=only_fields, **data)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/document.py", line 72, in __init__
+    super(EmbeddedDocument, self).__init__(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 80, in __init__
+    raise FieldDoesNotExist(msg)
+FieldDoesNotExist: The field 'education_key' does not exist on the document 'Person'
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgrad/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 630, in searchgrad
+    return render(request, 'testApp/searchGrad.html', context)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 200, in render
+    template = context.template.engine.get_template(template_name)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '/email' from 'e/email'
+ERROR:django.request:Internal Server Error: /testApp/searchgrad/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 630, in searchgrad
+    return render(request, 'testApp/searchGrad.html', context)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 200, in render
+    template = context.template.engine.get_template(template_name)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 510, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 572, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+TemplateSyntaxError: Invalid block tag on line 95: 'endfor'. Did you forget to register or load this tag?
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 202, in searchUnderGrad
+    parsed_bson = dumps(ent_list[0])
+IndexError: list index out of range
+WARNING:django.request:Not Found: /
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 260, in searchUnderGrad
+    if any(str(university) in s for s in res1['education']):
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 227, in __getitem__
+    raise KeyError(name)
+KeyError: 'education'
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 260, in searchUnderGrad
+    if any(str(university) in s for s in res1['results']['person']['education']):
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/datastructures.py", line 113, in __getitem__
+    value = super(BaseList, self).__getitem__(key)
+TypeError: list indices must be integers, not str
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 260, in searchUnderGrad
+    if any(str(university) in s for s in x['education']):
+  File "/usr/lib/python2.7/dist-packages/mongoengine/base/document.py", line 227, in __getitem__
+    raise KeyError(name)
+KeyError: 'education'
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 24, in batchSearch
+    wb = openpyxl.load_workbook(request.FILES['linkedFile'])
+  File "/usr/local/lib/python2.7/dist-packages/openpyxl/reader/excel.py", line 151, in load_workbook
+    archive = _validate_archive(filename)
+  File "/usr/local/lib/python2.7/dist-packages/openpyxl/reader/excel.py", line 118, in _validate_archive
+    archive = ZipFile(f, 'r', ZIP_DEFLATED)
+  File "/usr/lib/python2.7/zipfile.py", line 770, in __init__
+    self._RealGetContents()
+  File "/usr/lib/python2.7/zipfile.py", line 811, in _RealGetContents
+    raise BadZipfile, "File is not a zip file"
+BadZipfile: File is not a zip file
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 24, in batchSearch
+    wb = openpyxl.load_workbook(request.FILES['linkedFile'])
+  File "/usr/local/lib/python2.7/dist-packages/openpyxl/reader/excel.py", line 183, in load_workbook
+    wb.active = read_workbook_settings(archive.read(ARC_WORKBOOK)) or 0
+  File "/usr/lib/python2.7/zipfile.py", line 935, in read
+    return self.open(name, "r", pwd).read()
+  File "/usr/lib/python2.7/zipfile.py", line 961, in open
+    zinfo = self.getinfo(name)
+  File "/usr/lib/python2.7/zipfile.py", line 909, in getinfo
+    'There is no item named %r in the archive' % name)
+KeyError: "There is no item named 'xl/workbook.xml' in the archive"
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 24, in batchSearch
+    workbook = xlrd.open_workbook(request.FILES['linkedFile'], on_demand = True)
+  File "/usr/local/lib/python2.7/dist-packages/xlrd/__init__.py", line 395, in open_workbook
+    with open(filename, "rb") as f:
+TypeError: coercing to Unicode: need string or buffer, InMemoryUploadedFile found
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 24, in batchSearch
+    workbook = xlrd.open_workbook(request.FILES['linkedFile'], on_demand = True)
+  File "/usr/local/lib/python2.7/dist-packages/xlrd/__init__.py", line 395, in open_workbook
+    with open(filename, "rb") as f:
+TypeError: coercing to Unicode: need string or buffer, InMemoryUploadedFile found
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 24, in batchSearch
+    workbook = xlrd.open_workbook(request.FILES['linkedFile'], encoding='cp1252', on_demand = True)
+TypeError: open_workbook() got an unexpected keyword argument 'encoding'
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 26, in batchSearch
+    fname = dirname(abspath(request.FILES['linkedFile']))
+  File "/usr/lib/python2.7/posixpath.py", line 360, in abspath
+    if not isabs(path):
+  File "/usr/lib/python2.7/posixpath.py", line 54, in isabs
+    return s.startswith('/')
+AttributeError: 'InMemoryUploadedFile' object has no attribute 'startswith'
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 28, in batchSearch
+    workbook = xlrd.open_workbook(abspath(request.FILES['linkedFile']))
+  File "/usr/lib/python2.7/posixpath.py", line 360, in abspath
+    if not isabs(path):
+  File "/usr/lib/python2.7/posixpath.py", line 54, in isabs
+    return s.startswith('/')
+AttributeError: 'InMemoryUploadedFile' object has no attribute 'startswith'
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 35, in batchSearch
+    print workbook.sheet_names()
+AttributeError: 'NoneType' object has no attribute 'sheet_names'
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 32, in batchSearch
+    workdict = filehandle.get_dict()
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel_webio/__init__.py", line 93, in get_dict
+    return pe.get_dict(**params)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/core.py", line 297, in get_dict
+    **keywords)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/core.py", line 70, in get_sheet
+    named_content = _get_content(**keywords)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/core.py", line 82, in _get_content
+    sheets = source.get_data()
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/sources/file_source_input.py", line 82, in get_data
+    **self.keywords)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel_io/io.py", line 28, in get_data
+    file_type=file_type, **keywords)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel_io/io.py", line 130, in load_data_new
+    result = reader.read_all()
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel_xls/xls.py", line 158, in read_all
+    self.native_book = self._get_book()
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel_xls/xls.py", line 185, in _get_book
+    return xls_book
+UnboundLocalError: local variable 'xls_book' referenced before assignment
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 32, in batchSearch
+    workrecords = filehandle.get_record()
+AttributeError: 'ExcelInMemoryUploadedFile' object has no attribute 'get_record'
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 32, in batchSearch
+    workrecords = filehandle.get_records()
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel_webio/__init__.py", line 108, in get_records
+    return pe.get_records(**params)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/core.py", line 317, in get_records
+    **keywords)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/core.py", line 70, in get_sheet
+    named_content = _get_content(**keywords)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/core.py", line 82, in _get_content
+    sheets = source.get_data()
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/sources/file_source_input.py", line 82, in get_data
+    **self.keywords)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel_io/io.py", line 28, in get_data
+    file_type=file_type, **keywords)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel_io/io.py", line 130, in load_data_new
+    result = reader.read_all()
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel_xls/xls.py", line 158, in read_all
+    self.native_book = self._get_book()
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel_xls/xls.py", line 185, in _get_book
+    return xls_book
+UnboundLocalError: local variable 'xls_book' referenced before assignment
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 32, in batchSearch
+    records = pe.get_records(file_name=filehandle)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/core.py", line 317, in get_records
+    **keywords)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/core.py", line 70, in get_sheet
+    named_content = _get_content(**keywords)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/core.py", line 80, in _get_content
+    source = SourceFactory.get_source(**keywords)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/factory.py", line 43, in get_source
+    **keywords)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/factory.py", line 33, in _get_generic_source
+    if source.is_my_business(action, **keywords):
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/factory.py", line 149, in is_my_business
+    raise IOError("Wrong file name")
+IOError: Wrong file name
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 32, in batchSearch
+    records = pe.get_records(file_name=request.FILES['linkedFile'].__str__())
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/core.py", line 317, in get_records
+    **keywords)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/core.py", line 70, in get_sheet
+    named_content = _get_content(**keywords)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/core.py", line 82, in _get_content
+    sheets = source.get_data()
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/sources/file_source_input.py", line 52, in get_data
+    sheets = get_data(self.file_name, streaming=True, **self.keywords)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel_io/io.py", line 31, in get_data
+    file_type=file_type, **keywords)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel_io/io.py", line 130, in load_data_new
+    result = reader.read_all()
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel_xls/xls.py", line 158, in read_all
+    self.native_book = self._get_book()
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel_xls/xls.py", line 172, in _get_book
+    xls_book = xlrd.open_workbook(self.file_name, on_demand=on_demand)
+  File "/usr/local/lib/python2.7/dist-packages/xlrd/__init__.py", line 395, in open_workbook
+    with open(filename, "rb") as f:
+IOError: [Errno 2] No such file or directory: 'Forum 86 Reunion Guest List_Dec 29.xls'
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 34, in batchSearch
+    records = workbook.to_records()
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/sheets/nominablesheet.py", line 792, in to_records
+    return to_records(self, custom_headers)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/utils.py", line 85, in to_records
+    raise ValueError(MESSAGE_DATA_ERROR_NO_SERIES)
+ValueError: No column names or row names found
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 34, in batchSearch
+    records = workbook.to_records()
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/sheets/nominablesheet.py", line 792, in to_records
+    return to_records(self, custom_headers)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/utils.py", line 85, in to_records
+    raise ValueError(MESSAGE_DATA_ERROR_NO_SERIES)
+ValueError: No column names or row names found
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 34, in batchSearch
+    records = workbook.to_records()
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/sheets/nominablesheet.py", line 792, in to_records
+    return to_records(self, custom_headers)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/utils.py", line 85, in to_records
+    raise ValueError(MESSAGE_DATA_ERROR_NO_SERIES)
+ValueError: No column names or row names found
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 34, in batchSearch
+    records = filehandle.get_records(name_columns_by_row=0)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel_webio/__init__.py", line 108, in get_records
+    return pe.get_records(**params)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/core.py", line 317, in get_records
+    **keywords)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/core.py", line 70, in get_sheet
+    named_content = _get_content(**keywords)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/core.py", line 82, in _get_content
+    sheets = source.get_data()
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel/sources/file_source_input.py", line 82, in get_data
+    **self.keywords)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel_io/io.py", line 28, in get_data
+    file_type=file_type, **keywords)
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel_io/io.py", line 130, in load_data_new
+    result = reader.read_all()
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel_xls/xls.py", line 158, in read_all
+    self.native_book = self._get_book()
+  File "/usr/local/lib/python2.7/dist-packages/pyexcel_xls/xls.py", line 185, in _get_book
+    return xls_book
+UnboundLocalError: local variable 'xls_book' referenced before assignment
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 39, in batchSearch
+    print r['school']
+KeyError: 'school'
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 48, in batchSearch
+    sParams['lastName'] = r['Full Name'].split(' ')[1]
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 26, in batchSearch
+    print request.FILES['linkedFile']
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'linkedFile'"
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+

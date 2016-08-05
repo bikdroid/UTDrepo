@@ -79,8 +79,6 @@ class Person(EmbeddedDocument):
     link_voltron_people_search_5 = StringField()
     isBookmarked = BooleanField(default = False)
     fmt_headline = StringField()
-    education = StringField()
-    educationHtml = StringField()
     profilePhoto = EmbeddedDocumentField(PhotoWrapper)
     logo_result_base = EmbeddedDocumentField(LogoResultBase)
     

@@ -16,8 +16,9 @@
 <div class="pure-menu pure-menu-horizontal">
     <a href="#" class="pure-menu-heading">UTD</a>
     <ul class="pure-menu-list">
-        <li class="pure-menu-item"><a href="/testApp/search/" class="pure-menu-link">Search</a></li>
-        <li class="pure-menu-item pure-menu-selected"><a href="/testApp/results/" class="pure-menu-link">Results</a></li>
+        <li class="pure-menu-item pure-menu-selected"><a href="/testApp/search" class="pure-menu-link">SearchData</a></li>
+        <li class="pure-menu-item"><a href="/testApp/searchgrad/" class="pure-menu-link">Query</a></li>
+        <li class="pure-menu-item pure-menu-selected"><a href="/testApp/allresults/" class="pure-menu-link">Browse</a></li>
         <li class="pure-menu-item"><a href="/testApp/delete/" class="pure-menu-link">Delete</a></li>
 		<li class="pure-menu-item"><a href="/testApp/upload/" class="pure-menu-link">Batch File</a></li>
     </ul>
@@ -38,6 +39,7 @@
         <tr>
 		    <th>Image</th>
             <th>Name</th>
+            <th>Email</th>
 			<th>Title</th>
             <th>LinkedIn</th>
 			<th>Connections</th>
@@ -47,9 +49,9 @@
     <tbody>
 	    {% for rec in records %}
 		{% if forloop.counter|divisibleby:2 %}
-		<tr><td>{% if rec.personData.isProfilePic %}<img src={{rec.personData.profilePhoto.profilePhoto.media_picture_link_100}}>{% else %}<img src={{rec.personData.profilePhoto.profilePhoto.genericGhostImage}}>{% endif %}</td><td>{{rec.personData.firstName}} {{rec.personData.lastName}}</td><td>{{rec.personData.fmt_headline}}</td><td><a href="{{ rec.personData.link_nprofile_view_3 }}/">LinkedIn Profile</a></td><td>{{rec.personData.connectionCount}}</td><td>{% if rec.isMultiple %} <a href="{% url 'testApp:update' email_id=rec.email%}"> Multiple</a> {% endif %}</td></tr>
-		{% else %}
-		<tr><td>{% if rec.personData.isProfilePic %}<img src={{rec.personData.profilePhoto.profilePhoto.media_picture_link_100}}>{% else %}<img src={{rec.personData.profilePhoto.profilePhoto.genericGhostImage}}>{% endif %}</td><td>{{rec.personData.firstName}} {{rec.personData.lastName}}</td><td>{{rec.personData.fmt_headline}}</td><td><a target="_blank" href="{{ rec.personData.link_nprofile_view_3 }}/">LinkedIn Profile</a></td><td>{{rec.personData.connectionCount}}</td><td>{% if rec.isMultiple %} <a href="{% url 'testApp:update' email_id=rec.email%}"> Multiple</a> {% endif %}</td></tr>
+    		<tr><td>{% if rec.personData.isProfilePic %}<img src={{rec.personData.profilePhoto.profilePhoto.media_picture_link_100}}>{% else %}<img src={{rec.personData.profilePhoto.profilePhoto.genericGhostImage}}>{% endif %}</td><td>{{rec.personData.firstName}} {{rec.personData.lastName}}</td><td>{{rec.personData.fmt_headline}}</td><td><a href="{{ rec.personData.link_nprofile_view_3 }}/">LinkedIn Profile</a></td><td>{{rec.personData.connectionCount}}</td><td>{% if rec.isMultiple %} <a href="{% url 'testApp:update' email_id=rec.email%}"> Multiple</a> {% endif %}</td></tr>
+    		{% else %}
+    		<tr><td>{% if rec.personData.isProfilePic %}<img src={{rec.personData.profilePhoto.profilePhoto.media_picture_link_100}}>{% else %}<img src={{rec.personData.profilePhoto.profilePhoto.genericGhostImage}}>{% endif %}</td><td>{{rec.personData.firstName}} {{rec.personData.lastName}}</td><td>{{rec.personData.fmt_headline}}</td><td><a target="_blank" href="{{ rec.personData.link_nprofile_view_3 }}/">LinkedIn Profile</a></td><td>{{rec.personData.connectionCount}}</td><td>{% if rec.isMultiple %} <a href="{% url 'testApp:update' email_id=rec.email%}"> Multiple</a> {% endif %}</td></tr>
 		{% endif %}
        {% endfor %}
     </tbody>

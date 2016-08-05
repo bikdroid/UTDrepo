@@ -12,8 +12,8 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 
 import os
 from mongoengine import connect
-connect('test', username='', password='')
-
+# connect('test', username='', password='')
+connect('test1', username='', password='')
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -73,7 +73,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'testProject.wsgi.application'
 
-
+FILE_UPLOAD_HANDLERS = ("django_excel.ExcelMemoryFileUploadHandler",
+                        "django_excel.TemporaryExcelFileUploadHandler")
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 

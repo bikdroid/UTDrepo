@@ -12,14 +12,15 @@
 <div class="pure-menu pure-menu-horizontal">
     <a href="#" class="pure-menu-heading">UTD</a>
     <ul class="pure-menu-list">
-        <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Search</a></li>
-        <li class="pure-menu-item"><a href="/testApp/results/" class="pure-menu-link">Results</a></li>
+        <li class="pure-menu-item pure-menu-selected"><a href="/testApp/search" class="pure-menu-link">SearchData</a></li>
+        <li class="pure-menu-item"><a href="/testApp/searchgrad/" class="pure-menu-link">Query</a></li>
+        <li class="pure-menu-item"><a href="/testApp/allresults/" class="pure-menu-link">Browse</a></li>
         <li class="pure-menu-item"><a href="/testApp/delete/" class="pure-menu-link">Delete</a></li>
 		<li class="pure-menu-item"><a href="/testApp/upload/" class="pure-menu-link">Batch File</a></li>
     </ul>
 </div>
 
-<div class="banner" style='height:300px;'>
+<div class="banner" style='height:200px;'>
     <h1 class="banner-head">
         LinkedIn Profile Scraper<br>
         Dr. Latifur Khan Project.
@@ -41,8 +42,17 @@
         <div class="pure-control-group">
 		    <label for="email">Email</label>
             <input name="email" type="text" style="text-align:left;" placeholder="Email" required>
-            <label for="school">School</label>
-            <input name="school" style="text-align:right;" type="text" placeholder="University/School">
+            <label for="school">University</label>
+            <!-- <input name="school" style="text-align:right;" type="text" placeholder="University/School"> -->
+            <select name="university" style="text-align:right; width:20em;" required>
+            	<option selected disabled>Choose One</option>
+    			<option value="University of Texas at Dallas">University of Texas at Dallas</option>
+    			<option value="Bangladesh University" selected="selected">Bangladesh University of Engineering and Technology</option>
+	    	</select>
+            <!-- <select name="school-name" style="text-align:right;width:30em">
+            	<option value="utd" style="width:15em">University of Texas at Dallas</option>
+				<option value="buet" style="width:15em">Bangladesh University of Engineering and Technology</option>
+            </select> -->
         </div>
 
         <div class="pure-control-group">
@@ -329,7 +339,7 @@
 </form>
  </div>
 </div>
-<div class="footer l-box">
+<div class="footer l-box" style='bottom:0;position:absolute;width:100%;'>
     <p>
         &copy.
     </p>

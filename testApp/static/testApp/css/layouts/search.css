@@ -1,5 +1,25 @@
 body {
-    color: #526066;
+    /*color: #526066;*/
+    color: #333;
+font: 15px/22.5px "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue",HelveticaNeue,Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 22.5px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    -x-system-font: none;
+    font-feature-settings: normal;
+    font-language-override: normal;
+    font-kerning: auto;
+    font-synthesis: weight style;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
 }
 
 h2, h3 {
@@ -18,10 +38,14 @@ p {
  */
 .l-content {
     margin: auto;
+    width:100%;
 }
 
 .l-box {
     padding: 0.5em 2em;
+    bottom:0;
+    position:absolute;
+    width:100%;
 }
 
 /*
@@ -46,7 +70,7 @@ p {
     background-size: cover;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='banner.jpg', sizingMethod='scale');
 
-    height: 200px;
+    height: 100px;
     width: 100%;
     margin-bottom: 3em;
     display: table;
@@ -70,7 +94,7 @@ p {
  */
  .pricing-tables,
  .information {
-    max-width: 980px;
+    max-width: 1980px;
     margin: 0 auto;
  }
 .pricing-tables {

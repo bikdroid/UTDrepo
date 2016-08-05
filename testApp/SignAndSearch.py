@@ -13,16 +13,18 @@ from bs4 import Comment
 import logging
 
 logging.basicConfig(filename='log_file.txt',level=logging.INFO)
-username = "bigdatafall2015@gmail.com"
+username = "anandrox1991@gmail.com"
 password = "chandraisgr8"
 dbHost = 'localhost' #found from the hostname() command in mongo.
 dbPort = 27017
-dbName = 'test'
+dbName = 'test1'
 dbCollection = 'd_b_record'
 url1 = 'https://www.linkedin.com/'
 linkHome = 'http://www.linkedin.com/nhome'
 lSrchTitle = 'Search | LinkedIn'
 contentKey = 'content'
+curEducationHTMLKey = 'educationHtml'
+curEducationKey = 'education'
 gReqParamsKey = 'global_requestParams'
 pageKey = 'page'
 unifiedSearchKey = 'voltron_unified_search_json'
@@ -57,6 +59,9 @@ encryptedIdKey = 'encryptedId'
 encryptResltKey = 'encryptedResultId'
 firstNameKey = 'firstName'
 headlineKey = 'fmt_headline'
+snippetKey = 'snippets'
+fieldNameKey = 'fieldName'  #Bikramjit Mandal   
+bodyListKey = 'bodyList'    #Bikramjit Mandal
 curIndustryKey = 'fmt_industry'
 curLocKey = 'fmt_location'
 prflNameKey = 'fmt_name'
@@ -94,6 +99,8 @@ titleScopeParam = 'titleScope=CP&'
 companyScopeParam = 'companyScope=CP&'
 locationNoSelectParam = 'locationType=Y&'
 locationSelectParam = 'locationType=I&'
+
+university_choice=''
 
 cookie_filename = "parser.cookies.txt"
 
@@ -150,7 +157,8 @@ class Authenticate(object):
         except Exception as e:
             x,y = e.args
             return x
-        
+
+    # IN USE
     def performSearch(self, searchParams, dbHost, dbPort, dbName):
         """ Performs search and Saves the information gathered into DB. This method almost performs everything this class is created for """
         print "inside Perform Search ... "
@@ -173,7 +181,10 @@ class Authenticate(object):
             ]
             self.checkLogin(url1)
             fName = searchParams['firstName']
+            lName = searchParams['lastName']
             mailId = searchParams['email']
+            university = searchParams['school']
+            university_choice = university
             if fName == 'EMPTY' or mailId == 'EMPTY':
                 raise Exception('Info: Search has to be performed from Search page only, Please try again', 'Info')
             fSrchURL = self.formSearchURL(searchParams)
@@ -181,7 +192,7 @@ class Authenticate(object):
             recordJSON = self.formTrimmedJSON(linkedJSON)
             dbRecord = self.formDBRecord(recordJSON, mailId)
             client = self.connect2DB(dbHost, dbPort)
-            print "Client details : "+client.__str__()
+            # print "Client details : "+client.__str__()
             self.store2DB(dbRecord, mailId, client)
             return 'Success'
         except Exception as e:
@@ -280,12 +291,13 @@ class Authenticate(object):
             return 'bala'
         except:
             return 'SUCCESS'
-        
+    
+    # IN USE
     def store2DB(self, json2Store, email, dbClient):
         """ Persists the document to the DB using the dbClient, if the record is already present, it simply replaces the document """
         #db = dbClient.linkedinTest
         print "Inside store2DB ... "
-        db = dbClient.test
+        db = dbClient.test1 # CHange the test1 to any other new database name as per requirement.
         print "DB client is : "+db.__str__()
 
         if self.findEntryInDB(db, email):
@@ -294,14 +306,14 @@ class Authenticate(object):
             self.insertRecord(json2Store, db)
     
     def storeCSRecord(self, json2Store, pId, dbClient):
-        db = dbClient.test
+        db = dbClient.test1
         entries = db.c_s_person.find({'person.personId':{'$eq':pId}})
         if entries.count is 0:
             db.c_s_person.save(json2Store)
         else:
             db.c_s_person.replace_one({'person.personId':pId}, json2Store)
         
-    
+    # IN USE
     def insertRecord(self, record, db):
         """ Simple Insert into DB """
         print "saving record : "+record.__str__()
@@ -334,6 +346,8 @@ class Authenticate(object):
             val = val.replace(' ',spaceV) #replace spaces with %20, for making URLs ahead
             val = val.replace(amper, amperV) # replace ampersands with %26, for making URLs ahead
             paramString = paramString + key + equalTo + val + amper #making the complete URL for the profile
+        print "INSIDE formSearchURL and PARAM_STRING "
+        print paramString    
         tX = ''
         cX = ''
         if 'title' in pKeys:
@@ -438,7 +452,10 @@ class Authenticate(object):
         #if title is not None:
             #if title.string is not lSrchTitle:
                 #sys.exit('There is some problem with url provided, it does not correspond to Linkedin Search')
+        
         comments = spContent.findAll(text=lambda text:isinstance(text, Comment))
+        print "output BEAUTIFULSOUP FINDALL"
+        #print comments
         cLen = len(comments)
         if cLen > 0 and cLen > 11:
             comment = comments[11]
@@ -446,6 +463,8 @@ class Authenticate(object):
             for cmnt in comments:
                 if firstName in cmnt:
                     comment = cmnt
+        print "output COMMENTS :"
+        #print comment            
         return comment
                 
     def formFullJSON(self, srchResult):
@@ -457,6 +476,10 @@ class Authenticate(object):
         if srchResult is None:
             sys.exit('There is some problem with loading search page and search results')
         rawResults = re.sub('\\\\u002d1', '\"\"', srchResult)
+        print "-------------------------------------------------------------------------------"
+        print "Form FULL JSON "
+        print rawResults
+        print "\n"
         try:
             rawJSON = json.loads(rawResults)
             fContent = rawJSON[contentKey]
@@ -510,9 +533,15 @@ class Authenticate(object):
             allPersons = []
             for reslt in results:
                 personObj = reslt[personKey]
+                ## Pass the parameters to search from to the extractPerson function.
                 frmtedPerson = self.extractPerson(personObj)
+                '''
+                Structure of the saved data can be changed from here.
+                MongoDB structure decided from here.
+                '''
                 if frmtedPerson is not None:
                     allPersons.append(frmtedPerson)
+                    print frmtedPerson
             recObj = {recordKey : {gReqParamsKey:globalReqParams, resultsKey:allPersons, resultCountKey:resultCount}}
             return recObj
         except:
@@ -544,12 +573,15 @@ class Authenticate(object):
                 if frmtedPerson is not None:
                     client = self.connect2DB(dbHost, dbPort)
                     self.storeCSRecord(dbRecord, frmtedPerson, pId, client)
+                else:
+                    print "No Match"
         except:
             raise Exception('Error: There seems to be some problem with either the query or response JSON. Please note this might occur, if LinkedIn does not respond appropriately', 'Error')
 
                
     def extractPerson(self, personObj):
         """ Converts the person obj to required format """
+        print "Extracting Person Details "
         if personObj is None:
             print 'Person Object is None - Returning None'
             return None;
@@ -583,7 +615,60 @@ class Authenticate(object):
             curHeadLine = emptyString
             if headlineKey in keys:
                 curHeadLine = personObj[headlineKey]
-                
+            
+            curEducation = emptyString
+            # Left off here.        
+
+            curEducationHTMLparsed = ''
+            '''
+            Below portion by Bikramjit (edu.bmandal@gmail.com)
+            '''
+            curFullProfile = emptyString
+            for k in keys:
+                goodMatch=False
+                if k.startswith('link_nprofile_view_'):
+                    curFullProfile = personObj[k]
+                    html = self.loadPage(curFullProfile)
+                    soup = BeautifulSoup(html)
+                    edu_part = soup.find_all("div",re.compile("^education"))
+                    edu_html_list = ''
+                    # print "CONTENTS"
+                    searchtext = "Bangladesh University"
+                    # searchtext = university_choice
+                    # further_part = edu_part[0].find_all("a")
+                    # goodMatch=False
+                    eduinfo=''
+                    for e in edu_part:
+
+                        # edu_html_list.append(str(e))
+                        edu_html_list+=str(e)
+                        further_part = e.find_all("a")
+                        for f in further_part:
+                            if(searchtext in f.contents[0]):
+                                print "Search Text Found !"
+                                eduinfo=f.contents[0]
+                                print eduinfo
+                                goodMatch=True
+
+                            if(goodMatch==True):
+                                break
+
+                        if(goodMatch==True):
+                            print "Breaking for goodMatch TRUE"
+                            break
+                    
+                    if(goodMatch==True):
+                        curEducation = eduinfo
+                        print "education : "+curEducation.__str__()
+                        curEducationHTMLparsed = edu_html_list # Storing the html part too.
+                        
+                    else:
+                        curEducation = ''
+                if (goodMatch==True):
+                    break
+                    
+            print "curEducation extraction done"
+
             curIndustry = emptyString
             if curIndustryKey in keys:
                 curIndustry = personObj[curIndustryKey]
@@ -649,8 +734,13 @@ class Authenticate(object):
             else:
                 isPicPresent = False
                 profilePic = {profilePhoto:{genericGhostImageKey:ghostImage}}
-            personFormed = {personKey:{authTokenKey:authToken, authTypeKey:authType, connecCountKey:connectCount, localeKey:disLocale, firstNameKey:firstName, lastNameKey:lastName, headlineKey:curHeadLine, curIndustryKey:curIndustry, curLocKey:curLocation, prflNameKey:prflName, personIdKey:profileId, bookmarkKey:isBookmark, connectEnableKey:isConnectEnabled, contactKey:isContact, headlessKey:isHeadless, nameMatchKey:isNameMatched, searchLink1Key:searchLink1, searchLink2Key:searchLink2, profileLink1Key:profileLink1, profileLink2Key:profileLink2, isProfilePic:isPicPresent, logoBaseKey:logoBasedInfo, profilePhoto:profilePic}}
-            return personFormed
+            if curEducation != '': #check that the Education is not None, only then send it ahead.
+                personFormed = {personKey:{authTokenKey:authToken, authTypeKey:authType, connecCountKey:connectCount, localeKey:disLocale, firstNameKey:firstName, lastNameKey:lastName, headlineKey:curHeadLine, curEducationHTMLKey:curEducationHTMLparsed, curEducationKey:curEducation, curIndustryKey:curIndustry, curLocKey:curLocation, prflNameKey:prflName, personIdKey:profileId, bookmarkKey:isBookmark, connectEnableKey:isConnectEnabled, contactKey:isContact, headlessKey:isHeadless, nameMatchKey:isNameMatched, searchLink1Key:searchLink1, searchLink2Key:searchLink2, profileLink1Key:profileLink1, profileLink2Key:profileLink2, isProfilePic:isPicPresent, logoBaseKey:logoBasedInfo, profilePhoto:profilePic}}
+                print personFormed
+                return personFormed
+            else:
+                print "None"
+                return None
         except Exception as e:
             raise Exception('Error: There is some problem forming Person record from the information provided', 'Error')    
             

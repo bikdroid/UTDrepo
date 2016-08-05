@@ -7,74 +7,96 @@ from SignAndSearch import Authenticate
 from django import forms
 from pymongo import MongoClient
 from .forms import UploadFileForm
+from bs4 import BeautifulSoup
+from bs4 import Comment
+import re
 import csv
 import json
 import logging
+import xlrd
+import pyexcel as pe
 from bson import Binary, Code
 from bson.json_util import dumps
+from os.path import join, dirname, abspath
 
 logging.basicConfig(filename='log_file.txt',level=logging.INFO)
 
 def batchSearch(request):
     form = UploadFileForm(request.POST, request.FILES)
-    fileContent = csv.reader(request.FILES['linkedFile'])
+    print request.FILES['linkedFile']
+    #fname = dirname(abspath(request.FILES['linkedFile']))
+    workbook = None
+    
+    print "Form is Valid"
+    filehandle = request.FILES['linkedFile']
+
+    workbook = filehandle.get_sheet()
+    workbook.name_columns_by_row(0)
+    records = workbook.to_records()
+    message = ''
     sParams = {}
-    successReads = 0
+    linkObj = Authenticate('anandrox1991@gmail.com','chandraisgr8')
     failReads = 0
-    linkObj = Authenticate('bigdatafall2015@gmail.com','chandraisgr8')
-    for line in fileContent:
-        if len(line) != 10:
+    successReads = 0
+    for r in records:
+        if r is None:
             failReads = failReads + 1
             continue
-        minReq = 3
-        if line[0] != '':
-            sParams['firstName'] = line[0]
-            minReq = minReq - 1
-        if line[1] != '':
-            sParams['lastName'] = line[1]
-            minReq = minReq - 1
-        if line[2] != '':
-            sParams['email'] = line[2]
-            minReq = minReq - 1
-        if line[3] != '':
-            sParams['school'] = line[3]
-            minReq = minReq - 1
-        if line[4] != '':
-            sParams['company'] = line[4]
-            minReq = minReq - 1
-        if line[7] != '':
-            minReq = minReq - 1
-            country = line[7]
-            if len(country) == 2:
-                sParams['countryCode'] = country
-            else :
-                sParams['countryCode'] = 'us'
-        else:
-            sParams['countryCode'] = 'us'
-        if line[5] != '':
-            sParams['keywords'] = line[5]
-            minReq = minReq - 1
-        if line[6] != '':
-            sParams['title'] = line[6]
-            minReq = minReq - 1
-        if line[8] != '':
-            sParams['postalCode'] = line[8]
-            minReq = minReq - 1
-            if line[9] != '':
-                sParams['distance'] = line[9]
-            else :
-                sParams['distance'] = '50'
-        resp = Authenticate.performSearch(linkObj, sParams, 'localhost', 27017, 'test')
+        
+        if r['Full Name']!='':
+            name = r['Full Name'].split(' ')
+            if name:
+                if name[0]:
+                    sParams['firstName'] = name[0]
+                if name[1]:
+                    sParams['lastName'] = name[1]
+                else:
+                    sParams['lastName'] = ''
+            else:
+                sParams['firstName']=''
+                sParams['lastName']=''
+
+        if r['Email']:
+            sParams['email'] = r['Email']
+            print sParams['email']
+        if r['school']:
+            sParams['school'] = r['school']
+            print sParams['school']
+        # if line[4] != '':
+        #     sParams['company'] = line[4]
+        # if line[7] != '':
+        #     country = line[7]
+        #     if len(country) == 2:
+        #         sParams['countryCode'] = country
+        #     else :
+        #         sParams['countryCode'] = 'us'
+        # else:
+        #     sParams['countryCode'] = 'us'
+        # if line[5] != '':
+        #     sParams['keywords'] = line[5]
+        # if line[6] != '':
+        #     sParams['title'] = line[6]
+        # if line[8] != '':
+        #     sParams['postalCode'] = line[8]
+        #     if line[9] != '':
+        #         sParams['distance'] = line[9]
+        #     else :
+        #         sParams['distance'] = '50'
+        resp = Authenticate.performSearch(linkObj, sParams, 'localhost', 27017, 'test1')
         if resp.startswith('Success'):
             successReads = successReads + 1
+
         else :
             failReads = failReads + 1
+    
     message = 'The records from the uploaded file have been processed. '
     message = message + 'Success : ' + str(successReads)+' Failed : ' + str(failReads)
-    msg = {'type':'I','message':message}
-    context = {
-        'msg':msg,}
-    return render(request,'testApp/message.html', context)
+    if successReads!=0:
+        return render(request, 'testApp/allresults.html', context)
+    else:
+        msg = {'type':'I','message':message}
+        context = { 'msg':msg }
+        return render(request,'testApp/message.html', context)
         
 def index1(request):
     latest_question_list = [1,2,3,4]
@@ -85,7 +107,7 @@ def index1(request):
     return HttpResponse(template.render(context, request))
 
 def index(request):
-    link = Authenticate('bigdatafall2015@gmail.com','chandraisgr8')
+    link = Authenticate('anandrox1991@gmail.com','chandraisgr8')
     return HttpResponse(Authenticate.djangoTest(link))
 
 def filter(request):
@@ -125,17 +147,20 @@ def formSearch(request):
     firstName = request.POST.get('fname', 'Empty')
     lastName = request.POST.get('lname', 'Empty')
     email = request.POST.get('email', 'Empty')
-    school = request.POST.get('school', 'Empty')
+    school = request.POST.get('university', 'Empty')
     distance = request.POST.get('distance', 'Empty')
     countryCode = request.POST.get('country',  'Empty')
     keywords = request.POST.get('keywords', 'Empty')
-    params = {'email':email, 'firstName':firstName,'lastName':lastName, 'school':school, 'countryCode':countryCode, 'keywords':keywords}
+    params = {'email':email, 'firstName':firstName, 'lastName':lastName, 'school':school, 'countryCode':countryCode, 'keywords':keywords}
     
     print "Searching : "+params.__str__() 
     # Authenticating a linkedin profile to start with.
-    linkObj = Authenticate('bigdatafall2015@gmail.com','chandraisgr8')
+    linkObj = Authenticate('anandrox1991@gmail.com','chandraisgr8')
+    url1='https://www.linkedin.com/'
+    linkObj.checkLogin(url1) #checks that the login is successful.
+     
     print "Linkedin Object :: "+linkObj.__str__()
-    resp = Authenticate.performSearch(linkObj, params, 'localhost', 27017, 'test')
+    resp = Authenticate.performSearch(linkObj, params, 'localhost', 27017, 'test1')
     if resp.startswith('Success'):
         print request
         return results(request)
@@ -147,17 +172,19 @@ def formSearch(request):
         message = resp
         msg = {'type':type, 'message':message}
         context = {
-                   'msg':msg}
+                   'msg':msg
+                    }
         return render(request, 'testApp/message.html', context)
     
 
 def searchUnderGrad(request): ## Added By, Bikramjit edu.bmandal@gmail.com
     print "Inside grad search ... "
     myclient = MongoClient()
-    db = myclient.test
-    firstName = request.POST.get('fname', 'Empty')
-    lastName = request.POST.get('lname', 'Empty')
+    db = myclient.test1
+    # firstName = request.POST.get('fname', 'Empty')
+    # lastName = request.POST.get('lname', 'Empty')
     personemail = request.POST.get('email','Empty')
+    university = request.POST.get('university','Empty')
     #print "Values received from request : "+firstName.__str__()+", "+lastName.__str__()+", "+email.__str__()
     #resp = Authenticate.performSearch(linkObj, params, 'localhost', 27017, 'test')
     #resp = Authenticate.filterResult(linkObj, filterParams, 'localhost', 27017, 'test')
@@ -182,80 +209,153 @@ def searchUnderGrad(request): ## Added By, Bikramjit edu.bmandal@gmail.com
                 "$group": {   "_id": "$record.results.person.personId"  }
             }
         ])
-    entries_list = [] # list, will store all details.
+    
     ent_list = list(entries)
-    print "ENTRIES "
-    print ent_list
+    # print "ENTRIES "
+    # print ent_list
 
     """
     Helps to convert the Cursor function output to
     JSON readable output using BSON.JSON_UTIL library.
     """
-    parsed_bson = dumps(ent_list[0]) 
-
-    print parsed_bson
-
-    '''
-    Helps to read the json from the output of the 
-    above statement.
-
-    Will now use this method to read the details from the outputs 
-    that can be presented in the output.
-    '''
-    parsed_json = json.loads(parsed_bson.__str__())
-#    print "\n Length of parsed_bson : "+len(parsed_json).__str__()
-    #print "\n\n IDs : "+parsed_json['_id'][0].__str__()+", "+parsed_json['_id'][1].__str__()
-
-#    print "\n PARSED_JSON : "+parsed_json.__str__()+" \n"
-    print "IDs that match : "
     idlist = []
-    for e in parsed_json['_id']:
-        print e
-        idlist.append(e)
-    print "ID List :"
-    idlist1 = [int(s) for s in idlist]
-    print idlist1
-    '''
-        for e in parsed_json['_id']: # for each of the entries in parsed_json we send add the values to list.
+    entries_list = []
+    if ent_list:
+        parsed_bson = dumps(ent_list[0]) 
+
+    #print parsed_bson
+
+        '''
+        Helps to read the json from the output of the 
+        above statement.
+
+        Will now use this method to read the details from the outputs 
+        that can be presented in the output.
+        '''
+        parsed_json = json.loads(parsed_bson.__str__())
+    #    print "\n Length of parsed_bson : "+len(parsed_json).__str__()
+        #print "\n\n IDs : "+parsed_json['_id'][0].__str__()+", "+parsed_json['_id'][1].__str__()
+
+    #    print "\n PARSED_JSON : "+parsed_json.__str__()+" \n"
+        #print "IDs that match : "
+        idlist = []
+        for e in parsed_json['_id']:
+            print e
+            idlist.append(e)
+    #print "ID List :"
+    if idlist:
+        idlist1 = [int(s) for s in idlist]
+        #print idlist1
+        # entries_list = [] # list, will store all details.
+        for ide in idlist1: # for each of the entries in parsed_json we send add the values to list.
 
             #print "value : "+e.__str__()
 
-            persons_filter = DBRecord.objects(record__results__person__personId=e.__str__())
+            persons_filter = DBRecord.objects(record__results__person__personId=ide)
             #print "Persons are ... "
-            
+            # if persons_filter is None:
+            # msg = {'type':'E','message':'Currently, there are no records. Please perform Search or add few records'}
+            # context = {
+            #     'msg':msg,}
+            # return render(request,'testApp/message.html', context)
+
             for p in persons_filter:
                 #print " "+p.record.results.__str__()
                 #print " The IDs are :"
-                for p1 in p.record.results:
-                    print p1.person.personId.__str__()+", "+p1.person.firstName.__str__()+", "+p1.person.lastName.__str__()+", "+p1.person.fmt_industry.__str__()
-                    nperson = { 'personId':p1.person.personId, 'personPhoto':p1.person.profilePhoto.profilePhoto.media_picture_link_100,'firstName':p1.person.firstName, 'lastName':p1.person.lastName, 'fmt_industry':p1.person.fmt_industry, 'fmt_location':p1.person.fmt_location, 'workinfo':p1.person.fmt_headline }
+
+                res1 = p['record']
+                count = res1['resultCount']
+                print "result count : "+str(count)
+                email = res1['email']
+                print "email : "+str(email)
+                isMultiple = False
+                # if count > 1:
+                #     isMultiple = True
+                x = res1['results'][0]
+                nperson = {'email':email, 'isMultiple':isMultiple, 'personData':x['person']}
+                # for p1 in p.record.results:
+                #     print p1.person.personId.__str__()+", "+p1.person.firstName.__str__()+", "+p1.person.lastName.__str__()+", "+p1.person.fmt_industry.__str__()
+                #     nperson = { 'personId':p1.person.personId, 'personPhoto':p1.person.profilePhoto.profilePhoto.media_picture_link_100,'firstName':p1.person.firstName, 'lastName':p1.person.lastName, 'fmt_industry':p1.person.fmt_industry, 'fmt_location':p1.person.fmt_location, 'workinfo':p1.person.fmt_headline }
+                
                 entries_list.append(nperson) # appending the details of one person to the list.    
-     '''   
-    findlist = DBRecord.objects(__raw__={'record.results.person.personId':{'$in':idlist1}})
-    search_list = []
-    for p in findlist:
-        for j in p.record.results:
-            print j.person.firstName
-            nperson = {
-                'personId':j.person.personId,
-                'personPhoto':j.person.profilePhoto.profilePhoto.media_picture_link_200,
-                'firstName':j.person.firstName,
-                'lastName':j.person.lastName,
-                'fmt_industry':j.person.fmt_industry,
-                'fmt_location':j.person.fmt_location,
-                'workinfo':j.person.fmt_headline
-            }
-            search_list.append(nperson)
+     
+    # findlist = DBRecord.objects(__raw__={'record.results.person.personId':{'$in':idlist1}})
+    # search_list = []
+    #linkObj = Authenticate('bigdatafall2015@gmail.com','chandraisgr8')
+    # print "Linkedin Object :: "+linkObj.__str__()
+    
+    # for p in findlist:
+    #     for j in p.record.results:
+    #         print j.person.firstName
+    #         profile_page = j.person.link_nprofile_view_3
+    #         linkObj = Authenticate('anandrox1991@gmail.com','chandraisgr8')
+    #         # html = Authenticate.loadPage(linkObj, profile_page, data=None)
+    #         url1='https://www.linkedin.com/'
+    #         linkObj.checkLogin(url1)
+    #         html = linkObj.loadPage(profile_page)
+    #         goodMatch = False
+    #         soup = BeautifulSoup(html)
+    #         #print soup
+    #         print "Profile Page"
+    #         print profile_page
+
+    #         edu_part = soup.find_all("div",re.compile("^education"))
+    #         # edu_all = list(edu_part)
+    #         for e in edu_part:
+    #             searchtext = university
+    #             print searchtext
+    #             fur_part = e.find_all("a")
+    #             for f in fur_part:
+                    
+    #         # print "CONTENTS"
+    #         # searchtext = "University of Texas at Dallas"
+            
+    #                 eduinfo = ''
+    #                 # print "CONTENTS"
+    #                 # print "content : "+str(f.contents[0])
+                    
+
+    #                 # print str(flist[0]).split('\n')
+    #                 if (searchtext in f.contents[0]):
+    #                     print "Search Text found !!"
+    #                     goodMatch=True
+    #                     eduinfo = f.contents[0]
+    #                     break
+    #                 else:
+    #                     print "No text match"
+    #             # print "goodMatch value"
+    #             # print goodMatch
+    #             # print eduinfo
+    #             if goodMatch==True:
+    #                 break
+    #         print "goodMatch value"
+    #         print goodMatch
+    #         if(goodMatch==True):
+    #             nperson = {
+    #                 'personId':j.person.personId,
+    #                 'personPhoto':j.person.profilePhoto.profilePhoto.media_picture_link_200,
+    #                 'firstName':j.person.firstName,
+    #                 'lastName':j.person.lastName,
+    #                 'fmt_industry':j.person.fmt_industry,
+    #                 'fmt_location':j.person.fmt_location,
+    #                 'workinfo':j.person.fmt_headline,
+    #                 'eduinfo': eduinfo
+    #             }
+    #             # print nperson
+    #             search_list.append(nperson)
+    #             print "FouNd a good match, so appended to the list"
+    #         else:
+    #             print "This wasn't a good match, not appending to list"
 
 
 
     # each JSON can be 
-    print "Entries _ list ::"
-    print search_list
+    print "List of Matching results .. sending"
+    # print search_list
 
-    ctx = { 'entries':search_list }
+    ctx = { 'entries':entries_list }
     context=ctx
-    print "\n Entries appended to list and rendered to searchGrad.html "
+    # print "\n Entries appended to list and rendered to searchGrad.html "
     #return render(request, 'testApp/allresults.html', context)
     return render(request,'testApp/searchGrad.html',context)
     
@@ -265,6 +365,8 @@ def mergedUpdate(request):
     myclient = MongoClient()
     db = myclient.test
     print "\n\n\n Inside mergedUpdate \n\n"
+    email = ''
+    isMultiple = False
     entries_list = []
     return_list = []
     res = []
@@ -303,13 +405,19 @@ def mergedUpdate(request):
 
 
         person_filter = DBRecord.objects(record__results__person__personId=final_parsed_list[0].__str__())
+        email = person_filter[0].record.email
+
         nperson = { 'personId':final_parsed_list[0], 
-                    'personPhoto':person_filter[0].record.results[0].person.profilePhoto.profilePhoto.media_picture_link_100,
+                    'profilePhoto':person_filter[0].record.results[0].person.profilePhoto.profilePhoto.media_picture_link_100,
                     'firstName':person_filter[0].record.results[0].person.firstName, 
                     'lastName':person_filter[0].record.results[0].person.lastName, 
+                    'link_nprofile_view_3':person_filter[0].record.results[0].person.link_nprofile_view_3,
+                    'link_nprofile_view_4':person_filter[0].record.results[0].person.link_nprofile_view_4,
                     'fmt_industry':[], 
                     'fmt_location':[], 
-                    'workinfo':[] 
+                    'fmt_headline':[],
+                    'workinfo':[],
+                    'education':[]
                     }
 
         print "Intial nperson JSOn : "+nperson.__str__()
@@ -321,11 +429,17 @@ def mergedUpdate(request):
         industry = ""
         headlines = ""
         locations = ""
+        educations = person_filter[0].record.results[0].person.education
         for i in findlist:
             for j in i.record.results:
                 ind = j.person.fmt_industry
                 headl = j.person.fmt_headline
                 loc = j.person.fmt_location
+                educ = j.person.education
+                if any(str(educ) in s for s in educations.split(',')):
+                    print educ+" there"
+                else:
+                    educations+=str(j.person.education)+","
                 if any(str(ind) in s for s in industry.split(',')):
                     print ind+" there"
                 else:
@@ -346,6 +460,7 @@ def mergedUpdate(request):
         print "FMT_INDUSTRY : "+industry
         print "FMT_HEADLINE : "+headlines
         print "FMT_LOCATION : "+locations
+        print "EDUCATION : "+educations
 
         """
         Update in the database, combining the embedded documents.
@@ -371,11 +486,15 @@ def mergedUpdate(request):
             nperson['workinfo'].append(parsed_json['headline'])
         '''
         nperson['fmt_industry']=industry
-        nperson['workinfo']=headlines
+        nperson['fmt_headline']=headlines
         nperson['fmt_location']=locations
+        nperson['education']=educations
+        nperson['workinfo']=headlines
         print "Final nperson JSON : "+nperson.__str__()
 
-        return_list.append(nperson) #this list will be returned to website.    
+        x = nperson
+        sperson = {'email':email, 'isMultiple':isMultiple, 'personData':x}
+        return_list.append(sperson) #this list will be returned to website.    
         print "RETURN LIST : "+str(return_list)
         ctx = { 'entries':return_list }
         context=ctx
@@ -441,6 +560,32 @@ def results(request): #Accessing mongoengine to get data.
                'records':persons}
     return render(request, 'testApp/results.html', context)
 
+# Created by Bikramjit Mandal (edu.bmandal@gmail.com)
+def allresults(request): #Accessing mongoengine to get data.
+    #res = DBRecord.objects.all()
+    res = DBRecord.objects.order_by('record.results.person.firstName', '-record.results.person.connectionCount')
+    if res is None:
+        msg = {'type':'E','message':'Currently, there are no records. Please perform Search or add few records'}
+        context = {
+            'msg':msg,}
+        return render(request,'testApp/message.html', context)
+    persons = []
+    for r in res:
+        res1 = r['record']
+        count = res1['resultCount']
+        email = res1['email']
+        print email
+        isMultiple = False
+        if count > 1:
+            isMultiple = True
+        x = res1['results'][0]
+        person = {'email':email, 'isMultiple':isMultiple, 'personData':x['person']}
+        persons.append(person)
+    context = {
+               'entries':persons}
+    return render(request, 'testApp/searchGrad.html', context)
+
+
 def update(request, email_id):
     res = DBRecord.objects(record__email=email_id)
     if res is None:
@@ -461,8 +606,8 @@ def update(request, email_id):
         person = {'email':email, 'isMultiple':isMultiple, 'personData':x['person']}
         persons.append(person)
     context = {
-               'records':persons}
-    return render(request, 'testApp/multiple.html', context)
+               'entries':persons}
+    return render(request, 'testApp/searchGrad.html', context)
     
 def vote(request, question_id):
     return HttpResponse("You're voting on question %s." % question_id)
@@ -470,28 +615,100 @@ def vote(request, question_id):
 def search(request):
     return render(request, 'testApp/search.html')
 
+def searchgrad2(request):
+    print "Inside SearchGrad 2 .."
+    res = DBRecord.objects.order_by('record.results.person.firstName','-record.results.person.connectionCount')
+    if res is None:
+        msg = {'type':'E','message':'Currently, there are no records. Please perform Search or add few records'}
+        context = {
+            'msg':msg,}
+        return render(request,'testApp/message.html', context)
+    persons = []
+    for r in res:
+        res1 = r['record']
+        count = res1['resultCount']
+        email = res1['email']
+        isMultiple = False
+        if count > 1:
+            isMultiple = True
+        x = res1['results'][0]
+        person = {'email':email, 'isMultiple':isMultiple, 'personData':x['person']}
+        persons.append(person)
+    context = {
+               'entries':persons}
+    return render(request, 'testApp/searchGrad.html', context)
+
 def searchgrad(request):
+    print "Inside Searchgrad ... "
     findlist=DBRecord.objects.all()
     search_list = []
+    linkObj = Authenticate('anandrox1991@gmail.com','chandraisgr8')
+    url1='https://www.linkedin.com/'
+    linkObj.checkLogin(url1) #checks that the login is successful.
+            
     for p in findlist:
         for j in p.record.results:
-            print j.person.firstName
-            nperson = {
-                'personId':j.person.personId,
-                'personPhoto':j.person.profilePhoto.profilePhoto.media_picture_link_200,
-                'firstName':j.person.firstName,
-                'lastName':j.person.lastName,
-                'fmt_industry':j.person.fmt_industry,
-                'fmt_location':j.person.fmt_location,
-                'workinfo':j.person.fmt_headline
-            }
-            search_list.append(nperson)
+            print j.person.firstName+" "+j.person.lastName
+            profile_page = j.person.link_nprofile_view_3
+            # print profile_page
+            # html = Authenticate.loadPage(linkObj, profile_page, data=None)
+            html = linkObj.loadPage(profile_page)
+            soup = BeautifulSoup(html)
+            goodMatch = False
+            #print soup
+            edu_part = soup.find_all("div",re.compile("^education"))
+            # print "CONTENTS"
+            searchtext = "Bangladesh University"
+            # further_part = edu_part[0].find_all("a")
+            eduinfo=''
+            ## Checking the education parts below
+            for e in edu_part:
+                # print searchtext
+                further_part = e.find_all("a")
+                for f in further_part:
+                    '''
+                    # Function is looking for any mention of the University in the 
+                    # content of the tags under the Education section of the profile.
+                    '''
+                    #print f.contents[0]
+                    if (searchtext in f.contents[0]):
+                        print "Search Text found !!"
+                        eduinfo=f.contents[0]
+                        print eduinfo
+                        goodMatch=True
+                    
+                    if (goodMatch==True):
+                        break
 
+                if (goodMatch==True):
+                    break               
+
+                # print "goodMatch value"
+                # print goodMatch
+            if(goodMatch==True):
+                nperson = {
+                    'personId':j.person.personId,
+                    'personPhoto':j.person.profilePhoto.profilePhoto.media_picture_link_200,
+                    'firstName':j.person.firstName,
+                    'lastName':j.person.lastName,
+                    'fmt_industry':j.person.fmt_industry,
+                    'fmt_location':j.person.fmt_location,
+                    'workinfo':j.person.fmt_headline,
+                    'eduinfo': eduinfo
+                }
+                print nperson
+                search_list.append(nperson)
+                
+                    # print "Found a match, so appending to the list"
+            else:
+                print "no match"
+            
+    
 
 
     # each JSON can be 
-    print "Entries _ list ::"
-    print search_list
+    print "List of Matching Search Results .. sending"
+    #print search_list
 
     ctx = { 'entries':search_list }
     context=ctx
