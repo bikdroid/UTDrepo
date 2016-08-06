@@ -91,6 +91,8 @@ def batchSearch(request):
     
     message = 'The records from the uploaded file have been processed. '
     message = message + 'Success : ' + str(successReads)+' Failed : ' + str(failReads)
+    msg = {'type':'I','message':message}
+    context = { 'msg':msg }
     if successReads!=0:
         return render(request, 'testApp/allresults.html', context)
     else:
