@@ -83,6 +83,7 @@ class Person(EmbeddedDocument):
     educationHtml = StringField()
     profilePhoto = EmbeddedDocumentField(PhotoWrapper)
     logo_result_base = EmbeddedDocumentField(LogoResultBase)
+    relatedPids = ListField(IntField())
     
 class PersonWrapper(EmbeddedDocument):
     person = EmbeddedDocumentField(Person)
@@ -102,8 +103,54 @@ class Record(EmbeddedDocument):
     emailCount = IntField(default=0)
     results = EmbeddedDocumentListField(PersonWrapper)
 
+class PersonLink(EmbeddedDocument):
+    authToken = StringField(max_length=10)
+    fmt_location = StringField()
+    linkAuto_voltron_people_search_1 = StringField()
+    fmt_industry = StringField()
+    personId = IntField()
+    isNameMatch = BooleanField(default=True)
+    authType = StringField()
+    isContact = BooleanField(default = False)
+    link_nprofile_view_3 = StringField()
+    fmt_name = StringField()
+    link_nprofile_view_4 = StringField()
+    isConnectedEnabled = BooleanField(default = False)
+    connectionCount = IntField()
+    displayLocale = StringField()
+    isProfilePic = BooleanField(default = False)
+    firstName = StringField()
+    lastName = StringField()
+    isHeadless = BooleanField(default = False)
+    link_voltron_people_search_5 = StringField()
+    isBookmarked = BooleanField(default = False)
+    fmt_headline = StringField()
+    education = StringField()
+    educationHtml = StringField()
+    profilePhoto = EmbeddedDocumentField(PhotoWrapper)
+    logo_result_base = EmbeddedDocumentField(LogoResultBase)
+
+class Page(EmbeddedDocument):
+    pageNum = IntField()
+    pageLink = StringField(default='')
+    nextPageLink = StringField(default='')
+    prevPageLink = StringField(default='')
+
+class PersonLinkWrapper(EmbeddedDocument):
+    personLink = EmbeddedDocumentField(PersonLink)
+
+class PagesWrapper(EmbeddedDocument):
+    page = EmbeddedDocumentField(Page)
+
+
 class DBRecord(Document):
     record = EmbeddedDocumentField(Record)
 
 class CSPerson(Document):
     person = EmbeddedDocumentField(Person)
+
+class LIPerson(Document):
+    allPersonLinks = EmbeddedDocumentListField(PersonLinkWrapper)
+    allpersons = EmbeddedDocumentListField(PersonWrapper)
+    pages = EmbeddedDocumentListField(PagesWrapper)
+

@@ -30,71 +30,99 @@ def batchSearch(request):
     print "Form is Valid"
     filehandle = request.FILES['linkedFile']
 
+    '''
+    Below we have used PyExcel for excel sheet operations, follow online documents
+    for more details into the SDK.
+    '''
     workbook = filehandle.get_sheet()
-    workbook.name_columns_by_row(0)
+    workbook.name_columns_by_row(1)
     records = workbook.to_records()
     message = ''
     sParams = {}
     linkObj = Authenticate('anandrox1991@gmail.com','chandraisgr8')
     failReads = 0
     successReads = 0
+    sParamsList = []
+    locationsList = []
+    # stored_stuff = CSPerson.objects(person__email)
+    for r in records:
+        if r['Full Name']=='' or r['Full Name']=='?':
+            if r['Email']:
+                print ""
+            else:
+                if r['No.'] == '':
+                    l = str(r['Name']).split("/")
+                    for i in l:
+                        locationsList.append(i)
+
+    if locationsList:
+        request.session['locations']=locationsList
+        print "LOCATION LIST SAVED TO SESSION"
+
+
     for r in records:
         if r is None:
             failReads = failReads + 1
             continue
-        
-        if r['Full Name']!='':
+        sParams = {}
+        goodRecord = False
+
+
+        if r['Full Name']!='' or r['Full Name']!='?':
             name = r['Full Name'].split(' ')
+            goodRecord = True
             if name:
-                if name[0]:
+
+                nlist = list(name)                
+
+                if len(nlist)>=2:
                     sParams['firstName'] = name[0]
-                if name[1]:
                     sParams['lastName'] = name[1]
                 else:
+                    sParams['firstName'] = ''
                     sParams['lastName'] = ''
-            else:
-                sParams['firstName']=''
-                sParams['lastName']=''
+        
+        else:
+            goodRecord = True
+            sParams['firstName']=''
+            sParams['lastName']=''
 
+        
         if r['Email']:
             sParams['email'] = r['Email']
-            print sParams['email']
-        if r['school']:
-            sParams['school'] = r['school']
-            print sParams['school']
-        # if line[4] != '':
-        #     sParams['company'] = line[4]
-        # if line[7] != '':
-        #     country = line[7]
-        #     if len(country) == 2:
-        #         sParams['countryCode'] = country
-        #     else :
-        #         sParams['countryCode'] = 'us'
-        # else:
-        #     sParams['countryCode'] = 'us'
-        # if line[5] != '':
-        #     sParams['keywords'] = line[5]
-        # if line[6] != '':
-        #     sParams['title'] = line[6]
-        # if line[8] != '':
-        #     sParams['postalCode'] = line[8]
-        #     if line[9] != '':
-        #         sParams['distance'] = line[9]
-        #     else :
-        #         sParams['distance'] = '50'
-        resp = Authenticate.performSearch(linkObj, sParams, 'localhost', 27017, 'test1')
-        if resp.startswith('Success'):
-            successReads = successReads + 1
 
-        else :
-            failReads = failReads + 1
+        else: 
+            goodRecord = False
+
+
+        if goodRecord is True:        
+            resp = Authenticate.performCSSearch(linkObj, sParams, 'localhost', 27017, 'test1')
+        # print "sparams : "
+            # print sParams
+            resp = 'Success'
+            if resp.startswith('Success'):
+                successReads = successReads + 1
+            else :
+                failReads = failReads + 1
     
+
+        # if goodRecord is True:
+            sParamsList.append(sParams)
+    # print "INITIATING SEARCH OPERATION"
+    print locationsList
+    print "DONE WITH"
+    for s in sParamsList:
+        print s
+        # resp = Authenticate.performCSSearch(linkObj, s, 'localhost', 27017, 'test1')
+        # resp = Authenticate.performSearch(linkObj, s, 'localhost', 27017, 'test1')
+        # resp = 'Success'
+        
     message = 'The records from the uploaded file have been processed. '
     message = message + 'Success : ' + str(successReads)+' Failed : ' + str(failReads)
     msg = {'type':'I','message':message}
     context = { 'msg':msg }
     if successReads!=0:
-        return render(request, 'testApp/allresults.html', context)
+        return render(request, 'testApp/searchGrad.html', context)
     else:
         msg = {'type':'I','message':message}
         context = { 'msg':msg }
@@ -565,26 +593,76 @@ def results(request): #Accessing mongoengine to get data.
 # Created by Bikramjit Mandal (edu.bmandal@gmail.com)
 def allresults(request): #Accessing mongoengine to get data.
     #res = DBRecord.objects.all()
-    res = DBRecord.objects.order_by('record.results.person.firstName', '-record.results.person.connectionCount')
+    # res = DBRecord.objects.order_by('record.results.person.firstName', '-record.results.person.connectionCount')
+    res = CSPerson.objects.order_by('person.firstName')
+    
+    print "INSIDE ALL RESULTS"
+    print "SESSION VARIABLE locations"
+    # print request.session.get('locations')
+    locations = ['Arizona','Seattle','California','Canada','Georgia','Texas','Portland','Waterloo']
+
     if res is None:
         msg = {'type':'E','message':'Currently, there are no records. Please perform Search or add few records'}
         context = {
             'msg':msg,}
         return render(request,'testApp/message.html', context)
     persons = []
+    personIdsRead = []
     for r in res:
-        res1 = r['record']
-        count = res1['resultCount']
-        email = res1['email']
-        print email
+        # res1 = r['record']
+        # count = res1['resultCount']
+        # email = res1['email']
+        res1 = r['person']
+        relatedPids = res1['relatedPids']
+        # personIdsRead.append(res1['personId'])
         isMultiple = False
-        if count > 1:
+
+        if len(relatedPids) != 0:
             isMultiple = True
-        x = res1['results'][0]
-        person = {'email':email, 'isMultiple':isMultiple, 'personData':x['person']}
-        persons.append(person)
+            for rpid in relatedPids:
+                personIdsRead.append(rpid) #append the Person Ids for the ones that are similar.
+        # print email
+        # if count > 1:
+        #     isMultiple = True
+        # x = res1['results'][0]
+        # person = {'email':email, 'isMultiple':isMultiple, 'personData':x['person']}
+
+        '''
+        Below part extracts the education details.
+        To be displayed in a better way on UI.
+        Use Jquery
+        '''
+        soup = BeautifulSoup(res1['educationHtml'])
+        edu_list = []
+        edu_part = soup.find_all("div",re.compile("^education"))
+        for e in edu_part:
+            further_part = e.find_all("a")
+            # for f in further_part:
+            fl = list(further_part)
+            for f in fl:
+                if "h5" not in str(f):
+                    edu_list.append(f.contents[0])
+                # edu_list=f.contents[1:]
+        
+        [item.encode('utf-8') for item in edu_list]
+        edujson = json.dumps(edu_list)
+        print edujson
+        s = edujson[1:-1]
+        s = s[1:-1]
+        # print s
+        edu_list = s.split("\", \"")
+        # print edu_list
+
+        if res1['personId'] not in personIdsRead:
+            person_loc = res1['fmt_location']
+            person_loc_list = person_loc.split(' ')
+            # for i in person_loc_list:
+                # if any(i in s for s in locations):
+            person = { 'isMultiple':isMultiple, 'education_all':edujson, 'personData':r['person']}
+            persons.append(person)
     context = {
-               'entries':persons}
+               'entries':persons
+               }
     return render(request, 'testApp/searchGrad.html', context)
 
 
@@ -610,12 +688,70 @@ def update(request, email_id):
     context = {
                'entries':persons}
     return render(request, 'testApp/searchGrad.html', context)
+
+def updateByID(request, personId):
+    '''
+    Update function to update related personIds.
+    '''
+    res = CSPerson.objects(person__personId=personId)
+
+    if res is None:
+        msg = {'type':'E','message':'There seems to be some problem fetching records for the entered URL, Please try again later'}
+        context = {
+            'msg':msg,}
+        return render(request,'testApp/message.html', context)
+    persons = []
+    r = res[0]
+    res1 = r['person']
+    isMultiple = False
+    if len(res1['relatedPids']) != 0:
+        isMultiple = True
+    reslts = res1['relatedPids'] #List of related Pids
+    reslts.append(res1['personId']) #Adding it's own personId too.
+    print "Update from List"
+    print reslts
+    finalres = CSPerson.objects(person__personId__in=reslts)
+    for x in finalres:
+        person = { 'isMultiple':isMultiple, 'personData':x['person']}
+        persons.append(person)
+    context = {
+               'entries':persons}
+    return render(request, 'testApp/searchGrad.html', context)
     
 def vote(request, question_id):
     return HttpResponse("You're voting on question %s." % question_id)
 
 def search(request):
     return render(request, 'testApp/search.html')
+
+def utdsearch(request):
+
+    # params = {'email':email, 'firstName':firstName, 'lastName':lastName, 'school':school, 'countryCode':countryCode, 'keywords':keywords}
+    school = 'University of Texas at Dallas'
+    params = { 'school':school }
+    print "Searching : "+params.__str__() 
+    # Authenticating a linkedin profile to start with.
+    linkObj = Authenticate('bxm142230@utdallas.edu','bk11mandal#')
+    url1='https://www.linkedin.com/'
+    linkObj.checkLogin(url1) #checks that the login is successful.
+     
+    print "Linkedin Object :: "+linkObj.__str__()
+    resp = Authenticate.extractLinkedInPagination(linkObj, params, 'localhost', 27017, 'test1')
+    if resp.startswith('Success'):
+        print "SUCCESS"
+        context = { 'entries':'all searches' }
+        return render(request,'testApp/utdsearch.html',context)
+    else:
+        if resp.startswith('Error'):
+            type = 'E'
+        else:
+            type = 'I'
+        message = resp
+        msg = {'type':type, 'message':message}
+        context = {
+                   'msg':msg
+                    }
+        return render(request, 'testApp/message.html', context)
 
 def searchgrad2(request):
     print "Inside SearchGrad 2 .."
@@ -722,3 +858,112 @@ def upload(request):
 
 def delete(request):
     return render(request, 'testApp/delete.html')
+
+def sortView(request):
+    print "SORT TYPE"
+    print request.POST.get('sort_type','')
+    sort_type = request.POST.get('sort_type','')
+    res = None
+    if sort_type == 'byname':
+        print "Sort by Name"
+        # res = DBRecord.objects.order_by('record.results.person.firstName', '-record.results.person.connectionCount')
+        res = CSPerson.objects.order_by('person.firstName','-person.connectionCount')
+        if res is None:
+            msg = {'type':'E','message':'Currently, there are no records. Please perform Search or add few records'}
+            context = {
+                'msg':msg,}
+            return render(request,'testApp/message.html', context)
+    
+    if sort_type == 'bynamed':
+        print "Sort by Name : decreasing order"
+        # res = DBRecord.objects.order_by('-record.results.person.firstName')
+        res = CSPerson.objects.order_by('-person.firstName')
+        if res is None:
+            msg = {'type':'E','message':'Currently, there are no records. Please perform Search or add few records'}
+            context = {
+                'msg':msg,}
+            return render(request,'testApp/message.html', context)
+
+    if sort_type == 'byconnections':
+        print "Sort by Connections : Ascending order"
+        # res = DBRecord.objects.order_by('record.results.person.connectionCount')
+        # res = DBRecord.objects(record__results__person__connectionCount=501)
+        res = CSPerson.objects.order_by('person.connectionCount')
+        if res is None:
+            msg = {'type':'E','message':'Currently, there are no records. Please perform Search or add few records'}
+            context = {
+                'msg':msg,}
+            return render(request,'testApp/message.html', context)
+
+    if sort_type == 'byconnectionsd':
+        print "Sort by Connections : decreasing order"
+        # res = DBRecord.objects.order_by('-record.results.person.connectionCount')
+        res = CSPerson.objects.order_by('-person.connectionCount')
+        if res is None:
+            msg = {'type':'E','message':'Currently, there are no records. Please perform Search or add few records'}
+            context = {
+                'msg':msg,}
+            return render(request,'testApp/message.html', context)
+
+    if sort_type == 'byemail':
+        print "Sort by Email : alphabetical"
+        # res = DBRecord.objects.order_by('record.results.email')
+        res = CSPerson.objects.order_by('person.firstName')
+        if res is None:
+            msg = {'type':'E','message':'Currently, there are no records. Please perform Search or add few records'}
+            context = {
+                'msg':msg,}
+            return render(request,'testApp/message.html', context)
+
+    persons = []
+    personIdsRead = []
+    for r in res:
+        
+        isMultiple = False
+        
+        res1 = r['person']
+        
+        '''
+        For extracting the education details.
+        Use JQuery on the UI to better display this detail.
+        '''
+        soup = BeautifulSoup(res1['educationHtml'])
+        edu_list = []
+        edu_part = soup.find_all("div",re.compile("^education"))
+        for e in edu_part:
+            further_part = e.find_all("a")
+            # for f in further_part:
+            fl = list(further_part)
+            for f in fl:
+                if "h5" not in str(f):
+                    edu_list.append(f.contents[0])
+                # edu_list=f.contents[1:]
+        
+        [item.encode('utf-8') for item in edu_list]
+        edujson = json.dumps(edu_list)
+        # print edujson
+        s = edujson[1:-1]
+        s = s[1:-1]
+        # print s
+        edu_list = s.split("\", \"")
+        # print edu_list
+
+
+        relatedPids = res1['relatedPids']
+        isMultiple = False
+
+        if len(relatedPids) != 0:
+            isMultiple = True
+            for rpid in relatedPids:
+                personIdsRead.append(rpid) #append the Person Ids for the ones that are similar.
+        
+        if res1['personId'] not in personIdsRead:
+            # person = { 'isMultiple':isMultiple, 'personData':r['person']}
+            person = {'isMultiple':isMultiple, 'education_all':edujson, 'personData':res1}
+            persons.append(person)
+    context = {
+               'entries':persons
+               }
+    return render(request, 'testApp/searchGrad.html', context)
+        # person = {'email':email, 'isMultiple':isMultiple, 'education_all':edujson, 'personData':x['person']}
+    # return render(request, 'testApp/tempresult.html',context)
