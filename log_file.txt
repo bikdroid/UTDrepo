@@ -8006,3 +8006,385 @@ to this:
 
   markup_type=markup_type))
 
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/contrib/sessions/middleware.py", line 50, in process_response
+    request.session.save()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 80, in save
+    return self.create()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 49, in create
+    self._session_key = self._get_new_session_key()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 158, in _get_new_session_key
+    if not self.exists(session_key):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 45, in exists
+    return self.model.objects.filter(session_key=session_key).exists()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/query.py", line 651, in exists
+    return self.query.has_results(using=self.db)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 501, in has_results
+    return compiler.has_results()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 819, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 837, in execute_sql
+    sql, params = self.as_sql()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 387, in as_sql
+    from_, f_params = self.get_from_clause()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 625, in get_from_clause
+    clause_sql, clause_params = self.compile(from_clause)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 366, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/datastructures.py", line 146, in as_sql
+    base_sql = compiler.quote_name_unless_alias(self.table_name)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 357, in quote_name_unless_alias
+    r = self.connection.ops.quote_name(name)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/backends/dummy/base.py", line 21, in complain
+    raise ImproperlyConfigured("settings.DATABASES is improperly configured. "
+ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the ENGINE value. Check settings documentation for more details.
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/contrib/sessions/middleware.py", line 50, in process_response
+    request.session.save()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 80, in save
+    return self.create()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 49, in create
+    self._session_key = self._get_new_session_key()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 158, in _get_new_session_key
+    if not self.exists(session_key):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 45, in exists
+    return self.model.objects.filter(session_key=session_key).exists()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/query.py", line 651, in exists
+    return self.query.has_results(using=self.db)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 501, in has_results
+    return compiler.has_results()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 819, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 837, in execute_sql
+    sql, params = self.as_sql()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 387, in as_sql
+    from_, f_params = self.get_from_clause()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 625, in get_from_clause
+    clause_sql, clause_params = self.compile(from_clause)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 366, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/datastructures.py", line 146, in as_sql
+    base_sql = compiler.quote_name_unless_alias(self.table_name)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 357, in quote_name_unless_alias
+    r = self.connection.ops.quote_name(name)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/backends/dummy/base.py", line 21, in complain
+    raise ImproperlyConfigured("settings.DATABASES is improperly configured. "
+ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the ENGINE value. Check settings documentation for more details.
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/contrib/sessions/middleware.py", line 50, in process_response
+    request.session.save()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 80, in save
+    return self.create()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 49, in create
+    self._session_key = self._get_new_session_key()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 158, in _get_new_session_key
+    if not self.exists(session_key):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 45, in exists
+    return self.model.objects.filter(session_key=session_key).exists()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/query.py", line 651, in exists
+    return self.query.has_results(using=self.db)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 501, in has_results
+    return compiler.has_results()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 819, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 837, in execute_sql
+    sql, params = self.as_sql()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 387, in as_sql
+    from_, f_params = self.get_from_clause()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 625, in get_from_clause
+    clause_sql, clause_params = self.compile(from_clause)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 366, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/datastructures.py", line 146, in as_sql
+    base_sql = compiler.quote_name_unless_alias(self.table_name)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 357, in quote_name_unless_alias
+    r = self.connection.ops.quote_name(name)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/backends/dummy/base.py", line 21, in complain
+    raise ImproperlyConfigured("settings.DATABASES is improperly configured. "
+ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the ENGINE value. Check settings documentation for more details.
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/contrib/sessions/middleware.py", line 50, in process_response
+    request.session.save()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 80, in save
+    return self.create()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 49, in create
+    self._session_key = self._get_new_session_key()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 158, in _get_new_session_key
+    if not self.exists(session_key):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 45, in exists
+    return self.model.objects.filter(session_key=session_key).exists()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/query.py", line 651, in exists
+    return self.query.has_results(using=self.db)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 501, in has_results
+    return compiler.has_results()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 819, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 837, in execute_sql
+    sql, params = self.as_sql()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 387, in as_sql
+    from_, f_params = self.get_from_clause()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 625, in get_from_clause
+    clause_sql, clause_params = self.compile(from_clause)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 366, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/datastructures.py", line 146, in as_sql
+    base_sql = compiler.quote_name_unless_alias(self.table_name)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 357, in quote_name_unless_alias
+    r = self.connection.ops.quote_name(name)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/backends/dummy/base.py", line 21, in complain
+    raise ImproperlyConfigured("settings.DATABASES is improperly configured. "
+ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the ENGINE value. Check settings documentation for more details.
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/contrib/sessions/middleware.py", line 50, in process_response
+    request.session.save()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 80, in save
+    return self.create()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 49, in create
+    self._session_key = self._get_new_session_key()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 158, in _get_new_session_key
+    if not self.exists(session_key):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 45, in exists
+    return self.model.objects.filter(session_key=session_key).exists()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/query.py", line 651, in exists
+    return self.query.has_results(using=self.db)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 501, in has_results
+    return compiler.has_results()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 819, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 837, in execute_sql
+    sql, params = self.as_sql()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 387, in as_sql
+    from_, f_params = self.get_from_clause()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 625, in get_from_clause
+    clause_sql, clause_params = self.compile(from_clause)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 366, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/datastructures.py", line 146, in as_sql
+    base_sql = compiler.quote_name_unless_alias(self.table_name)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 357, in quote_name_unless_alias
+    r = self.connection.ops.quote_name(name)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/db/backends/dummy/base.py", line 21, in complain
+    raise ImproperlyConfigured("settings.DATABASES is improperly configured. "
+ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the ENGINE value. Check settings documentation for more details.
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:django.request:Not Found: /search
+WARNING:django.request:Not Found: /testAp/search
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 97, in batchSearch
+    resp = Authenticate.performCSSearch(linkObj, sParams, 'localhost', 27017, 'test1')
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/SignAndSearch.py", line 172, in performCSSearch
+    x,y = e.args
+ValueError: need more than 1 value to unpack
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 101, in batchSearch
+    resp = Authenticate.performCSSearch(linkObj, sParams, 'localhost', 27017, 'test1')
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/SignAndSearch.py", line 172, in performCSSearch
+    x,y = e.args
+ValueError: need more than 1 value to unpack
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/batchSearch/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 101, in batchSearch
+    resp = Authenticate.performCSSearch(linkObj, sParams, 'localhost', 27017, 'test1')
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/SignAndSearch.py", line 174, in performCSSearch
+    x,y = e.args
+ValueError: need more than 1 value to unpack
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+

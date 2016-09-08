@@ -153,7 +153,7 @@ class Authenticate(object):
             # print "LOCATIONS LIST"
             # print searchParams['locations']
             print "LOCATIONS"
-            print request.session.get('locations')
+            # print request.session.get('locations')
             print "OTHER DETAILS"
             fName = searchParams['firstName']
             mailId = searchParams['email']
@@ -161,6 +161,8 @@ class Authenticate(object):
             print mailId
             # if fName == 'EMPTY' or mailId == 'EMPTY':
                 # raise Exception('Info: Search has to be performed from Search page only, Please try again', 'Info')
+            print "Search Params : "
+            print searchParams
             fSrchURL = self.formSearchURL(searchParams)
             print fSrchURL
             linkedJSON = self.loadSearch(fSrchURL, fName)
@@ -534,6 +536,7 @@ class Authenticate(object):
     
     def formSearchURL(self, params): #Here the parameters are converted to the URL.
         """ Creates the search url using the params """
+        print "ENTERED FORM SEARCH URL"
         if params is None:
             return url1
         paramString = ''
@@ -541,11 +544,13 @@ class Authenticate(object):
         for key in pKeys:       # for each parameter, check
             if key == 'email':
                 continue
+            if key == 'locations':
+                continue
             val = params[key]
             if val is None or val == '':
                 continue
             val = val.replace(' ',spaceV) #replace spaces with %20, for making URLs ahead
-            val = val.replace(amper, amperV) # replace ampersands with %26, for making URLs ahead
+            val = val.replace(amper, amperV) #replace ampersands with %26, for making URLs ahead
             paramString = paramString + key + equalTo + val + amper #making the complete URL for the profile
         print "INSIDE formSearchURL and PARAM_STRING "
         print paramString    

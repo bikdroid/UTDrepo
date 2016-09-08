@@ -54,10 +54,7 @@ def batchSearch(request):
                     l = str(r['Name']).split("/")
                     for i in l:
                         locationsList.append(i)
-
-    if locationsList:
-        request.session['locations']=locationsList
-        print "LOCATION LIST SAVED TO SESSION"
+# LIST SAVED TO SESSION"
 
 
     for r in records:
@@ -87,7 +84,11 @@ def batchSearch(request):
             sParams['firstName']=''
             sParams['lastName']=''
 
-        
+        if locationsList:
+            sParams['locations'] = locationsList
+        # request.session['locations']=locationsList
+        # print "LOCATION LIST SAVED TO SESSION"
+
         if r['Email']:
             sParams['email'] = r['Email']
 
@@ -95,14 +96,17 @@ def batchSearch(request):
             goodRecord = False
 
 
-        if goodRecord is True:        
+        if goodRecord is True:     
+            print "CALLING PERFORM CS SEARCH"
             resp = Authenticate.performCSSearch(linkObj, sParams, 'localhost', 27017, 'test1')
         # print "sparams : "
             # print sParams
-            resp = 'Success'
+            # resp = 'Success'
             if resp.startswith('Success'):
+                print "Successfully found"
                 successReads = successReads + 1
             else :
+                print "Unfortunately Not Found"
                 failReads = failReads + 1
     
 
