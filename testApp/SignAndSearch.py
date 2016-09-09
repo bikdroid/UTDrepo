@@ -136,19 +136,19 @@ class Authenticate(object):
             #self.login = login
             #self.password = password
             # Simulate browser with cookies enabled
-            self.cj = cookielib.MozillaCookieJar(cookie_filename)
-            if os.access(cookie_filename, os.F_OK):
-                self.cj.load()
-            self.opener = urllib2.build_opener(
-                urllib2.HTTPRedirectHandler(),
-                urllib2.HTTPHandler(debuglevel=0),
-                urllib2.HTTPSHandler(debuglevel=0),
-                urllib2.HTTPCookieProcessor(self.cj)
-            )
-            self.opener.addheaders = [
-                ('User-agent', ('Mozilla/4.0 (compatible; MSIE 6.0; '
-                               'Windows NT 5.2; .NET CLR 1.1.4322)'))
-            ]
+            # self.cj = cookielib.MozillaCookieJar(cookie_filename)
+            # if os.access(cookie_filename, os.F_OK):
+            #     self.cj.load()
+            # self.opener = urllib2.build_opener(
+            #     urllib2.HTTPRedirectHandler(),
+            #     urllib2.HTTPHandler(debuglevel=0),
+            #     urllib2.HTTPSHandler(debuglevel=0),
+            #     urllib2.HTTPCookieProcessor(self.cj)
+            # )
+            # self.opener.addheaders = [
+            #     ('User-agent', ('Mozilla/4.0 (compatible; MSIE 6.0; '
+            #                    'Windows NT 5.2; .NET CLR 1.1.4322)'))
+            # ]
             self.checkLogin(url1)
             # print "LOCATIONS LIST"
             # print searchParams['locations']
@@ -164,9 +164,13 @@ class Authenticate(object):
             print "Search Params : "
             print searchParams
             fSrchURL = self.formSearchURL(searchParams)
-            print fSrchURL
-            linkedJSON = self.loadSearch(fSrchURL, fName)
-            print "Extracted COMMENTS"
+            # print fSrchURL
+            print "Printing URLs formed"
+            # for f in fSrchURL:
+            print fSrchURL[0]
+            print fSrchURL[1]
+            linkedJSON = self.loadSearch(fSrchURL[1], fName)
+            print "Extracted COMMENTS"  
             # print linkedJSON
             self.formCSRecord(linkedJSON, dbHost, dbPort, dbName, mailId, searchParams['locations'])
             return 'Success'
@@ -537,12 +541,18 @@ class Authenticate(object):
     def formSearchURL(self, params): #Here the parameters are converted to the URL.
         """ Creates the search url using the params """
         print "ENTERED FORM SEARCH URL"
+        Links = []
         if params is None:
             return url1
         paramString = ''
+        paramString2 = ''
         pKeys = params.keys() #getting the parameters.
         for key in pKeys:       # for each parameter, check
             if key == 'email':
+                val2 = params[key]
+                val2 = val2.replace(' ',spaceV)
+                val2 = val2.replace(amper, amperV)
+                paramString2 = paramString2 + key + equalTo + val2 + amper
                 continue
             if key == 'locations':
                 continue
@@ -552,8 +562,10 @@ class Authenticate(object):
             val = val.replace(' ',spaceV) #replace spaces with %20, for making URLs ahead
             val = val.replace(amper, amperV) #replace ampersands with %26, for making URLs ahead
             paramString = paramString + key + equalTo + val + amper #making the complete URL for the profile
+            paramString2 = paramString2 + key + equalTo + val +amper
         print "INSIDE formSearchURL and PARAM_STRING "
         print paramString    
+        print paramString2
         tX = ''
         cX = ''
         if 'title' in pKeys:
@@ -565,10 +577,16 @@ class Authenticate(object):
         else:
             lX = locationNoSelectParam
         srchURL = paramBaseURL.format(paramString, tX, cX, lX) 
-        print "SEARCH URL FORMED"
+        srchURL2 = paramBaseURL.format(paramString2, tX, cX, lX)
+        print "1st SEARCH URL (without email)"
         print srchURL
+        print "2nd SEARCH URL (with email)"
+        print srchURL2
+        Links.append(srchURL)
+
+        Links.append(srchURL2)
         # paramBaseURL is defined at the top, the {0}, {1} etc. positions are filled with the respictive indexed parameters
-        return srchURL
+        return Links
     
     def checkLogin(self, homeUrl):
         """ checks if the user has already logged in into Linkedin """
@@ -667,14 +685,14 @@ class Authenticate(object):
         comments = spContent.findAll(text=lambda text:isinstance(text, Comment))
         print "COMMENTS"
         # print comments
-        print " >> BEAUTIFULSOUP FINDALL"
+        # print " >> BEAUTIFULSOUP FINDALL"
         #print comments
         cLen = len(comments)
         print "Length of COmments"+cLen.__str__()
         if cLen > 0 and cLen > 11:
             comment = comments[11]
         if comment is None:
-            for cmnt in comments:
+            for cmnt in comments:   
                 if firstName in cmnt:
                     comment = cmnt
         # print "output COMMENTS :"
@@ -1089,6 +1107,7 @@ class Authenticate(object):
                             break
                     
                     if(goodMatch==True):
+
                         curEducation = eduinfo
                         print "education : "+curEducation.__str__()
                         curEducationHTMLparsed = edu_html_list # Storing the html part too.
