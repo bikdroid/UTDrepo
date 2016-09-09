@@ -9,7 +9,7 @@ import pymongo
 import datetime
 from models import Employee, Record, DBRecord, Person, PersonWrapper
 from bs4 import BeautifulSoup
-import html5lib 
+# import html5lib 
 from bs4 import Comment
 import logging
 
