@@ -594,7 +594,7 @@ class Authenticate(object):
         print "Inside Checklogin"
         homepage = self.loadPage(homeUrl)
         print "homeURL loaded"
-        homeSoup = BeautifulSoup(homepage, "html5lib")
+        homeSoup = BeautifulSoup(homepage)#, "html5lib")
         print "Soup formed"
         if homeSoup.find('form', 'login-form') is not None:
             self.loginPage()
