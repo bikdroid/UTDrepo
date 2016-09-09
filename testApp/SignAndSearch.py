@@ -152,7 +152,7 @@ class Authenticate(object):
             self.checkLogin(url1)
             # print "LOCATIONS LIST"
             # print searchParams['locations']
-            print "LOCATIONS"
+            # print "LOCATIONS"
             # print request.session.get('locations')
             print "OTHER DETAILS"
             fName = searchParams['firstName']
@@ -590,8 +590,11 @@ class Authenticate(object):
     
     def checkLogin(self, homeUrl):
         """ checks if the user has already logged in into Linkedin """
+        print "Inside Checklogin"
         homepage = self.loadPage(homeUrl)
+        print "homeURL loaded"
         homeSoup = BeautifulSoup(homepage)
+        print "Soup formed"
         if homeSoup.find('form', 'login-form') is not None:
             self.loginPage()
             self.confirmLogin(homeUrl)
