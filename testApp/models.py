@@ -84,6 +84,12 @@ class Person(EmbeddedDocument):
     profilePhoto = EmbeddedDocumentField(PhotoWrapper)
     logo_result_base = EmbeddedDocumentField(LogoResultBase)
     relatedPids = ListField(IntField())
+    email = EmailField() #(required=True)
+    # Email is stored for all the persons
+    # returned in the search for this email id
+    # The correct person for this entry has to 
+    # be detected.
+
     
 class PersonWrapper(EmbeddedDocument):
     person = EmbeddedDocumentField(Person)

@@ -8388,3 +8388,67 @@ to this:
 
   markup_type=markup_type))
 
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+WARNING:django.request:Not Found: /
+WARNING:py.warnings:/usr/local/lib/python2.7/dist-packages/bs4/__init__.py:166: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+To get rid of this warning, change this:
+
+ BeautifulSoup([your markup])
+
+to this:
+
+ BeautifulSoup([your markup], "html.parser")
+
+  markup_type=markup_type))
+
+ERROR:django.request:Internal Server Error: /testApp/searchgradaction/
+Traceback (most recent call last):
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/bikram/UTDProjects/UTDrepo/testApp/views.py", line 400, in searchUnderGrad
+    return render(request,'testApp/searchGrad.html',context)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 200, in render
+    template = context.template.engine.get_template(template_name)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "/home/bikram/.local/lib/python2.7/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Unused 'message' at end of if expression.

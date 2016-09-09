@@ -388,6 +388,12 @@ def searchUnderGrad(request): ## Added By, Bikramjit edu.bmandal@gmail.com
     # print search_list
 
     ctx = { 'entries':entries_list }
+
+    '''
+    If List is Empty
+    '''
+    if not entries_list:
+        ctx = {'entries':entries_list, 'message':'NO MATCHING ENTRY IS PRESENT'}
     context=ctx
     # print "\n Entries appended to list and rendered to searchGrad.html "
     #return render(request, 'testApp/allresults.html', context)

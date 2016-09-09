@@ -876,6 +876,13 @@ class Authenticate(object):
             print results
             allPersons = []
 
+            '''
+            Related Person IDs:
+            Below, the code collects the Person IDs related to 
+            the current person and stores it. This helps to 
+            get the data for 'Multiple' links in the displayed 
+            results.
+            '''
             relatedPids = []
             for reslt in results:
                 personObj = reslt[personKey]
@@ -1050,7 +1057,13 @@ class Authenticate(object):
                     edu_part = soup.find_all("div",re.compile("^education"))
                     edu_html_list = ''
                     # print "CONTENTS"
-                    searchtext = "Bangladesh University"
+
+                    ###
+                    #Below searchtext was used for searching persons from 
+                    #a specific university 
+                    ###
+                    searchtext = "Bangladesh University" 
+                    
                     # searchtext = university_choice
                     # further_part = edu_part[0].find_all("a")
                     # goodMatch=False
