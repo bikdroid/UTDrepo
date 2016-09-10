@@ -177,6 +177,8 @@ class Authenticate(object):
             return 'Success'
         except Exception as e:
             x,y = e.args
+            print x
+            print e
             return x
 
     # IN USE
