@@ -12,10 +12,13 @@ from bs4 import BeautifulSoup
 # import html5lib 
 from bs4 import Comment
 import logging
+import requests
 
 logging.basicConfig(filename='log_file.txt',level=logging.INFO)
 username = "anandrox1991@gmail.com"
 password = "chandraisgr8"
+username = "bxm142230@utdallas.edu"
+password = ""
 dbHost = 'localhost' #found from the hostname() command in mongo.
 dbPort = 27017
 dbName = 'test1'
@@ -678,7 +681,19 @@ class Authenticate(object):
         Loads the search page using the url provided and returns raw search results
         """
         print " inside loadSearch .."
-        html = self.loadPage(url)
+
+        '''
+        97.77.104.22:80
+        '''
+        proxy = {
+            "http":"97.77.104.22:80",
+        }
+        headers = {'Accept-Encoding': 'identity'}
+        html2 = requests.get(url, proxies=proxy, headers=headers)
+        print "HTML 2"
+        # print html2.content[:1000]
+        html = html2.content
+        # html = self.loadPage(url)
         print "SPAGE"
         # print sPage[:200]
         spContent = BeautifulSoup(html)

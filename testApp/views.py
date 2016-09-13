@@ -620,7 +620,7 @@ def allresults(request): #Accessing mongoengine to get data.
     personIdsRead = []
     for r in res:
         # res1 = r['record']
-        # count = res1['resultCount']
+        # count = res1['resultCount']se
         # email = res1['email']
         res1 = r['person']
         relatedPids = res1['relatedPids']
