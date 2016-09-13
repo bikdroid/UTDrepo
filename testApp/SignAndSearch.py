@@ -119,14 +119,21 @@ class Authenticate(object):
         self.password = password
         # Simulate browser with cookies enabled
         self.cj = cookielib.MozillaCookieJar(cookie_filename)
+        '''
+        Creating settings for the proxy
+        '''
+        proxy_handler = urllib2.ProxyHandler({'http':'209.222.25.83:3128'})
+        # proxy_auth_handler = urllib2.ProxyBasicAuthHandler()
         if os.access(cookie_filename, os.F_OK):
             self.cj.load()
         self.opener = urllib2.build_opener(
             urllib2.HTTPRedirectHandler(),
             urllib2.HTTPHandler(debuglevel=0),
             urllib2.HTTPSHandler(debuglevel=0),
+            proxy_handler,
             urllib2.HTTPCookieProcessor(self.cj)
         )
+
         self.opener.addheaders = [
             ('User-agent', ('Mozilla/4.0 (compatible; MSIE 6.0; '
                            'Windows NT 5.2; .NET CLR 1.1.4322)'))
@@ -620,11 +627,15 @@ class Authenticate(object):
             self.trialCount = self.trialCount+1;
             if data is not None:
                 response = self.opener.open(url, data)
+                print "Data Not None"
+                print response
             else:
+                print "Data is None"
                 response = self.opener.open(url)
             self.trialCount = 0    
             return ''.join(response.readlines())
         except:
+            print "LoadPage Exception"
             # If URL doesn't load for ANY reason, try again for 5 times...
             # Quick and dirty solution for 404 returns because of network problems
             # after 5 trials, the program will terminate
@@ -684,16 +695,17 @@ class Authenticate(object):
 
         '''
         97.77.104.22:80
+        174.129.204.124:80
         '''
         proxy = {
-            "http":"97.77.104.22:80",
+            "http":"209.222.25.83:3128",
         }
         headers = {'Accept-Encoding': 'identity'}
         html2 = requests.get(url, proxies=proxy, headers=headers)
         print "HTML 2"
-        # print html2.content[:1000]
-        html = html2.content
-        # html = self.loadPage(url)
+        print html2.content
+        # html = html2.content
+        html = self.loadPage(url)
         print "SPAGE"
         # print sPage[:200]
         spContent = BeautifulSoup(html)
@@ -702,22 +714,22 @@ class Authenticate(object):
         #if title is not None:
             #if title.string is not lSrchTitle:
                 #sys.exit('There is some problem with url provided, it does not correspond to Linkedin Search')
-        
+        comment = None
         comments = spContent.findAll(text=lambda text:isinstance(text, Comment))
         print "COMMENTS"
-        # print comments
+        print comments
         # print " >> BEAUTIFULSOUP FINDALL"
         #print comments
         cLen = len(comments)
         print "Length of COmments"+cLen.__str__()
         if cLen > 0 and cLen > 11:
-            comment = comments[11]
+            comment = comments[11]  
         if comment is None:
             for cmnt in comments:   
                 if firstName in cmnt:
                     comment = cmnt
-        # print "output COMMENTS :"
-        # print comment            
+        print "output COMMENTS :"
+        print comment            
         return comment
                 
     def formFullJSON(self, srchResult):
