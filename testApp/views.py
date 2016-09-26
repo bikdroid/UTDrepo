@@ -56,7 +56,7 @@ def batchSearch(request):
                         locationsList.append(i)
 # LIST SAVED TO SESSION"
 
-
+    res = CSPerson.objects.order_by('person.firstName')
     for r in records:
         if r is None:
             failReads = failReads + 1
@@ -84,6 +84,10 @@ def batchSearch(request):
             sParams['firstName']=''
             sParams['lastName']=''
 
+        '''
+        Check for record already available.
+        '''
+
         if locationsList:
             sParams['locations'] = locationsList
         # request.session['locations']=locationsList
@@ -98,7 +102,7 @@ def batchSearch(request):
 
         if goodRecord is True:     
             print "CALLING PERFORM CS SEARCH"
-            resp = Authenticate.performCSSearch(linkObj, sParams, 'localhost', 27017, 'test1')
+            resp = Authenticate.performCSSearch(linkObj, sParams, 'localhost', 27017, 'test2')
         # print "sparams : "
             # print sParams
             # resp = 'Success'
@@ -117,8 +121,8 @@ def batchSearch(request):
     print "DONE WITH"
     for s in sParamsList:
         print s
-        # resp = Authenticate.performCSSearch(linkObj, s, 'localhost', 27017, 'test1')
-        # resp = Authenticate.performSearch(linkObj, s, 'localhost', 27017, 'test1')
+        # resp = Authenticate.performCSSearch(linkObj, s, 'localhost', 27017, 'test2')
+        # resp = Authenticate.performSearch(linkObj, s, 'localhost', 27017, 'test2')
         # resp = 'Success'
         
     message = 'The records from the uploaded file have been processed. '
@@ -194,7 +198,7 @@ def formSearch(request):
     linkObj.checkLogin(url1) #checks that the login is successful.
      
     print "Linkedin Object :: "+linkObj.__str__()
-    resp = Authenticate.performSearch(linkObj, params, 'localhost', 27017, 'test1')
+    resp = Authenticate.performSearch(linkObj, params, 'localhost', 27017, 'test2')
     if resp.startswith('Success'):
         print request
         return results(request)
@@ -214,7 +218,7 @@ def formSearch(request):
 def searchUnderGrad(request): ## Added By, Bikramjit edu.bmandal@gmail.com
     print "Inside grad search ... "
     myclient = MongoClient()
-    db = myclient.test1
+    db = myclient.test2
     # firstName = request.POST.get('fname', 'Empty')
     # lastName = request.POST.get('lname', 'Empty')
     personemail = request.POST.get('email','Empty')
@@ -646,21 +650,43 @@ def allresults(request): #Accessing mongoengine to get data.
         edu_list = []
         edu_part = soup.find_all("div",re.compile("^education"))
         for e in edu_part:
-            further_part = e.find_all("a")
+            temp_list = '';
+            temp_list2 = [];
+            further_part = e.find_all("header")
+            time_part = e.find_all("span","time")
+            # further_part_headers = e.find_all("header");
             # for f in further_part:
+            temp_list2 = [header.a.contents[0] for header in further_part]
+            contents_1 = "";
+            for each in temp_list2:
+                contents_1 += each
+
+                
             fl = list(further_part)
+            # list1 = [header.a for a in further_part]
             for f in fl:
                 if "h5" not in str(f):
-                    edu_list.append(f.contents[0])
+                    # temp_list.append(f.contents[0])
+                    temp_list = temp_list+','+f.contents[0];
                 # edu_list=f.contents[1:]
+            # [item.encode('utf-8') for item in temp_list]
+            timelist = "";
+            for t in time_part:
+                timelist = timelist+t;
+            print "CONTENTS_1"
+            print contents_1
+            edu_list.append(contents_1.encode('utf-8')+timelist)
         
-        [item.encode('utf-8') for item in edu_list]
+        print "LIST OF EDUCATION CREATED"
+        print edu_list
+        # [item.encode('utf-8') for item in edu_list]
         edujson = json.dumps(edu_list)
+        print "EDUCATION JSON "
         print edujson
         s = edujson[1:-1]
         s = s[1:-1]
         # print s
-        edu_list = s.split("\", \"")
+        # edu_list = s.split("\", \"")
         # print edu_list
 
         if res1['personId'] not in personIdsRead:
@@ -668,7 +694,7 @@ def allresults(request): #Accessing mongoengine to get data.
             person_loc_list = person_loc.split(' ')
             # for i in person_loc_list:
                 # if any(i in s for s in locations):
-            person = { 'isMultiple':isMultiple, 'education_all':edujson, 'personData':r['person']}
+            person = { 'isMultiple':isMultiple, 'education_all':edu_list, 'personData':r['person']}
             persons.append(person)
     context = {
                'entries':persons
@@ -746,7 +772,7 @@ def utdsearch(request):
     linkObj.checkLogin(url1) #checks that the login is successful.
      
     print "Linkedin Object :: "+linkObj.__str__()
-    resp = Authenticate.extractLinkedInPagination(linkObj, params, 'localhost', 27017, 'test1')
+    resp = Authenticate.extractLinkedInPagination(linkObj, params, 'localhost', 27017, 'test2')
     if resp.startswith('Success'):
         print "SUCCESS"
         context = { 'entries':'all searches' }
@@ -941,21 +967,36 @@ def sortView(request):
         edu_list = []
         edu_part = soup.find_all("div",re.compile("^education"))
         for e in edu_part:
-            further_part = e.find_all("a")
+            temp_list2 = []; # list to store the educaiton information
+            further_part = e.find_all("header")
+            time_part = e.find_all("span","time")
+            
+            #for the contents of the a tags
+            temp_list2 = [header.a.contents[0] for header in further_part]
+            contents_1 = "";
+            for each in temp_list2:
+                contents_1 += each
+
+            # for the contents of the time tags.
+            timelist = "";
+            for t in time_part:
+                timelist = timelist+t;
+
             # for f in further_part:
             fl = list(further_part)
             for f in fl:
                 if "h5" not in str(f):
                     edu_list.append(f.contents[0])
-                # edu_list=f.contents[1:]
-        
-        [item.encode('utf-8') for item in edu_list]
+
+            edu_list.append(contents_1.encode('utf-8')+timelist)
+
+        # [item.encode('utf-8') for item in edu_list]
         edujson = json.dumps(edu_list)
         # print edujson
         s = edujson[1:-1]
         s = s[1:-1]
         # print s
-        edu_list = s.split("\", \"")
+        # edu_list = s.split("\", \"")
         # print edu_list
 
 
@@ -969,7 +1010,7 @@ def sortView(request):
         
         if res1['personId'] not in personIdsRead:
             # person = { 'isMultiple':isMultiple, 'personData':r['person']}
-            person = {'isMultiple':isMultiple, 'education_all':edujson, 'personData':res1}
+            person = {'isMultiple':isMultiple, 'education_all':edu_list, 'personData':res1}
             persons.append(person)
     context = {
                'entries':persons

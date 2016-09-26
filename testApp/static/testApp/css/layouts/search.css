@@ -32,6 +32,34 @@ p {
     line-height: 1.6em;
 }
 
+/*ul {
+    border: 1px solid #ccc;
+    width: 200px;
+
+     Border radius for Chrome, Webkit and other good browsers 
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -border-radius: 10px;
+    border-radius: 10px;
+}
+*/
+/* Only add border to bottom of <li> */
+/*li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+*/
+/* Get rid of the last <li>'s bottom border to stop overlap with <ul>'s border */
+/* :last-child works in IE7+ */
+/*li:last-child {
+    border-bottom: none;
+}*/
+
+/* Get the number and float it right */
+span {
+    float: right;
+}
+
 
 /*
  * -- Layout Styles --
@@ -254,3 +282,4 @@ p {
 if it's not present, don't show loader */
 
 }
+
