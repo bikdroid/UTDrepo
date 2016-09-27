@@ -576,7 +576,10 @@ class Authenticate(object):
         pKeys = params.keys() #getting the parameters.
         for key in pKeys:       # for each parameter, check
             if key == 'email':
+
                 val2 = params[key]
+                if(val2==' '):
+                    continue
                 val2 = val2.replace(' ',spaceV)
                 val2 = val2.replace(amper, amperV)
                 paramString2 = paramString2 + key + equalTo + val2 + amper
@@ -736,7 +739,7 @@ class Authenticate(object):
         headers = {'Accept-Encoding': 'identity'}
         html2 = requests.get(url, proxies=proxy, headers=headers)
         print "HTML 2"
-        print html2.content
+        # print html2.content
         # html = html2.content
         html = self.loadPage(url)
         print "SPAGE"
@@ -750,7 +753,7 @@ class Authenticate(object):
         comment = None
         comments = spContent.findAll(text=lambda text:isinstance(text, Comment))
         print "COMMENTS"
-        print comments
+        # print comments
         # print " >> BEAUTIFULSOUP FINDALL"
         #print comments
         cLen = len(comments)
@@ -762,7 +765,7 @@ class Authenticate(object):
                 if firstName in cmnt:
                     comment = cmnt
         print "output COMMENTS :"
-        print comment            
+        # print comment            
         return comment
                 
     def formFullJSON(self, srchResult):
@@ -947,7 +950,8 @@ class Authenticate(object):
             print "SEARCHRES"
             # print searchRes
             resultCount = searchRes['formattedResultCount']
-            resultNo = int(resultCount)
+            resultCount = resultCount.replace(',','')
+            resultNo = int(resultCount) #PROBLEM : 1,666 gives Invalid Literal error.
             if resultNo == 0:
                 raise Exception('Info: There are no matching records for the query', 'Info')
             baseData = searchRes[baseDataKey]
@@ -958,7 +962,7 @@ class Authenticate(object):
             print resultCount
             results = searchRes[resultsKey]
             print "RESULTS"
-            print results
+            # print results
             allPersons = []
 
             '''
@@ -987,6 +991,7 @@ class Authenticate(object):
 
             print "RELATED PIDS"
             print relatedPids
+            print "UNIVERSITY CHECK == TRUE"
             doUniversityCheck = True
             for reslt in results:
                 '''
@@ -1011,6 +1016,7 @@ class Authenticate(object):
                     print "PERSON NOT NONE"
                     client = self.connect2DB(dbHost, dbPort)
                     print client
+                    print "STORING .."
                     self.storeCSRecord(frmtedPerson, pId, client)
                 else:
                     print "No Match"
@@ -1300,6 +1306,7 @@ class Authenticate(object):
             
             return personFormed
         except Exception as e:
+            print "Extract Person Exception :: "
             print e
             raise Exception('Error: There is some problem forming Person record from the information provided', 'Error')    
             

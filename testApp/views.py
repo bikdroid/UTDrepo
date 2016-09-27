@@ -4,6 +4,7 @@ from models import Employee, Record, CSPerson, DBRecord, Person, PersonWrapper
 from django.template import loader, RequestContext
 from django.core.urlresolvers import reverse
 from SignAndSearch import Authenticate
+from People import People
 from django import forms
 from pymongo import MongoClient
 from .forms import UploadFileForm
@@ -44,7 +45,6 @@ def batchSearch(request):
     successReads = 0
     sParamsList = []
     locationsList = []
-    # stored_stuff = CSPerson.objects(person__email)
     for r in records:
         if r['Full Name']=='' or r['Full Name']=='?':
             if r['Email']:
@@ -54,39 +54,77 @@ def batchSearch(request):
                     l = str(r['Name']).split("/")
                     for i in l:
                         locationsList.append(i)
-# LIST SAVED TO SESSION"
+    # LIST SAVED TO SESSION"
 
     res = CSPerson.objects.order_by('person.firstName')
+    allpeople = []
+    for r in res:
+        res1 = r['person']
+        allpeople.append(People(res1['firstName'],res1['lastName'],''))
+
+    print allpeople.__str__()
+
     for r in records:
         if r is None:
             failReads = failReads + 1
             continue
         sParams = {}
         goodRecord = False
-
+        '''
+        Peculiar possibilities based on the doc provided.
+        '''
+        if r['Name']=='Total':
+            break
+        if r['Name']=='Arizona':
+            continue
 
         if r['Full Name']!='' or r['Full Name']!='?':
-            name = r['Full Name'].split(' ')
+            thename = r['Full Name']
+            thename = re.sub(r'\(.+?\)\s*', '', thename )
+            print "Cleaned Full Name : "+thename
+            if thename.strip()=='':
+                continue
+            # name = r['Full Name'].split(' ')
+            name = thename.strip().split(' ')
             goodRecord = True
             if name:
 
                 nlist = list(name)                
-
+                '''
+                Still no check for the cases for middle names.
+                '''
                 if len(nlist)>=2:
-                    sParams['firstName'] = name[0]
-                    sParams['lastName'] = name[1]
+                    sParams['firstName'] = name[0].strip() #Removing Trailing Spaces
+                    sParams['lastName'] = name[1].strip()
                 else:
-                    sParams['firstName'] = ''
-                    sParams['lastName'] = ''
+                    # sParams['firstName'] = ''
+                    # sParams['lastName'] = ''
+                    sParams['firstName']=name[0]
+                    sParams['lastName']=''
         
         else:
             goodRecord = True
             sParams['firstName']=''
             sParams['lastName']=''
 
+        print "Checking for "+sParams['firstName']+", "+sParams['lastName']
         '''
         Check for record already available.
         '''
+        inrecords = False
+        # for p in allpeople:
+        #     # print "Inside People Records .."
+        #     if ((p.firstName.lower()==sParams['firstName'].lower()) and (p.lastName.lower()==sParams['lastName'].lower())):
+        #         print p.firstName+" "+p.lastName+" already in records"
+        #         print "moving to next record ..."
+        #         inrecords = True
+        #         break
+
+        # if inrecords==True:
+        #     print "It's True"
+        #     continue
+
+        # print "CONTINUE DID NOT EXECUTE"
 
         if locationsList:
             sParams['locations'] = locationsList
@@ -94,10 +132,13 @@ def batchSearch(request):
         # print "LOCATION LIST SAVED TO SESSION"
 
         if r['Email']:
+            # print ""
             sParams['email'] = r['Email']
 
         else: 
-            goodRecord = False
+            print "No Email"
+            sParams['email'] = ' '
+            goodRecord = True
 
 
         if goodRecord is True:     
