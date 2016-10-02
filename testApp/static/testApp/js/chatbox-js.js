@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 	var entry_q = "Please specify last 4 digits of your account number. Thankyou";
     	setTimeout(function () {
-				message_side = message_side === 'left'?'right':'left';
+				var message_side = message_side === 'left'?'right':'left';
 				user_answer_required = 2;
 				// console.log(data)
 				message2 = new Message({
