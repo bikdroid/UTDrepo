@@ -942,7 +942,7 @@ def chatbotview(request):
         response_data = []
         response_data['answer'] = 'Account Balance'
         return HttpResponse(
-            json.dumps(response_data)
+            json.dumps(response_data),
             content_type = "application/json"
             )
     else:
