@@ -939,10 +939,10 @@ def delete(request):
 def chatbotview(request):
     if request.method == 'GET':
         post_text = request.GET.get('the_post')
-        response_data = []
-        response_data['answer'] = 'Account Balance'
+       # response_data = []
+        #response_data['answer'] = 'Account Balance'
         return HttpResponse(
-            json.dumps(response_data),
+            json.dumps("test"),
             content_type = "application/json"
             )
     else:
