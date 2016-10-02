@@ -40,6 +40,11 @@ $(document).ready(function(){
 		$.get('/testApp/chatbot/',{'query':text}, function(data)
 			{
 				console.log('requesting server for query analysis');
+				message_side = message_side === 'left'?'right':'left';
+				message = new Message({
+					text: data,
+					message_side: message_side
+				});
 			});
 		console.log("button clicked !!");
 
