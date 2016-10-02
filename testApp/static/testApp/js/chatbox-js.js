@@ -39,6 +39,17 @@ $(document).ready(function(){
 		message.draw();
 		console.log(message);
 		$('.messages').append($message_input.val());
+		$.get('/testApp/querynlp/',{'query':text}, function(data)
+			{
+				console.log('requesting server for query analysis');
+				message_side = message_side === 'left'?'right':'left';
+				console.log(data)
+				message = new Message({
+					text: data['result'],
+					message_side: message_side
+				});
+				console.log(data);
+			});
 		console.log($message_input.val());
 		console.log("button clicked !!");
 
