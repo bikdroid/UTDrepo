@@ -64,10 +64,10 @@ class QueryDeployer(object):
 		response_data = str(response.text);
 		#print ("content:", response_data)
 		json_data = json.loads(response_data)
-		print (getMerchantName(json_data[0]["merchant_id"]))
+		print (self.getMerchantName(json_data[0]["merchant_id"]))
 		print (json_data[0]["description"])
 		print (json_data[0]["amount"])
-		return "Your last transaction was : " + "Merchant - " + getMerchantName(json_data[0]["merchant_id"]) + " Description - " + json_data[0]["description"] + " Amount - " + str(json_data[0]["amount"]);
+		return "Your last transaction was : " + "Merchant - " + self.getMerchantName(json_data[0]["merchant_id"]) + " Description - " + json_data[0]["description"] + " Amount - " + str(json_data[0]["amount"]);
 
 	def accountCheck(self):
 		data = '{"query":{"bool":{"must":[{"text":{"record.document":"SOME_JOURNAL"}},{"text":{"record.articleTitle":"farmers"}}],"must_not":[],"should":[]}},"from":0,"size":50,"sort":[],"facets":{}}'
@@ -101,9 +101,9 @@ class QueryDeployer(object):
 		return json_data["name"]
 
 	def response1(self,text,type):
-	    ret = parse(text,type)
+	    ret = self.parse(text,type)
 	    print (ret)
 	    if ret == "transaction check" :
-	        return consumeGETRequestSync()
+	        return self.consumeGETRequestSync()
 	    if ret == "account check" :
-	        return accountCheck()
+	        return self.accountCheck()
