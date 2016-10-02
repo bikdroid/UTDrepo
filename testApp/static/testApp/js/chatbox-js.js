@@ -27,7 +27,22 @@ $(document).ready(function(){
 		$message_input = $('.message_input');
 		text = $('.message_input').val();
 		console.log(text);
-		$messages = $('.messages');
+		
+		 setTimeout(function () {
+            $messages = $('.messages');
+			message_side = 'right';
+			message_side = message_side === 'left'?'right':'left';
+
+			message = new Message({
+				text: text,
+				message_side: message_side
+			});
+
+			message.draw();
+			console.log(message);
+			$('.messages').append($message_input.val());
+        }, 1000);
+/*		$messages = $('.messages');
 		message_side = 'right';
 		message_side = message_side === 'left'?'right':'left';
 
@@ -39,7 +54,7 @@ $(document).ready(function(){
 		message.draw();
 		console.log(message);
 		$('.messages').append($message_input.val());
-		$.get('/testApp/querynlp/',{'the_post':text}, function(data)
+*/		$.get('/testApp/querynlp/',{'the_post':text}, function(data)
 			{
 				console.log('requesting server for query analysis');
 				message_side = message_side === 'left'?'right':'left';
@@ -50,6 +65,7 @@ $(document).ready(function(){
 				});
 				message1.draw();
 				console.log(data);
+				window.print(data['result']);
 			});
 		console.log($message_input.val());
 		console.log("button clicked !!");
