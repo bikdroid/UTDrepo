@@ -937,7 +937,7 @@ def delete(request):
     return render(request, 'testApp/delete.html')
 
 def chatbotview(request):
-    return render(request, 'testApp/chatbot.html')
+    return "Hi !"
 
 def sortView(request):
     print "SORT TYPE"
