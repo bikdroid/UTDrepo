@@ -936,6 +936,9 @@ def upload(request):
 def delete(request):
     return render(request, 'testApp/delete.html')
 
+def chatbotview(request):
+    return render(request, 'testApp/chatbot.html')
+
 def sortView(request):
     print "SORT TYPE"
     print request.POST.get('sort_type','')

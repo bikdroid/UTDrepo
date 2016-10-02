@@ -1,0 +1,74 @@
+# ChatBot
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/static/testApp/css/layouts/chatbox.css">
+
+{%	load staticfiles %}
+</head>
+
+<body>
+
+{% csrf_token %}
+<h1>ChatBox</h1>Message:
+	<form>
+		<input id="input" name="FirstName" type="text" value="Mickey"><br>
+		<button id="send-query" onclick="sendRequest()" type="button">Send</button>
+	</form>
+	<p id="demo"></p>
+
+<div class="chat_window">
+		<div class="top_menu">
+			<div class="buttons">
+				<div class="button close"></div>
+				<div class="button minimize"></div>
+				<div class="button maximize"></div>
+			</div>
+			<div class="title">
+				Chat
+			</div>
+		</div>
+		<ul class="messages"></ul>
+		<div class="bottom_wrapper clearfix">
+			<div class="message_input_wrapper">
+				<input class="message_input" placeholder="Type your message here...">
+			</div>
+			<div class="send_message">
+				<div class="icon"></div>
+				<div class="text">
+					Send
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="message_template">
+		<ul>
+			<li class="message">
+				<div class="avatar"></div>
+				<div class="text_wrapper">
+					<div class="text"></div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+</body>
+<!--
+<script>
+function sendRequest()
+{
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "/testApp/chatbox", false);
+xhr.send();
+alert("test");
+console.log(xhr.status);
+console.log(xhr.statusText);
+}
+</script>-->
+<script src="{% static "/static/testApp/js/chatbox-ajax.js" %}"></script>
+
+	<script src="{% static "/static/testApp/js/json2.js" %}"></script>
+</html>
