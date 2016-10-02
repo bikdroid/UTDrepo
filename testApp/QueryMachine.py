@@ -104,7 +104,7 @@ class QueryDeployer(object):
 	def response1(self,text,type):
 		print text
 	    ret = self.parse(text,type)
-	    print (ret)
+	    print ret
 	    if ret == "transaction check" :
 	        return self.consumeGETRequestSync()
 	    if ret == "account check" :
