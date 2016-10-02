@@ -24,7 +24,8 @@ $(document).ready(function(){
 
 		var $message_input, $messages, message, message_side, text;
 		$message_input = $('.message_input');
-		text = $message_input;
+		text = $('.message_input').val();
+		console.log(text);
 		$messages = $('.messages');
 		message_side = 'right';
 		message_side = message_side === 'left'?'right':'left';
