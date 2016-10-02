@@ -12,7 +12,7 @@ $(document).ready(function(){
                 $message.addClass(_this.message_side).find('.text').html(_this.text);
                 $('.messages').append($message);
                 console.log('appended');
-                $('.messages').animate({ scrollTop: $messages.prop('scrollHeight') }, 300);
+                $('.messages').animate({ scrollTop: $('.messages').prop('scrollHeight') }, 300);
                 return setTimeout(function () {
                     return $message.addClass('appeared');
                 }, 0);
