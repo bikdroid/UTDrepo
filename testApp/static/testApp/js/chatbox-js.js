@@ -50,7 +50,7 @@ $(document).ready(function(){
   //           	console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
   //       	}
 		// });
-		$.get('/testApp/chatbot/',{'query':text}, function(data)
+		$.get('/testApp/querynlp',{'query':text}, function(data)
 			{
 				console.log('requesting server for query analysis');
 				message_side = message_side === 'left'?'right':'left';

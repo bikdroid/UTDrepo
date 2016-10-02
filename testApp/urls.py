@@ -27,5 +27,6 @@ urlpatterns = [
     url(r'^(?P<question_id>[0-9]+)/vote/$', views.vote, name='vote'),
     url(r'^utdsearch/$', views.utdsearch, name='utdsearch'),
     url(r'^merge_update/$', views.mergedUpdate, name='mergedUpdate_update'),
-    url(r'^chatbot/$', views.chatbotview, name='chatbotrequest')
+    url(r'^chatbot/$', views.chatbotview, name='chatbotrequest'),
+    url(r'^querynlp/$',views.querynlp, name='querynlprequest')
 	]

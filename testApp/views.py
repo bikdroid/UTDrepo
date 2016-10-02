@@ -936,7 +936,7 @@ def upload(request):
 def delete(request):
     return render(request, 'testApp/delete.html')
 
-def chatbotview(request):
+def querynlp(request):
     if request.method == 'GET':
         post_text = request.GET.get('the_post')
         response_data = {}
@@ -953,6 +953,10 @@ def chatbotview(request):
             json.dumps({"nothing to see": "this isn't happening"}),
             content_type="application/json"
         )
+
+def chatbotview(request):
+    return render(request, 'testApp/chatbot.html')
+    
 
 def sortView(request):
     print "SORT TYPE"
