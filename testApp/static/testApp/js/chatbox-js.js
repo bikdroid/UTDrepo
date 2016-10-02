@@ -37,7 +37,7 @@ $(document).ready(function(){
 
 		message.draw();
 		console.log(message);
-		$.ajax({
+		$.get({
 			url: "/testApp/chatbot/",
 			type: "POST",
 			data: { the_post : text},
