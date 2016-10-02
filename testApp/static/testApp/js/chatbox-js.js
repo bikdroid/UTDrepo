@@ -37,8 +37,10 @@ $(document).ready(function(){
 
 		message.draw();
 		console.log(message);
-		$('.messages').append($message_input.val() + "\n");
-		console.log($message_input.val());
+		$.get('/testApp/chatbot/',{'query':text}, function(data)
+			{
+				console.log('requesting server for query analysis');
+			});
 		console.log("button clicked !!");
 
 	});
