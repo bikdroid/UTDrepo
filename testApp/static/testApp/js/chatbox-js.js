@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
 
-	var Message;
+	 var Message;
     Message = function (arg) {
         this.text = arg.text, this.message_side = arg.message_side;
         this.draw = function (_this) {
@@ -37,29 +37,8 @@ $(document).ready(function(){
 
 		message.draw();
 		console.log(message);
-		// $.ajax({
-		// 	url: "/testApp/chatbot/",
-		// 	type: "POST",
-		// 	data: { the_post : text},
-		// 	success: function(json){
-		// 		console.log(json);
-		// 		console.log(success);
-		// 	},
-		// 	error: function(xhr,errmsg,err) {
-            
-  //           	console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
-  //       	}
-		// });
-		// $.get('/testApp/querynlp',{'query':text}, function(data)
-		// 	{
-		// 		console.log('requesting server for query analysis');
-		// 		message_side = message_side === 'left'?'right':'left';
-		// 		message = new Message({
-		// 			text: data['answer'],
-		// 			message_side: message_side
-		// 		});
-		// 		console.log(data);	
-		// 	});
+		// $('.messages').append($message_input.val() + "\n");
+		console.log($message_input.val());
 		console.log("button clicked !!");
 
 	});
