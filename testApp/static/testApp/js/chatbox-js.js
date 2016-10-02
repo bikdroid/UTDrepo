@@ -2,8 +2,25 @@
 $(document).ready(function(){
 
 
+
 	 var Message;
 	 var user_answer_required = 1;
+
+	var entry_q = "Please specify last 4 digits of your account number. Thankyou";
+    	setTimeout(function () {
+				message_side = message_side === 'left'?'right':'left';
+				user_answer_required = 2;
+				// console.log(data)
+				message2 = new Message({
+					text: entry_q,
+					message_side: message_side
+				});
+				message2.draw();
+				console.log('chat window load');
+				console.log(message2);
+				$('.messages').append(entry_q);
+			},1000);
+
     Message = function (arg) {
         this.text = arg.text, this.message_side = 'left';//arg.message_side;
         this.draw = function (_this) {
@@ -22,23 +39,23 @@ $(document).ready(function(){
         return this;
     };
 
-    $(".chat_window").load(function(){
-    	var entry_q = "Please specify last 4 digits of your account number. Thankyou";
-    	setTimeout(function () {
-				message_side = message_side === 'left'?'right':'left';
-				user_answer_required = 2;
-				// console.log(data)
-				message2 = new Message({
-					text: entry_q,
-					message_side: message_side
-				});
-				message2.draw();
-				console.log('chat window load');
-				console.log(message2);
-				$('.messages').append(entry_q);
-			},1000);
+   //  $(".chat_window").load(function(){
+   //  	var entry_q = "Please specify last 4 digits of your account number. Thankyou";
+   //  	setTimeout(function () {
+			// 	message_side = message_side === 'left'?'right':'left';
+			// 	user_answer_required = 2;
+			// 	// console.log(data)
+			// 	message2 = new Message({
+			// 		text: entry_q,
+			// 		message_side: message_side
+			// 	});
+			// 	message2.draw();
+			// 	console.log('chat window load');
+			// 	console.log(message2);
+			// 	$('.messages').append(entry_q);
+			// },1000);
 
-    });
+   //  });
 
 	$(".send_message").click(function(){
 
