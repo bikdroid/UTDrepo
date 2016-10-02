@@ -58,6 +58,7 @@ $(document).ready(function(){
 					text: data['answer'],
 					message_side: message_side
 				});
+				console.log(data);
 			});
 		console.log("button clicked !!");
 
