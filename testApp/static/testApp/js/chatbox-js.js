@@ -34,6 +34,8 @@ $(document).ready(function(){
 			text: text,
 			message_side: message_side
 		});
+
+		message.draw();
 		console.log(message);
 		$('.messages').append($message_input.val() + "\n");
 		console.log($message_input.val());
