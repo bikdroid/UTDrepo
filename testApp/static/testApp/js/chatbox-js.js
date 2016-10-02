@@ -45,7 +45,7 @@ $(document).ready(function(){
 				message_side = message_side === 'left'?'right':'left';
 				console.log(data)
 				message = new Message({
-					text: data['result'],
+					text: data,
 					message_side: message_side
 				});
 				console.log(data);
