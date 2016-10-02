@@ -123,5 +123,5 @@ class QueryDeployer(object):
             return "Your provided answer is wrong, please refresh page and try again.."
         if ret == "Error":
             return "I am sorry, I might not have an answer, please call a representative at (000)000-0000"
-        if ret == "check request" :
+        if ret == "cheque request" :
             return "Your request has been forwarded to our team and you will get your cheque on your address in x business days."
