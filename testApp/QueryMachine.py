@@ -113,3 +113,5 @@ class QueryDeployer(object):
 			return "You have been authorized. How may I help you ?"
 		if ret == "not match":
 			return "Your provided answer is wrong, please refresh page and try again.."
+		if ret == "Error":
+			return "I am sorry, I might not have an answer, please call a representative at (000)000-0000"
