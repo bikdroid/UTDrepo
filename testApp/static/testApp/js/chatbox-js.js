@@ -26,9 +26,7 @@ $(document).ready(function(){
 
 		var $message_input, $messages, message;
 		$message_input = $('.message_input');
-		if($message_input.trim()===''){
-			console.log('Seems All Emptys');
-		}
+		
 		$messages = $('.messages');
 		message_side = message_side === 'left'?'right':'left';
 
