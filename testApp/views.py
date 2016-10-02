@@ -937,7 +937,19 @@ def delete(request):
     return render(request, 'testApp/delete.html')
 
 def chatbotview(request):
-    return "Hi !"
+    if request.method == 'POST':
+        post_text = request.POST.get('the_post')
+        response_data = []
+        response_data['answer'] = 'Account Balance'
+        return HttpResponse(
+            json.dumps(response_data)
+            content_type = "application/json"
+            )
+    else:
+        return HttpResponse(
+            json.dumps({"nothing to see":"this is not happening"}),
+            content_type = "application/json"
+            )
 
 def sortView(request):
     print "SORT TYPE"
