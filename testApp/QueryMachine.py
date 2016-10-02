@@ -109,3 +109,7 @@ class QueryDeployer(object):
 			return self.consumeGETRequestSync()
 		if ret == "account check" :
 			return self.accountCheck()
+		if ret == "match":
+			return "You have been authorized. How may I help you ?"
+		if ret == "not match":
+			return "Your provided answer is wrong, please refresh page and try again.."
