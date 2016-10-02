@@ -1,5 +1,6 @@
 import json
 import requests
+from textblob import TextBlob
 
 class QueryDeployer(object):
 
