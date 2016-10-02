@@ -943,7 +943,7 @@ def querynlp(request):
         post_text = request.GET.get('the_post')
         response_data = {}
         query = QueryDeployer()
-        answer = query.response(request.GET,1)
+        answer = query.response1(request.GET,1)
         print "Query NLP running, query analyzed ::"
         print answer
         response_data['result'] = 'Create post successful!'
