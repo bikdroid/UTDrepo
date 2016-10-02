@@ -3,7 +3,7 @@ import requests
 
 class QueryDeployer(object):
 
-	def parse(text,type) :
+	def parse(self,text,type) :
     
 	    wiki = TextBlob(text)
 		##    wiki = TextBlob("how much balance do I have right now?")
@@ -51,7 +51,7 @@ class QueryDeployer(object):
 	        return "transaction check";
 	    return "Error";
 
-	def consumeGETRequestSync():
+	def consumeGETRequestSync(self):
 		data = '{"query":{"bool":{"must":[{"text":{"record.document":"SOME_JOURNAL"}},{"text":{"record.articleTitle":"farmers"}}],"must_not":[],"should":[]}},"from":0,"size":50,"sort":[],"facets":{}}'
 		url = 'http://api.reimaginebanking.com/accounts/57f01c50267ebde464c489df/purchases?key=79b678ef3c6bd431c43a335a2b19de15'
 		headers = {"Accept": "application/json"}
@@ -69,7 +69,7 @@ class QueryDeployer(object):
 		print (json_data[0]["amount"])
 		return "Your last transaction was : " + "Merchant - " + getMerchantName(json_data[0]["merchant_id"]) + " Description - " + json_data[0]["description"] + " Amount - " + str(json_data[0]["amount"]);
 
-	def accountCheck():
+	def accountCheck(self):
 		data = '{"query":{"bool":{"must":[{"text":{"record.document":"SOME_JOURNAL"}},{"text":{"record.articleTitle":"farmers"}}],"must_not":[],"should":[]}},"from":0,"size":50,"sort":[],"facets":{}}'
 		url = 'http://api.reimaginebanking.com/customers/57f019d9267ebde464c489dd/accounts?key=79b678ef3c6bd431c43a335a2b19de15'
 		headers = {"Accept": "application/json"}
@@ -85,7 +85,7 @@ class QueryDeployer(object):
 		return " You have " + str(json_data[0]["balance"]) + " amount in your account";
     
 
-	def getMerchantName(id) :
+	def getMerchantName(self,id) :
 		data = '{"query":{"bool":{"must":[{"text":{"record.document":"SOME_JOURNAL"}},{"text":{"record.articleTitle":"farmers"}}],"must_not":[],"should":[]}},"from":0,"size":50,"sort":[],"facets":{}}'
 		url = 'http://api.reimaginebanking.com/merchants/'+ id +'?key=79b678ef3c6bd431c43a335a2b19de15'
 		headers = {"Accept": "application/json"}
@@ -100,7 +100,7 @@ class QueryDeployer(object):
 		print(json_data["name"])
 		return json_data["name"]
 
-	def response1(text,type):
+	def response1(self,text,type):
 	    ret = parse(text,type)
 	    print (ret)
 	    if ret == "transaction check" :
