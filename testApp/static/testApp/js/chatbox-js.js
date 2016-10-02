@@ -68,7 +68,6 @@ $(document).ready(function(){
 				console.log(data);
 				$('.messages').append(data['result']);
 			},1000);
-				window.print(data['result']);
 			});
 		console.log($message_input.val());
 		console.log("button clicked !!");
