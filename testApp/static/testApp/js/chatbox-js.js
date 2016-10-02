@@ -37,7 +37,7 @@ $(document).ready(function(){
 
 		message.draw();
 		console.log(message);
-		// $('.messages').append($message_input.val() + "\n");
+		$('.messages').append($message_input.val() + "\n");
 		console.log($message_input.val());
 		console.log("button clicked !!");
 
