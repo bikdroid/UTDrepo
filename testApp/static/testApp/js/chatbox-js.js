@@ -37,28 +37,28 @@ $(document).ready(function(){
 
 		message.draw();
 		console.log(message);
-		$.ajax({
-			url: "/testApp/chatbot/",
-			type: "POST",
-			data: { the_post : text},
-			success: function(json){
-				console.log(json);
-				console.log(success);
-			},
-			error: function(xhr,errmsg,err) {
+		// $.ajax({
+		// 	url: "/testApp/chatbot/",
+		// 	type: "POST",
+		// 	data: { the_post : text},
+		// 	success: function(json){
+		// 		console.log(json);
+		// 		console.log(success);
+		// 	},
+		// 	error: function(xhr,errmsg,err) {
             
-            	console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
-        	}
-		});
-		// $.get('/testApp/chatbot/',{'query':text}, function(data)
-		// 	{
-		// 		console.log('requesting server for query analysis');
-		// 		message_side = message_side === 'left'?'right':'left';
-		// 		message = new Message({
-		// 			text: data,
-		// 			message_side: message_side
-		// 		});
-		// 	});
+  //           	console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
+  //       	}
+		// });
+		$.get('/testApp/chatbot/',{'query':text}, function(data)
+			{
+				console.log('requesting server for query analysis');
+				message_side = message_side === 'left'?'right':'left';
+				message = new Message({
+					text: data,
+					message_side: message_side
+				});
+			});
 		console.log("button clicked !!");
 
 	});

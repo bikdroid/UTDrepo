@@ -937,8 +937,8 @@ def delete(request):
     return render(request, 'testApp/delete.html')
 
 def chatbotview(request):
-    if request.method == 'POST':
-        post_text = request.POST.get('the_post')
+    if request.method == 'GET':
+        post_text = request.GET.get('the_post')
         response_data = []
         response_data['answer'] = 'Account Balance'
         return HttpResponse(
