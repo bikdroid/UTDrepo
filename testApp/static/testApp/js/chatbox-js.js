@@ -45,9 +45,10 @@ $(document).ready(function(){
 				message_side = message_side === 'left'?'right':'left';
 				console.log(data)
 				message = new Message({
-					text: data,
+					text: data['result'],
 					message_side: message_side
 				});
+				message.draw();
 				console.log(data);
 			});
 		console.log($message_input.val());
