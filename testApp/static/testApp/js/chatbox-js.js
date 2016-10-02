@@ -66,6 +66,7 @@ $(document).ready(function(){
 				});
 				message1.draw();
 				console.log(data);
+				$('.messages').append(data['result']);
 			},1000);
 				window.print(data['result']);
 			});
