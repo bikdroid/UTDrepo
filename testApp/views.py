@@ -4,6 +4,7 @@ from models import Employee, Record, CSPerson, DBRecord, Person, PersonWrapper
 from django.template import loader, RequestContext
 from django.core.urlresolvers import reverse
 from SignAndSearch import Authenticate
+from QueryMachine import QueryDeployer
 from People import People
 from django import forms
 from pymongo import MongoClient
@@ -16,6 +17,7 @@ import json
 import logging
 import xlrd
 import pyexcel as pe
+import requests
 from bson import Binary, Code
 from bson.json_util import dumps
 from os.path import join, dirname, abspath
@@ -940,7 +942,10 @@ def querynlp(request):
     if request.method == 'GET':
         post_text = request.GET.get('the_post')
         response_data = {}
-
+        query = QueryDeployer()
+        answer = query.response(request.GET,1)
+        print "Query NLP running, query analyzed ::"
+        print answer
         response_data['result'] = 'Create post successful!'
         
 
