@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
 
-	 var Message;
+	var Message;
     Message = function (arg) {
         this.text = arg.text, this.message_side = arg.message_side;
         this.draw = function (_this) {
@@ -60,7 +60,7 @@ $(document).ready(function(){
 		// 		});
 		// 		console.log(data);	
 		// 	});
-		// console.log("button clicked !!");
+		console.log("button clicked !!");
 
 	});
 })
