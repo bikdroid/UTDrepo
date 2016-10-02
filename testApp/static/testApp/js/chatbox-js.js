@@ -39,7 +39,7 @@ $(document).ready(function(){
 		message.draw();
 		console.log(message);
 		$('.messages').append($message_input.val());
-		$.get('/testApp/querynlp/',{'query':text}, function(data)
+		$.get('/testApp/querynlp/',{'the_post':text}, function(data)
 			{
 				console.log('requesting server for query analysis');
 				message_side = message_side === 'left'?'right':'left';
