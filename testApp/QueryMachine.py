@@ -102,6 +102,7 @@ class QueryDeployer(object):
 		return json_data["name"]
 
 	def response1(self,text,type):
+		print text
 	    ret = self.parse(text,type)
 	    print (ret)
 	    if ret == "transaction check" :
