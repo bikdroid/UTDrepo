@@ -3,8 +3,9 @@ $(document).ready(function(){
 
 
 	 var Message;
+	 var user_answer_required = 1;
     Message = function (arg) {
-        this.text = arg.text, this.message_side = arg.message_side;
+        this.text = arg.text, this.message_side = 'left';//arg.message_side;
         this.draw = function (_this) {
             return function () {
                 var $message;
@@ -15,11 +16,29 @@ $(document).ready(function(){
                 $('.messages').animate({ scrollTop: $('.messages').prop('scrollHeight') }, 300);
                 return setTimeout(function () {
                     return $message.addClass('appeared');
-                }, 0);
+                }, 1000);
             };
         }(this);
         return this;
     };
+
+    $(".chat_window").load(function(){
+    	var entry_q = "Please specify last 4 digits of your account number. Thankyou";
+    	setTimeout(function () {
+				message_side = message_side === 'left'?'right':'left';
+				user_answer_required = 2;
+				// console.log(data)
+				message2 = new Message({
+					text: entry_q,
+					message_side: message_side
+				});
+				message2.draw();
+				console.log('chat window load');
+				console.log(message2);
+				$('.messages').append(entry_q);
+			},1000);
+
+    });
 
 	$(".send_message").click(function(){
 
@@ -31,7 +50,7 @@ $(document).ready(function(){
 		 setTimeout(function () {
             $messages = $('.messages');
 			message_side = 'right';
-			message_side = message_side === 'left'?'right':'left';
+			//message_side = message_side === 'left'?'right':'left';
 
 			message = new Message({
 				text: text,
@@ -54,11 +73,12 @@ $(document).ready(function(){
 		message.draw();
 		console.log(message);
 		$('.messages').append($message_input.val());
-*/		$.get('/testApp/querynlp/',{'the_post':text}, function(data)
+*/		$.get('/testApp/querynlp/',{'the_post':text, 'user_ans':user_answer_required}, function(data)
 			{
 				console.log('requesting server for query analysis');
 				setTimeout(function () {
 				message_side = message_side === 'left'?'right':'left';
+				user_answer_required = 1;
 				console.log(data)
 				message1 = new Message({
 					text: data['result'],

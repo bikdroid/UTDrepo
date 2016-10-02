@@ -941,11 +941,12 @@ def delete(request):
 def querynlp(request):
     if request.method == 'GET':
         post_text = request.GET.get('the_post')
+        user_ans = request.GET.get('user_ans')
         response_data = {}
         query = QueryDeployer()
         print "Sending Request : "
         print str(post_text)
-        answer = query.response1(str(post_text),1)
+        answer = query.response1(str(post_text),int(user_ans))
         print "Query NLP running, query analyzed ::"
         print answer
         response_data['result'] = str(answer)
