@@ -1,7 +1,7 @@
 /*Chatbox Javascript*/
 $(document).ready(function(){
 
-	$(".send-message").click(function(){
+	$(".send_message").click(function(){
 
 		var $message_input;
 		$message_input = $('.message_input');
