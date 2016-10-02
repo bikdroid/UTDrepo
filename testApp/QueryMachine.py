@@ -98,12 +98,12 @@ class QueryDeployer(object):
 		## print ("******************")
 		response_data = str(response.text);
 		json_data = json.loads(response_data)
-		print(json_data["name"])
-		return json_data["name"]
+		print json_data["name"] 
+		return json_data["name"];
 
 	def response1(self,text,type):
 		print text
-	    ret = self.parse(text,type)
+		ret = self.parse(text,type)
 	    print ret
 	    if ret == "transaction check" :
 	        return self.consumeGETRequestSync()
