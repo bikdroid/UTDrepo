@@ -19,9 +19,7 @@ $(document).ready(function(){
         }(this);
         return this;
     };
-	sendMessage = function(text){
 
-	}
 	$(".send_message").click(function(){
 
 		var $message_input, $messages, message, message_side, text;
@@ -35,6 +33,7 @@ $(document).ready(function(){
 			text: text,
 			message_side: message_side
 		});
+		console.log(message);
 		$('.messages').append($message_input.val() + "\n");
 		console.log($message_input.val());
 		console.log("button clicked !!");
