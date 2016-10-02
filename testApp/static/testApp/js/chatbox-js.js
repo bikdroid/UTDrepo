@@ -57,6 +57,7 @@ $(document).ready(function(){
 */		$.get('/testApp/querynlp/',{'the_post':text}, function(data)
 			{
 				console.log('requesting server for query analysis');
+				setTimeout(function () {
 				message_side = message_side === 'left'?'right':'left';
 				console.log(data)
 				message1 = new Message({
@@ -65,6 +66,7 @@ $(document).ready(function(){
 				});
 				message1.draw();
 				console.log(data);
+			},1000);
 				window.print(data['result']);
 			});
 		console.log($message_input.val());
