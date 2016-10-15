@@ -283,3 +283,26 @@ if it's not present, don't show loader */
 
 }
 
+.add_education {
+  width: 40px;
+  height: 50px;
+  display: inline-block;
+  border-radius: 25px;
+  background-color: #a3d063;
+  border: 2px solid #a3d063;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  text-align: center;
+  float: right;
+}
+.add_education:hover {
+  color: #a3d063;
+  background-color: #fff;
+}
+.add_education .text {
+  font-size: 18px;
+  font-weight: 500;
+  display: inline-block;
+  line-height: 48px;
+}

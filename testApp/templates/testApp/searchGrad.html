@@ -23,20 +23,21 @@
         	<!-- <li class="pure-menu-item"><a href="/testApp/searchgrad/" class="pure-menu-link">Query</a></li> -->
 	        <li class="pure-menu-item pure-menu-selected"><a href="/testApp/allresults/" class="pure-menu-link">Browse</a></li>
 	        <li class="pure-menu-item"><a href="/testApp/delete/" class="pure-menu-link">Delete</a></li>
-			<li class="pure-menu-item"><a href="/testApp/upload/" class="pure-menu-link">Batch File</a></li>
+			<li class="pure-menu-item"><a href="/testApp/upload/" class="pure-menu-link">Batch	 File</a></li>
 	    </ul>
 	</div>
 	
 	{% include "testApp/searchbox.html" %}
+	</div>
+		<button type="button" id="submit_selections">Merge</button>
+	</div>
 	{% include "testApp/filters.html" %}
 	
 
 	<!-- Table to print the search results -->
 	{% include "testApp/allresults.html" %}
 	
-	</div>
-		<button type="button" id="submit_selections">Merge</button>
-	</div>
+	
 </body>
 <!--scripts -->
 	<script src="{% static "/static/testApp/js/jquery-3.0.0.min.js" %}"></script>

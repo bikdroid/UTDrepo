@@ -26,5 +26,7 @@ urlpatterns = [
     url(r'^allresults/$', views.allresults, name='allresults'), 
     url(r'^(?P<question_id>[0-9]+)/vote/$', views.vote, name='vote'),
     url(r'^utdsearch/$', views.utdsearch, name='utdsearch'),
+    url(r'^feedform/$', views.feedForm, name='feedform'),
     url(r'^merge_update/$', views.mergedUpdate, name='mergedUpdate_update'),
+    url(r'^fillnewrecord/$', views.fillNewRecord, name='fillnewrecord')
 	]

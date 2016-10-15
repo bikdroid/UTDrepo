@@ -28,7 +28,7 @@ def batchSearch(request):
     #fname = dirname(abspath(request.FILES['linkedFile']))
     workbook = None
     
-    print "Form is Valid"
+    # print "Form is Valid"
     filehandle = request.FILES['linkedFile']
 
     '''
@@ -62,7 +62,7 @@ def batchSearch(request):
         res1 = r['person']
         allpeople.append(People(res1['firstName'],res1['lastName'],''))
 
-    print allpeople.__str__()
+    # print allpeople.__str__()
 
     for r in records:
         if r is None:
@@ -112,19 +112,24 @@ def batchSearch(request):
         Check for record already available.
         '''
         inrecords = False
-        # for p in allpeople:
-        #     # print "Inside People Records .."
-        #     if ((p.firstName.lower()==sParams['firstName'].lower()) and (p.lastName.lower()==sParams['lastName'].lower())):
-        #         print p.firstName+" "+p.lastName+" already in records"
-        #         print "moving to next record ..."
-        #         inrecords = True
-        #         break
+        # Need to Optimize code here to use something like Hash (make it faster)
+        '''
+        Below code checks if the entry was already there in database.
+        If it was there then it skips to the next record.
+        '''
+        for p in allpeople:
+            # print "Inside People Records .."
+            if ((p.firstName.lower()==sParams['firstName'].lower()) and (p.lastName.lower()==sParams['lastName'].lower())):
+                print p.firstName+" "+p.lastName+" already in records"
+                print "RECORD ALREADY PRESENT"
+                inrecords = True
+                break
 
-        # if inrecords==True:
-        #     print "It's True"
-        #     continue
+        if inrecords==True:
+            print "CONTINUE TO NEXT RECORD"
+            continue
 
-        # print "CONTINUE DID NOT EXECUTE"
+        print "CONTINUE DID NOT EXECUTE"
 
         if locationsList:
             sParams['locations'] = locationsList
@@ -143,7 +148,8 @@ def batchSearch(request):
 
         if goodRecord is True:     
             print "CALLING PERFORM CS SEARCH"
-            resp = Authenticate.performCSSearch(linkObj, sParams, 'localhost', 27017, 'test2')
+            resp = Authenticate.performCSSearch(linkObj, sParams, 'localhost', 27017, 'test3')
+            # resp = 'Success'
         # print "sparams : "
             # print sParams
             # resp = 'Success'
@@ -157,13 +163,12 @@ def batchSearch(request):
 
         # if goodRecord is True:
             sParamsList.append(sParams)
-    # print "INITIATING SEARCH OPERATION"
-    print locationsList
-    print "DONE WITH"
+
+    print "SEARCH OPERATION COMPLETED AND DATABASE UPDATED."
     for s in sParamsList:
         print s
-        # resp = Authenticate.performCSSearch(linkObj, s, 'localhost', 27017, 'test2')
-        # resp = Authenticate.performSearch(linkObj, s, 'localhost', 27017, 'test2')
+        # resp = Authenticate.performCSSearch(linkObj, s, 'localhost', 27017, 'test3')
+        # resp = Authenticate.performSearch(linkObj, s, 'localhost', 27017, 'test3')
         # resp = 'Success'
         
     message = 'The records from the uploaded file have been processed. '
@@ -175,7 +180,8 @@ def batchSearch(request):
     else:
         msg = {'type':'I','message':message}
         context = { 'msg':msg }
-        return render(request,'testApp/message.html', context)
+        # return render(request,'testApp/message.html', context)
+        return render(request, 'testApp/searchGrad.html', context)
         
 def index1(request):
     latest_question_list = [1,2,3,4]
@@ -239,7 +245,7 @@ def formSearch(request):
     linkObj.checkLogin(url1) #checks that the login is successful.
      
     print "Linkedin Object :: "+linkObj.__str__()
-    resp = Authenticate.performSearch(linkObj, params, 'localhost', 27017, 'test2')
+    resp = Authenticate.performSearch(linkObj, params, 'localhost', 27017, 'test3')
     if resp.startswith('Success'):
         print request
         return results(request)
@@ -259,7 +265,7 @@ def formSearch(request):
 def searchUnderGrad(request): ## Added By, Bikramjit edu.bmandal@gmail.com
     print "Inside grad search ... "
     myclient = MongoClient()
-    db = myclient.test2
+    db = myclient.test3
     # firstName = request.POST.get('fname', 'Empty')
     # lastName = request.POST.get('lname', 'Empty')
     personemail = request.POST.get('email','Empty')
@@ -455,19 +461,21 @@ def mergedUpdate(request):
     entries_list = []
     return_list = []
     res = []
-    #return_list = []
     if request.method=='GET':
         
         entries_list = request.GET['selectedIDs[]']
         print "first entry"
         res = entries_list.strip('"[]').split('","')
         res = [int(i) for i in res]
+        print "Remove PIDs"
         print res
 
         
     if entries_list:
         # fill the return list with merged results.
         # also, merge the data in the database.
+
+        ## Delete the selected PID
         print "\n\n\n\nmergedUpdate returns \n"
         print "list we got : "
 
@@ -478,7 +486,6 @@ def mergedUpdate(request):
         '''
         print "Entries List below : "
         entry_int_list = entries_list
-        #entry_int_list = [int(i) for i in entry_int_list]
         print entry_int_list
         parsed_list = json.loads(entries_list.__str__())
         #print "parsed_list : "+parsed_list.__str__()
@@ -489,26 +496,50 @@ def mergedUpdate(request):
         merge_list = []
 
 
-        person_filter = DBRecord.objects(record__results__person__personId=final_parsed_list[0].__str__())
-        email = person_filter[0].record.email
+        # person_filter = DBRecord.objects(record__results__person__personId=final_parsed_list[0].__str__())
+        person_filter = CSPerson.objects(person__personId=final_parsed_list[0])
+        # email = person_filter[0].record.email # not needed
 
-        nperson = { 'personId':final_parsed_list[0], 
-                    'profilePhoto':person_filter[0].record.results[0].person.profilePhoto.profilePhoto.media_picture_link_100,
-                    'firstName':person_filter[0].record.results[0].person.firstName, 
-                    'lastName':person_filter[0].record.results[0].person.lastName, 
-                    'link_nprofile_view_3':person_filter[0].record.results[0].person.link_nprofile_view_3,
-                    'link_nprofile_view_4':person_filter[0].record.results[0].person.link_nprofile_view_4,
-                    'fmt_industry':[], 
-                    'fmt_location':[], 
-                    'fmt_headline':[],
-                    'workinfo':[],
-                    'education':[]
+        # nperson = { 'personId':final_parsed_list[0], 
+        #             'profilePhoto':person_filter[0].record.results[0].person.profilePhoto.profilePhoto.media_picture_link_100,
+        #             'firstName':person_filter[0].record.results[0].person.firstName, 
+        #             'lastName':person_filter[0].record.results[0].person.lastName, 
+        #             'link_nprofile_view_3':person_filter[0].record.results[0].person.link_nprofile_view_3,
+        #             'link_nprofile_view_4':person_filter[0].record.results[0].person.link_nprofile_view_4,
+        #             'fmt_industry':[], 
+        #             'fmt_location':[], 
+        #             'fmt_headline':[],
+        #             'workinfo':[],
+        #             'education':[]
+        #             }
+
+        nperson = { 'personId':person_filter[0].person.personId, 
+                    'profilePhoto':person_filter[0].person.profilePhoto.profilePhoto.media_picture_link_100,
+                    'firstName':person_filter[0].person.firstName, 
+                    'lastName':person_filter[0].person.lastName, 
+                    'link_nprofile_view_3':person_filter[0].person.link_nprofile_view_3,
+                    'link_nprofile_view_4':person_filter[0].person.link_nprofile_view_4,
+                    'fmt_industry':person_filter[0].person.fmt_industry, 
+                    'fmt_location':person_filter[0].person.fmt_location, 
+                    'fmt_headline':person_filter[0].person.fmt_headline,
+                    'workinfo':person_filter[0].person.fmt_headline,
+                    'education':person_filter[0].person.education
                     }
 
-        print "Intial nperson JSOn : "+nperson.__str__()
-    
-        # Using mongoengine to get the objects.
+        # print "Intial nperson JSOn : "+nperson.__str__()
+        
+        print "Printing PersonIDs from GET request."
+        for personid in final_parsed_list:
+            print personid
+
+            # Using mongoengine to get the objects.
+        print "Found in Database"
+        personsList = CSPerson.objects(__raw__={'person.personId':{'$in':res}}).delete()
         findlist = DBRecord.objects(__raw__={'record.results.person.personId':{'$in':res}})
+
+        print personsList
+        for p in personsList:
+            print p.firstName
         print "PyMongo Print : "
         # Printing from the mongoengine objects.
         industry = ""
@@ -590,7 +621,7 @@ def mergedUpdate(request):
 
         #render page with new results.
     #return HttpResponse(context)
-    return render(request,'testApp/allresults.html',context)
+    return render(request,'testApp/searchGrad.html',context)
     #return render(request,'testApp/searchGrad.html',context)
 
 def remove(request):
@@ -813,7 +844,7 @@ def utdsearch(request):
     linkObj.checkLogin(url1) #checks that the login is successful.
      
     print "Linkedin Object :: "+linkObj.__str__()
-    resp = Authenticate.extractLinkedInPagination(linkObj, params, 'localhost', 27017, 'test2')
+    resp = Authenticate.extractLinkedInPagination(linkObj, params, 'localhost', 27017, 'test3')
     if resp.startswith('Success'):
         print "SUCCESS"
         context = { 'entries':'all searches' }
@@ -1059,3 +1090,22 @@ def sortView(request):
     return render(request, 'testApp/searchGrad.html', context)
         # person = {'email':email, 'isMultiple':isMultiple, 'education_all':edujson, 'personData':x['person']}
     # return render(request, 'testApp/tempresult.html',context)
+
+
+def feedForm(request):
+    return render(request, 'testApp/feedform.html')
+
+def fillNewRecord(request):
+    '''
+    check if already present, by first name, last name, city, 
+    university, and more details.
+
+    If not then update the record in the database.
+    '''
+
+    
+    ctx = {
+        'entries': 'nothing',
+    }
+    return render(request, 'testApp/searchGrad.html')
+

@@ -21,8 +21,8 @@ username = "bxm142230@utdallas.edu"
 password = ""
 dbHost = 'localhost' #found from the hostname() command in mongo.
 dbPort = 27017
-# dbName = 'test2'
-dbName='test2'
+# dbName = 'test3'
+dbName='test3'
 dbCollection = 'd_b_record'
 url1 = 'https://www.linkedin.com/'
 linkedInHome = 'https://www.linkedin.com/'
@@ -158,34 +158,13 @@ class Authenticate(object):
         """ Performs search and Saves the information gathered into DB. This method almost performs everything this class is created for """
         print "INSIDE PERFORM CS SEARCH"
         try:
-            #self.login = login
-            #self.password = password
-            # Simulate browser with cookies enabled
-            # self.cj = cookielib.MozillaCookieJar(cookie_filename)
-            # if os.access(cookie_filename, os.F_OK):
-            #     self.cj.load()
-            # self.opener = urllib2.build_opener(
-            #     urllib2.HTTPRedirectHandler(),
-            #     urllib2.HTTPHandler(debuglevel=0),
-            #     urllib2.HTTPSHandler(debuglevel=0),
-            #     urllib2.HTTPCookieProcessor(self.cj)
-            # )
-            # self.opener.addheaders = [
-            #     ('User-agent', ('Mozilla/4.0 (compatible; MSIE 6.0; '
-            #                    'Windows NT 5.2; .NET CLR 1.1.4322)'))
-            # ]
+            
             self.checkLogin(url1)
-            # print "LOCATIONS LIST"
-            # print searchParams['locations']
-            # print "LOCATIONS"
-            # print request.session.get('locations')
             print "OTHER DETAILS"
             fName = searchParams['firstName']
             mailId = searchParams['email']
             print fName
             print mailId
-            # if fName == 'EMPTY' or mailId == 'EMPTY':
-                # raise Exception('Info: Search has to be performed from Search page only, Please try again', 'Info')
             print "Search Params : "
             print searchParams
             fSrchURL = self.formSearchURL(searchParams)
@@ -520,7 +499,7 @@ class Authenticate(object):
         """ Persists the document to the DB using the dbClient, if the record is already present, it simply replaces the document """
         #db = dbClient.linkedinTest
         print "Inside store2DB ... "
-        db = dbClient.test2 # CHange the test2 to any other new database name as per requirement.
+        db = dbClient.test3 # CHange the test3 to any other new database name as per requirement.
         print "DB client is : "+db.__str__()
 
         if self.findEntryInDB(db, email):
@@ -532,7 +511,7 @@ class Authenticate(object):
         print "STORING CS RECORD"
         print pId
         print dbClient
-        db = dbClient.test2
+        db = dbClient.test3
         print db
         entries = db.c_s_person.find({'person.personId':{'$eq':pId}})
         print "Entries Count"
@@ -727,7 +706,7 @@ class Authenticate(object):
         """
         Loads the search page using the url provided and returns raw search results
         """
-        print " inside loadSearch .."
+        print " searching ..."
 
         '''
         97.77.104.22:80
@@ -742,7 +721,7 @@ class Authenticate(object):
         # print html2.content
         # html = html2.content
         html = self.loadPage(url)
-        print "SPAGE"
+        # print "SPAGE"
         # print sPage[:200]
         spContent = BeautifulSoup(html)
         
@@ -752,19 +731,19 @@ class Authenticate(object):
                 #sys.exit('There is some problem with url provided, it does not correspond to Linkedin Search')
         comment = None
         comments = spContent.findAll(text=lambda text:isinstance(text, Comment))
-        print "COMMENTS"
+        # print "COMMENTS"
         # print comments
         # print " >> BEAUTIFULSOUP FINDALL"
         #print comments
         cLen = len(comments)
-        print "Length of COmments"+cLen.__str__()
+        # print "Length of COmments"+cLen.__str__()
         if cLen > 0 and cLen > 11:
             comment = comments[11]  
         if comment is None:
             for cmnt in comments:   
                 if firstName in cmnt:
                     comment = cmnt
-        print "output COMMENTS :"
+        # print "output COMMENTS :"
         # print comment            
         return comment
                 
@@ -926,28 +905,31 @@ class Authenticate(object):
             raise Exception('Error: There seems to be some problem with either the query or response JSON. Please note this might occur, if LinkedIn does not respond appropriately', 'Error')
     
     def formCSRecord(self, srchResult, dbHost, dbPort, dbName, mailId, locations):
-        print "INSIDE FORM CS RECORD"
+        print "Forming Person Record .."
         # print srchResult[:300]
         if srchResult is None:
             raise Exception('Info: Either the query has not returned any results or there is some problem with linkedIn search', 'Info')
-        rawResults = re.sub('\\\\u002d1', '\"\"', srchResult)
-        # rawResults1 = re.sub('\\\\u003c','<',srchResult)
+        rawResults = re.sub('\\\\u002d', '-', srchResult)
+        # rawResults1 = re.sub('\\u003c','<',rawResults)
+        # rawResults = re.sub('\\u003e','>',rawResults1)
         # rawResults = re.sub('\\u003cB\\u003e','\"\"',rawResults1)
+        # rawResults = srchResult.encode("ascii","ignore")
 
-        # print rawResults[:2000]
-        print "RAW RESULTS"
+        # print "RAW RESULTS"
+        # print rawResults
+        # print rawResults.decode('utf-8')
         try:
             rawJSON = json.loads(rawResults)
-            print "RAW JSON"
+            # print "RAW JSON"
             # print rawJSON
             fContent = rawJSON[contentKey]
-            print "FCONTENT"
+            # print "FCONTENT"
             # print fContent
             globalReqParams = fContent[gReqParamsKey]
             fPageRes = fContent[pageKey]
             unifiedSearch = fPageRes[unifiedSearchKey]
             searchRes = unifiedSearch[searchKey]
-            print "SEARCHRES"
+            # print "SEARCHRES"
             # print searchRes
             resultCount = searchRes['formattedResultCount']
             resultCount = resultCount.replace(',','')
@@ -955,13 +937,13 @@ class Authenticate(object):
             if resultNo == 0:
                 raise Exception('Info: There are no matching records for the query', 'Info')
             baseData = searchRes[baseDataKey]
-            print "BASEDATA"
+            # print "BASEDATA"
             # print baseData 
             resultCount = baseData[resultCountKey]
-            print "RESULTCOUNT"
-            print resultCount
+            # print "RESULTCOUNT"
+            # print resultCount
             results = searchRes[resultsKey]
-            print "RESULTS"
+            # print "RESULTS"
             # print results
             allPersons = []
 
@@ -991,7 +973,7 @@ class Authenticate(object):
 
             print "RELATED PIDS"
             print relatedPids
-            print "UNIVERSITY CHECK == TRUE"
+            # print "UNIVERSITY CHECK == TRUE"
             doUniversityCheck = True
             for reslt in results:
                 '''
@@ -999,10 +981,17 @@ class Authenticate(object):
                 '''
                 # print reslt
                 personObj = reslt[personKey]
-                print "PERSON OBJECT"
+                # print "PERSON OBJECT"
                 frmtedPerson = self.extractPerson(personObj, doUniversityCheck)
-                print "FRMTEDPERSON type :"
-                print type(frmtedPerson['person'])  
+
+                if frmtedPerson is None:
+                    doUniversityCheck=False
+                    # print "FRMTEDPERSON is NONE"
+                    # print "University Check set to FALSE"
+                    frmtedPerson = self.extractPerson(personObj,doUniversityCheck)
+                doUniversityCheck = True
+                # print "FRMTEDPERSON type :"
+                # print type(frmtedPerson['person'])  
                 pId = frmtedPerson['person']['personId'] 
                 rPids=[]
                 for e in relatedPids:
@@ -1010,13 +999,13 @@ class Authenticate(object):
                 if pId in rPids:
                     rPids.remove(pId)
                 frmtedPerson['person'].update({'relatedPids':rPids})
-                print "Updating related Person Ids as list"
-                print frmtedPerson['person']['relatedPids'] # added the related Person Ids.            
+                # print "Updating related Person Ids as list"
+                # print frmtedPerson['person']['relatedPids'] # added the related Person Ids.            
                 if frmtedPerson is not None:
-                    print "PERSON NOT NONE"
+                    # print "PERSON NOT NONE"
                     client = self.connect2DB(dbHost, dbPort)
                     print client
-                    print "STORING .."
+                    print "STORING ..."
                     self.storeCSRecord(frmtedPerson, pId, client)
                 else:
                     print "No Match"
@@ -1115,7 +1104,7 @@ class Authenticate(object):
         Arguments : personObj > person Object
                     doUniversityCheck > check whether the University Check is on (True or False)
         '''
-        print "Extracting Person Details "
+        print "Person Detail extraction ... "
         if personObj is None:
             print 'Person Object is None - Returning None'
             return None;
@@ -1201,7 +1190,7 @@ class Authenticate(object):
                     if(goodMatch==True):
 
                         curEducation = eduinfo
-                        print "education : "+curEducation.__str__()
+                        # print "education : "+curEducation.__str__()
                         curEducationHTMLparsed = edu_html_list # Storing the html part too.
                                     
                     else:
@@ -1218,7 +1207,7 @@ class Authenticate(object):
                 if (goodMatch==True):
                     break
                     
-            print "curEducation extraction done"
+            # print "curEducation extraction done"
             print curEducation
 
             curIndustry = emptyString
@@ -1236,8 +1225,8 @@ class Authenticate(object):
             profileId = 0
             if 'id' in keys:
                 profileId = personObj['id']
-                print "PROFILE ID : "
-                print profileId
+                print "PROFILE ID : "+profileId.__str__()
+                # print profileId
             
             isBookmark = False 
             if bookmarkKey in keys:
@@ -1292,10 +1281,10 @@ class Authenticate(object):
 
             ## Check for the Current Education. ##
             if curEducation != '': #check that the Education is not None, only then send it ahead.
-                print "CUR EDUCATION MAY NOT BE BUET"
+                # print "CUR EDUCATION MAY NOT BE BUET"
                 # personFormed = {personKey:{authTokenKey:authToken, authTypeKey:authType, connecCountKey:connectCount, localeKey:disLocale, firstNameKey:firstName, lastNameKey:lastName, headlineKey:curHeadLine, curEducationHTMLKey:curEducationHTMLparsed, curEducationKey:curEducation, curIndustryKey:curIndustry, curLocKey:curLocation, prflNameKey:prflName, personIdKey:profileId, bookmarkKey:isBookmark, connectEnableKey:isConnectEnabled, contactKey:isContact, headlessKey:isHeadless, nameMatchKey:isNameMatched, searchLink1Key:searchLink1, searchLink2Key:searchLink2, profileLink1Key:profileLink1, profileLink2Key:profileLink2, isProfilePic:isPicPresent, logoBaseKey:logoBasedInfo, profilePhoto:profilePic}}
                 personFormed = {personKey:{authTokenKey:authToken, authTypeKey:authType, connecCountKey:connectCount, localeKey:disLocale, firstNameKey:firstName, lastNameKey:lastName, headlineKey:curHeadLine, curEducationHTMLKey:curEducationHTMLparsed, curEducationKey:curEducation, curIndustryKey:curIndustry, curLocKey:curLocation, prflNameKey:prflName, personIdKey:profileId, bookmarkKey:isBookmark, connectEnableKey:isConnectEnabled, contactKey:isContact, headlessKey:isHeadless, nameMatchKey:isNameMatched, searchLink1Key:searchLink1, searchLink2Key:searchLink2, profileLink1Key:profileLink1, profileLink2Key:profileLink2, isProfilePic:isPicPresent, logoBaseKey:logoBasedInfo, profilePhoto:profilePic}}
-                print personFormed
+                # print personFormed
                 return personFormed
             
             else:
